@@ -1,57 +1,57 @@
-import path from "path";
-import winston, { format, transports } from "winston";
-import DailyRotateFile from "winston-daily-rotate-file";
-const { combine, timestamp, label, printf } = format;
+import path from 'path'
+import winston, { format, transports } from 'winston'
+import DailyRotateFile from 'winston-daily-rotate-file'
+const { combine, timestamp, label, printf } = format
 
 const myFormat = printf(({ level, message, label, timestamp }) => {
-  const date = new Date(timestamp);
-  const hour = date.getHours();
-  const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
+  const date = new Date(timestamp)
+  const hour = date.getHours()
+  const minutes = date.getMinutes()
+  const seconds = date.getSeconds()
 
-  return `${date.toDateString()} ${hour}:${minutes}:${seconds} [${label}] ${level}: ${message}`;
-});
+  return `${date.toDateString()} ${hour}:${minutes}:${seconds} [${label}] ${level}: ${message}`
+})
 
 const logger = winston.createLogger({
-  level: "info",
-  format: combine(label({ label: "DENTIST" }), timestamp(), myFormat),
+  level: 'info',
+  format: combine(label({ label: 'DENTIST' }), timestamp(), myFormat),
   transports: [
     new transports.Console(),
     new DailyRotateFile({
       filename: path.join(
         process.cwd(),
-        "logs",
-        "winston",
-        "success",
-        "%DATE%-success.log"
+        'logs',
+        'winston',
+        'success',
+        '%DATE%-success.log',
       ),
-      datePattern: "DD-MM-YYYY-HH",
+      datePattern: 'DD-MM-YYYY-HH',
       zippedArchive: true,
-      maxSize: "20m",
-      maxFiles: "1d",
+      maxSize: '20m',
+      maxFiles: '1d',
     }),
   ],
-});
+})
 
 const errorLogger = winston.createLogger({
-  level: "error",
-  format: combine(label({ label: "DENTIST" }), timestamp(), myFormat),
+  level: 'error',
+  format: combine(label({ label: 'DENTIST' }), timestamp(), myFormat),
   transports: [
     new transports.Console(),
     new DailyRotateFile({
       filename: path.join(
         process.cwd(),
-        "logs",
-        "winston",
-        "error",
-        "%DATE%-error.log"
+        'logs',
+        'winston',
+        'error',
+        '%DATE%-error.log',
       ),
-      datePattern: "DD-MM-YYYY-HH",
+      datePattern: 'DD-MM-YYYY-HH',
       zippedArchive: true,
-      maxSize: "20m",
-      maxFiles: "1d",
+      maxSize: '20m',
+      maxFiles: '1d',
     }),
   ],
-});
+})
 
-export { errorLogger, logger };
+export { errorLogger, logger }
