@@ -1,14 +1,32 @@
 import { ErrorRequestHandler } from 'express'
+import { StatusCodes } from 'http-status-codes'
 import config from '../../config'
 import ApiError from '../../errors/ApiError'
+import { errorLogger } from '../../shared/logger'
 import { IErrorMessage } from '../../types/errorTypes'
 
 const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
+  config.env === 'development'
+    ? console.log('🚨 globalErrorHandler ~~', error)
+    : errorLogger.error('🚨 globalErrorHandler ~~', error)
+
   let statusCode = 500
   let message = 'Something went wrong!'
   let errorMessages: IErrorMessage[] = []
 
-  if (error instanceof ApiError) {
+  if (error.name === 'TokenExpiredError') {
+    statusCode = StatusCodes.UNAUTHORIZED
+    message = 'Session Expired'
+    errorMessages = error?.message
+      ? [
+          {
+            path: '',
+            message:
+              'Your session has expired. Please log in again to continue.',
+          },
+        ]
+      : []
+  } else if (error instanceof ApiError) {
     statusCode = error?.statusCode
     message = error?.message
     errorMessages = error?.message
