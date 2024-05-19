@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 1
+    },
+    "auditLog": "C:\\Users\\bdCalling\\Downloads\\dentist-app-backend\\logs\\winston\\success\\.66c617751218fab7eb8b436cb8bef8b60f1412ea-audit.json",
+    "files": [
+        {
+            "date": 1716109477807,
+            "name": "C:\\Users\\bdCalling\\Downloads\\dentist-app-backend\\logs\\winston\\success\\19-05-2024-15-success.log",
+            "hash": "e0edcd0d64db2f72bbee9f3962fa8941eb43ffd8f81912a51159c421e5a94fed"
+        }
+    ],
+    "hashType": "sha256"
+}
