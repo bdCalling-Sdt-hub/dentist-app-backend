@@ -1,6 +1,8 @@
 import { Request, Response } from 'express'
 import { StatusCodes } from 'http-status-codes'
 import catchAsync from '../../../shared/catchAsync'
+import { paginationFields } from '../../../shared/constant'
+import pick from '../../../shared/pick'
 import sendResponse from '../../../shared/sendResponse'
 import { CategoryService } from './category.service'
 
@@ -16,13 +18,15 @@ const createCategory = catchAsync(async (req: Request, res: Response) => {
   })
 })
 const getCategories = catchAsync(async (req: Request, res: Response) => {
-  const result = await CategoryService.getCategoriesFromDB()
+  const paginationOptions = pick(req.query, paginationFields)
+  const result = await CategoryService.getCategoriesFromDB(paginationOptions)
 
   sendResponse(res, {
     success: true,
     statusCode: StatusCodes.OK,
     message: 'Category create successfully',
-    data: result,
+    pagination: result.meta,
+    data: result.data,
   })
 })
 const updateCategory = catchAsync(async (req: Request, res: Response) => {

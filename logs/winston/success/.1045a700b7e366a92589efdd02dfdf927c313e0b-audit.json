@@ -6,14 +6,9 @@
     "auditLog": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\success\\.1045a700b7e366a92589efdd02dfdf927c313e0b-audit.json",
     "files": [
         {
-            "date": 1716030738205,
-            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\success\\18-05-2024-17-success.log",
-            "hash": "bc14e585ee8e17aeaf645679f89dd8ca5a8f0982eceb06b2e0862fd54688bf51"
-        },
-        {
-            "date": 1716033609289,
-            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\success\\18-05-2024-18-success.log",
-            "hash": "cd8f4378ed2600e2724f73cca418e2e50a6832e1803ce7525993e19973173222"
+            "date": 1716177767697,
+            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\success\\20-05-2024-10-success.log",
+            "hash": "cb3fef1e33bdfc2581ffb013b03d14f34e0fd32df26fc5e03353f59d8d5a3c84"
         }
     ],
     "hashType": "sha256"

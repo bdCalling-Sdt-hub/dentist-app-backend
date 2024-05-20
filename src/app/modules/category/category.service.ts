@@ -1,26 +1,55 @@
 import { StatusCodes } from 'http-status-codes'
+import { SortOrder } from 'mongoose'
 import ApiError from '../../../errors/ApiError'
+import { paginationHelper } from '../../../helpers/paginationHelper'
+import { IGenericResponse } from '../../../types/common'
+import { IPaginationOptions } from '../../../types/pagination'
 import { ICategory } from './category.interface'
 import { Category } from './category.model'
 
 const createCategoryToDB = async (payload: ICategory) => {
   const createCategory = await Category.create(payload)
-  if (createCategory) {
+  if (!createCategory) {
     throw new ApiError(StatusCodes.BAD_REQUEST, 'Failed to create category')
   }
 
   return createCategory
 }
-const getCategoriesFromDB = async (): Promise<ICategory[]> => {
+
+const getCategoriesFromDB = async (
+  paginationOptions: IPaginationOptions,
+): Promise<IGenericResponse<ICategory[]>> => {
+  const { page, limit, skip, sortBy, sortOrder } =
+    paginationHelper.calculatePagination(paginationOptions)
+
+  const sortCondition: { [key: string]: SortOrder } = {}
+  if (sortBy && sortOrder) {
+    sortCondition[sortBy] = sortOrder
+  }
+
   const result = await Category.find()
-  return result
+    .sort(sortCondition)
+    .skip(skip)
+    .limit(limit)
+
+  const total = await Category.countDocuments()
+  const totalPage = Math.ceil(total / limit)
+  return {
+    meta: {
+      page,
+      limit,
+      totalPage,
+      total,
+    },
+    data: result,
+  }
 }
 
 const updateCategoryToDB = async (id: string, payload: ICategory) => {
   const updateCategory = await Category.findOneAndUpdate({ _id: id }, payload, {
     new: true,
   })
-  if (updateCategory) {
+  if (!updateCategory) {
     throw new ApiError(StatusCodes.BAD_REQUEST, "Category doesn't exist")
   }
 
@@ -29,7 +58,7 @@ const updateCategoryToDB = async (id: string, payload: ICategory) => {
 
 const deleteCategoryToDB = async (id: string): Promise<ICategory | null> => {
   const deleteCategory = await Category.findByIdAndDelete(id)
-  if (deleteCategory) {
+  if (!deleteCategory) {
     throw new ApiError(StatusCodes.BAD_REQUEST, "Category doesn't exist")
   }
   return deleteCategory
