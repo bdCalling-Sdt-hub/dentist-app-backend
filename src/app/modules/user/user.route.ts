@@ -8,10 +8,28 @@ const router = express.Router()
 
 router.post(
   '/create-patient',
+  auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN),
   validateRequest(UserValidation.createPatientZodSchema),
   UserController.createPatient,
 )
 
+router.get(
+  '/patient',
+  auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN),
+  UserController.getAllPatient,
+)
+
+//admin management
+router.post(
+  '/create-admin',
+  auth(USER_TYPE.SUPER_ADMIN),
+  validateRequest(UserValidation.createAdminZodSchema),
+  UserController.createAdmin,
+)
+
+router.get('/admin', auth(USER_TYPE.SUPER_ADMIN), UserController.getAllAdmin)
+
+//profile
 router.get(
   '/profile',
   auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN, USER_TYPE.PATIENT),

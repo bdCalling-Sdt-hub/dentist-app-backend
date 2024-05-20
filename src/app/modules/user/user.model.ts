@@ -12,6 +12,7 @@ const userSchema = new Schema<IUser, UserModel>(
     password: {
       type: String,
       required: true,
+      select: 0,
     },
     role: {
       type: String,
@@ -19,11 +20,16 @@ const userSchema = new Schema<IUser, UserModel>(
     },
     pin: {
       type: String,
-      required: true,
+      default: 0,
+      select: 0,
     },
     patient: {
       type: Schema.Types.ObjectId,
       ref: 'Patient',
+    },
+    admin: {
+      type: Schema.Types.ObjectId,
+      ref: 'Admin',
     },
     status: {
       type: String,
@@ -56,7 +62,7 @@ userSchema.pre('save', async function (next) {
     Number(config.bcrypt_salt_rounds),
   )
   //pin hash
-  user.pin = await bcrypt.hash(user.pin, Number(config.bcrypt_salt_rounds))
+  user.pin = await bcrypt.hash(user.pin!, Number(config.bcrypt_salt_rounds))
 
   next()
 })

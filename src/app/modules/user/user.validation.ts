@@ -20,4 +20,19 @@ const createPatientZodSchema = z.object({
   }),
 })
 
-export const UserValidation = { createPatientZodSchema }
+const createAdminZodSchema = z.object({
+  body: z.object({
+    name: z.string({ required_error: 'Name is required' }),
+    contactNo: z.string().optional(),
+    age: z.number().optional(),
+    dateOfBirth: z.string().optional(),
+    gender: z.enum([...gender] as [string, ...string[]]).optional(),
+    email: z.string({ required_error: 'Email is required' }),
+    password: z.string({ required_error: 'Password is required' }),
+    pin: z.string().optional(),
+    profile: z.string().optional(),
+    status: z.enum(['active', 'delete']).optional(),
+  }),
+})
+
+export const UserValidation = { createPatientZodSchema, createAdminZodSchema }
