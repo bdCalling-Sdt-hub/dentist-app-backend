@@ -53,7 +53,10 @@ const fileHandler = () => {
       fileSize: 5000000, //5MB
     },
     fileFilter: fileFilter,
-  }).fields([{ name: 'bannerImage', maxCount: 1 }])
+  }).fields([
+    { name: 'bannerImage', maxCount: 1 },
+    { name: 'offerImage', maxCount: 1 },
+  ])
 
   return upload
 }
