@@ -6,6 +6,7 @@ import { UserController } from './user.controller'
 import { UserValidation } from './user.validation'
 const router = express.Router()
 
+//patient management
 router.post(
   '/create-patient',
   auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN),
@@ -28,6 +29,12 @@ router.post(
 )
 
 router.get('/admin', auth(USER_TYPE.SUPER_ADMIN), UserController.getAllAdmin)
+
+router.delete(
+  '/admin/:id',
+  auth(USER_TYPE.SUPER_ADMIN),
+  UserController.deleteAdmin,
+)
 
 //profile
 router.get(

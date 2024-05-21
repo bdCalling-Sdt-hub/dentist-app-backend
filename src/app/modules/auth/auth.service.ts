@@ -10,7 +10,7 @@ import { User } from '../user/user.model'
 const loginUserFromDB = async (payload: Partial<IUser>) => {
   const { email, pin, password } = payload
 
-  const isUserExist = await User.findOne({ email })
+  const isUserExist = await User.findOne({ email }).select('+password +pin')
   if (!isUserExist) {
     throw new ApiError(StatusCodes.BAD_REQUEST, "User doesn't exist!")
   }
@@ -20,7 +20,7 @@ const loginUserFromDB = async (payload: Partial<IUser>) => {
     throw new ApiError(StatusCodes.BAD_REQUEST, 'Password is incorrect!')
   }
 
-  const isMatchPin = await bcrypt.compare(pin!, isUserExist.pin)
+  const isMatchPin = await bcrypt.compare(pin!, isUserExist.pin!)
   if (!isMatchPin) {
     throw new ApiError(StatusCodes.BAD_REQUEST, 'Pin is incorrect!')
   }

@@ -13,6 +13,9 @@ app.use(express.urlencoded({ extended: true }))
 //app router
 app.use('/api/v1', router)
 
+//static file check
+app.use(express.static('uploads'))
+
 //server response
 app.get('/', (req, res: Response) => {
   res.send(

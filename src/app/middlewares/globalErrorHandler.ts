@@ -2,6 +2,8 @@ import { ErrorRequestHandler } from 'express'
 import { StatusCodes } from 'http-status-codes'
 import config from '../../config'
 import ApiError from '../../errors/ApiError'
+import handleValidationError from '../../errors/handleValidationError'
+import handleZodError from '../../errors/handleZodError'
 import { errorLogger } from '../../shared/logger'
 import { IErrorMessage } from '../../types/errorTypes'
 
@@ -14,7 +16,17 @@ const globalErrorHandler: ErrorRequestHandler = (error, req, res, next) => {
   let message = 'Something went wrong!'
   let errorMessages: IErrorMessage[] = []
 
-  if (error.name === 'TokenExpiredError') {
+  if (error.name === 'ZodError') {
+    const simplifiedError = handleZodError(error)
+    statusCode = simplifiedError.statusCode
+    message = simplifiedError.message
+    errorMessages = simplifiedError.errorMessages
+  } else if (error.name === 'ValidationError') {
+    const simplifiedError = handleValidationError(error)
+    statusCode = simplifiedError.statusCode
+    message = simplifiedError.message
+    errorMessages = simplifiedError.errorMessages
+  } else if (error.name === 'TokenExpiredError') {
     statusCode = StatusCodes.UNAUTHORIZED
     message = 'Session Expired'
     errorMessages = error?.message

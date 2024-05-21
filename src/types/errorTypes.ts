@@ -1,1 +1,1 @@
-export type IErrorMessage = { path: string; message: string }
+export type IErrorMessage = { path: string | number; message: string }

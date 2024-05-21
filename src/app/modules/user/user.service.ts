@@ -1,6 +1,6 @@
 import { StatusCodes } from 'http-status-codes'
 import { JwtPayload } from 'jsonwebtoken'
-import mongoose, { SortOrder } from 'mongoose'
+import mongoose, { SortOrder, startSession } from 'mongoose'
 import { USER_TYPE } from '../../../enums/user'
 import ApiError from '../../../errors/ApiError'
 import { paginationHelper } from '../../../helpers/paginationHelper'
@@ -13,6 +13,7 @@ import { IUser } from './user.interface'
 import { User } from './user.model'
 type IUserPayload = IUser & IPatient
 
+//patient management
 const createPatientToDB = async (payload: IUserPayload) => {
   const { email, password, pin, ...patientData } = payload
   const user: IUser = {
@@ -129,6 +130,7 @@ const getAllAdminFromDB = async (
     sortCondition[sortBy] = sortOrder
   }
   const result = await User.find({ role: USER_TYPE.ADMIN })
+    .populate({ path: 'admin', select: '-createdAt -updatedAt -__v' })
     .sort(sortCondition)
     .skip(skip)
     .limit(limit)
@@ -146,6 +148,36 @@ const getAllAdminFromDB = async (
   }
 }
 
+const deleteAdminFromDB = async (id: string): Promise<IUser | null> => {
+  let deleteAdminUser
+  const session = await startSession()
+  try {
+    session.startTransaction()
+    const findUser = await User.isUserExist(id)
+    if (!findUser) {
+      throw new ApiError(StatusCodes.BAD_REQUEST, "User doesn't exist")
+    }
+
+    const deleteAdmin = await Admin.findByIdAndDelete(findUser.admin).session(
+      session,
+    )
+    deleteAdminUser = await User.findByIdAndDelete(id).session(session)
+
+    if (!deleteAdminUser || !deleteAdmin) {
+      throw new ApiError(StatusCodes.BAD_REQUEST, "Admin doesn't exist")
+    }
+
+    await session.commitTransaction()
+    await session.endSession()
+  } catch (error: any) {
+    await session.abortTransaction()
+    await session.endSession()
+    throw new ApiError(StatusCodes.BAD_REQUEST, error?.message)
+  }
+  return deleteAdminUser
+}
+
+//profile
 const getProfileFromDB = async (payload: JwtPayload) => {
   const result = await User.findOne({ _id: payload.id })
     .populate(['patient', 'admin'])
@@ -159,4 +191,5 @@ export const UserService = {
   createAdminToDB,
   getAllAdminFromDB,
   getAllPatientFromDB,
+  deleteAdminFromDB,
 }
