@@ -6,54 +6,14 @@
     "auditLog": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\.52f345f73a5bcd33e83f890fc748114fbfa16c6e-audit.json",
     "files": [
         {
-            "date": 1716263812025,
-            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\21-05-2024-09-error.log",
-            "hash": "2e468a7def8eb73bb299336b1611c03f8587f8e9166dcd64b52ca565aa5cbb5e"
+            "date": 1716635805493,
+            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\25-05-2024-17-error.log",
+            "hash": "3c03901267fbb719ed59ca6a99050d57f84df66f0ddb35a51e2d87b6dbde8604"
         },
         {
-            "date": 1716264074433,
-            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\21-05-2024-10-error.log",
-            "hash": "54d4c691a4c8f62424b72ccdd05c32be942d5f1fced46dd0dd110b041eda9c9b"
-        },
-        {
-            "date": 1716270177292,
-            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\21-05-2024-11-error.log",
-            "hash": "8b7536cc1160d03082c05d90f93365b7f963cdfac74ce0cc8d3083b2377c63b6"
-        },
-        {
-            "date": 1716271258791,
-            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\21-05-2024-12-error.log",
-            "hash": "cecd23404991acb404182470f0802b43fec41fc1556e1f961a874e432f3036a0"
-        },
-        {
-            "date": 1716278751862,
-            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\21-05-2024-14-error.log",
-            "hash": "f4435c564fa6629bbbf3499dc9c62843d266331bd0c6163adc818b01e77cd463"
-        },
-        {
-            "date": 1716282059359,
-            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\21-05-2024-15-error.log",
-            "hash": "2831bf668924c8e59b73c4289ff73de1b6db91d061dafbfc5fa8167038b6866d"
-        },
-        {
-            "date": 1716287629158,
-            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\21-05-2024-16-error.log",
-            "hash": "2337c3fed8afd5679f5877c7bf8f5b29f9b99e8cbbecbad07e85fa4dd9cc59b6"
-        },
-        {
-            "date": 1716289219481,
-            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\21-05-2024-17-error.log",
-            "hash": "611a2fa809f31cf666a3ec778a45b9928f884776116196cbf5900fbaa175b9b7"
-        },
-        {
-            "date": 1716295095474,
-            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\21-05-2024-18-error.log",
-            "hash": "384fbeacb9b2db031d7d7748f150d1139bf0ebe15c95d840a77f26423bb434ce"
-        },
-        {
-            "date": 1716296562632,
-            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\21-05-2024-19-error.log",
-            "hash": "267bef36b0af131f2429dda557795531f82f4465698f9488db37e0f3d5ded583"
+            "date": 1716638546541,
+            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\25-05-2024-18-error.log",
+            "hash": "6fb1be8e920cd0af13faf883e55a209f98b7e140009f93ab2d8d1cc8b7bebcb9"
         }
     ],
     "hashType": "sha256"

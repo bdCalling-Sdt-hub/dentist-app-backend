@@ -56,6 +56,7 @@ const fileHandler = () => {
   }).fields([
     { name: 'bannerImage', maxCount: 1 },
     { name: 'offerImage', maxCount: 1 },
+    { name: 'articleCategoryImage', maxCount: 1 },
   ])
 
   return upload

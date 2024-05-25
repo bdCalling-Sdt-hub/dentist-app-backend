@@ -1,4 +1,6 @@
 import express from 'express'
+import { ArticleRoutes } from '../app/modules/article/article.route'
+import { ArticleCategoryRoutes } from '../app/modules/articleCategory/articleCategory.route'
 import { AuthRoutes } from '../app/modules/auth/auth.route'
 import { BannerRoutes } from '../app/modules/banner/banner.route'
 import { CategoryRoutes } from '../app/modules/category/category.route'
@@ -41,6 +43,14 @@ const appRouteList = [
   {
     path: '/offer',
     route: OfferRoutes,
+  },
+  {
+    path: '/article-category',
+    route: ArticleCategoryRoutes,
+  },
+  {
+    path: '/article',
+    route: ArticleRoutes,
   },
 ]
 
