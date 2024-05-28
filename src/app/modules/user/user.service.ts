@@ -153,7 +153,7 @@ const deleteAdminFromDB = async (id: string): Promise<IUser | null> => {
   const session = await startSession()
   try {
     session.startTransaction()
-    const findUser = await User.isUserExist(id)
+    const findUser = await User.isUserExistById(id)
     if (!findUser) {
       throw new ApiError(StatusCodes.BAD_REQUEST, "User doesn't exist")
     }

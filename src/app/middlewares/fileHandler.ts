@@ -57,6 +57,9 @@ const fileHandler = () => {
     { name: 'bannerImage', maxCount: 1 },
     { name: 'offerImage', maxCount: 1 },
     { name: 'articleCategoryImage', maxCount: 1 },
+    { name: 'buttonImage', maxCount: 1 },
+    { name: 'articleSlider', maxCount: 3 },
+    { name: 'smartCheckImage', maxCount: 1 },
   ])
 
   return upload

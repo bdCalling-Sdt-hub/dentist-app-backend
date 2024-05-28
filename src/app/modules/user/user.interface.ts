@@ -10,9 +10,24 @@ export type IUser = {
   patient?: Types.ObjectId | IPatient
   admin?: Types.ObjectId | IAdmin
   status?: 'active' | 'delete'
+  authentication?: {
+    isResetPassword: boolean
+    oneTimeCode: number
+    expiresAt: Date
+  }
 }
 
 export type UserModel = {
-  isUserExist(id: string): any
+  isUserExistById(id: string): any
+  isUserExistByEmail(email: string): any
   isMatchPassword(password: string, hashPassword: string): Promise<boolean>
 } & Model<IUser>
+
+export type IForgetPassword = {
+  email: string
+}
+
+export type IVerifyOtp = {
+  email: string
+  otp: string
+}

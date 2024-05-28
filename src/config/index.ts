@@ -12,4 +12,11 @@ export default {
     secret: process.env.JWT_SECRET,
     expire_in: process.env.JWT_EXPIRE_IN,
   },
+  email: {
+    from: process.env.EMAIL_FROM,
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+    port: process.env.EMAIL_PORT,
+    host: process.env.EMAIL_HOST,
+  },
 }

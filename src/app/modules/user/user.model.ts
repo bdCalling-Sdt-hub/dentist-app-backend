@@ -20,7 +20,6 @@ const userSchema = new Schema<IUser, UserModel>(
     },
     pin: {
       type: String,
-      default: 0,
       select: 0,
     },
     patient: {
@@ -36,13 +35,29 @@ const userSchema = new Schema<IUser, UserModel>(
       enum: ['active', 'delete'],
       default: 'active',
     },
+    authentication: {
+      isResetPassword: {
+        type: Boolean,
+        default: false,
+      },
+      oneTimeCode: {
+        type: String,
+      },
+      expiresAt: {
+        type: Date,
+      },
+    },
   },
   { timestamps: true },
 )
 
 //user check
-userSchema.statics.isUserExist = async (id: string) => {
+userSchema.statics.isUserExistById = async (id: string) => {
   return await User.findById(id)
+}
+
+userSchema.statics.isUserExistByEmail = async (email: string) => {
+  return await User.findOne({ email: email })
 }
 
 //password match

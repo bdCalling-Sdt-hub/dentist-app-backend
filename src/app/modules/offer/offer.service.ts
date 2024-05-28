@@ -13,8 +13,8 @@ const createOfferToDB = async (payload: IOffer) => {
 }
 
 const getOfferFromDB = async (): Promise<IOffer[]> => {
-  const createOffer = await Offer.find()
-  return createOffer
+  const result = await Offer.find()
+  return result
 }
 
 const updateOfferToDB = async (

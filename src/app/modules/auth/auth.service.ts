@@ -3,8 +3,12 @@ import { StatusCodes } from 'http-status-codes'
 import { JwtPayload, Secret } from 'jsonwebtoken'
 import config from '../../../config'
 import ApiError from '../../../errors/ApiError'
+import { emailHelper } from '../../../helpers/emailHelper'
 import { jwtHelper } from '../../../helpers/jwtHelper'
-import { IUser } from '../user/user.interface'
+import { emailTemplate } from '../../../shared/emailTemplate'
+import { IChangePassword } from '../../../types/authTypes'
+import generateOTP from '../../../util/generateOTP'
+import { IForgetPassword, IUser, IVerifyOtp } from '../user/user.interface'
 import { User } from '../user/user.model'
 
 const loginUserFromDB = async (payload: Partial<IUser>) => {
@@ -35,10 +39,43 @@ const loginUserFromDB = async (payload: Partial<IUser>) => {
   return { createToken }
 }
 
-type IChangePassword = {
-  currentPassword: string
-  newPassword: string
-  confirmPassword: string
+const forgetPasswordToDB = async (payload: IForgetPassword) => {
+  const { email } = payload
+  const isExistUser = await User.isUserExistByEmail(email)
+  if (!isExistUser) {
+    throw new ApiError(StatusCodes.OK, "User doesn't exist!")
+  }
+
+  //otp generate
+  const otp = generateOTP()
+
+  //save to db
+  const authentication = {
+    oneTimeCode: otp,
+    expiresAt: new Date(Date.now() + 3 * 60000),
+  }
+  await User.findOneAndUpdate({ email: email }, { $set: { authentication } })
+
+  //send email
+  const data = {
+    email,
+    otp: otp.toString(),
+  }
+  const mailData = emailTemplate.forgetPassword(data)
+  emailHelper.sendMail(mailData)
+}
+
+const verifyOtpToDB = async (payload: IVerifyOtp) => {
+  const { email, otp } = payload
+  //user
+  const isExistUser = await User.isUserExistByEmail(email)
+  if (!isExistUser) {
+    throw new ApiError(StatusCodes.OK, "User doesn't exist!")
+  }
+  //otp
+  if (!otp) {
+    throw new ApiError(StatusCodes.OK, 'Please give the otp')
+  }
 }
 
 const changePasswordToDB = async (
@@ -46,7 +83,7 @@ const changePasswordToDB = async (
   payload: IChangePassword,
 ) => {
   const { newPassword, currentPassword, confirmPassword } = payload
-  const isUserExist = await User.isUserExist(user.id)
+  const isUserExist = await User.isUserExistById(user.id)
   if (!isUserExist) {
     throw new ApiError(StatusCodes.BAD_REQUEST, "User doesn't exist")
   }
@@ -77,4 +114,6 @@ const changePasswordToDB = async (
 export const AuthService = {
   loginUserFromDB,
   changePasswordToDB,
+  forgetPasswordToDB,
+  verifyOtpToDB,
 }

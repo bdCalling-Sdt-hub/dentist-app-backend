@@ -13,6 +13,18 @@ router.post(
 )
 
 router.post(
+  '/forget-password',
+  validateRequest(AuthValidation.createForgetPasswordZodSchema),
+  AuthController.forgetPassword,
+)
+
+router.post(
+  '/verify-otp',
+  validateRequest(AuthValidation.createVerifyOtpZodSchema),
+  AuthController.verifyOtp,
+)
+
+router.post(
   '/change-password',
   auth(USER_TYPE.PATIENT, USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN),
   validateRequest(AuthValidation.createChangePasswordZodSchema),

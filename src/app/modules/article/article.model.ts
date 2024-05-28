@@ -7,6 +7,13 @@ const articleSchema = new Schema<IArticle, ArticleModel>(
       type: String,
       required: true,
     },
+    patientCategory: {
+      type: String,
+    },
+    articleCategory: {
+      type: String,
+      required: true,
+    },
     buttonImage: {
       type: String,
       required: true,

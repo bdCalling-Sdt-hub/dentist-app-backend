@@ -8,6 +8,19 @@ const createLoginZodSchema = z.object({
   }),
 })
 
+const createForgetPasswordZodSchema = z.object({
+  body: z.object({
+    email: z.string({ required_error: 'Email is required' }),
+  }),
+})
+
+const createVerifyOtpZodSchema = z.object({
+  body: z.object({
+    email: z.string({ required_error: 'Email is required' }),
+    otp: z.string({ required_error: 'Otp is required' }),
+  }),
+})
+
 const createChangePasswordZodSchema = z.object({
   body: z.object({
     currentPassword: z.string({
@@ -23,4 +36,6 @@ const createChangePasswordZodSchema = z.object({
 export const AuthValidation = {
   createLoginZodSchema,
   createChangePasswordZodSchema,
+  createForgetPasswordZodSchema,
+  createVerifyOtpZodSchema,
 }
