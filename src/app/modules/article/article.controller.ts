@@ -51,6 +51,39 @@ const getAllArticle = catchAsync(async (req: Request, res: Response) => {
   })
 })
 
+const getAllArticleByCategory = catchAsync(
+  async (req: Request, res: Response) => {
+    const paginationOptions = pick(req.query, paginationFields)
+    const filterOptions = pick(req.query, ['search'])
+    const category = req.params.id
+    const result = await ArticleService.getAllArticleByCategoryFromDB(
+      category,
+      paginationOptions,
+      filterOptions,
+    )
+
+    sendResponse(res, {
+      statusCode: StatusCodes.OK,
+      success: true,
+      message: 'All Article retrieved successfully!',
+      pagination: result.meta,
+      data: result.data,
+    })
+  },
+)
+
+const getSingleArticle = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id
+  const result = await ArticleService.getSingleArticleFromDB(id)
+
+  sendResponse(res, {
+    statusCode: StatusCodes.OK,
+    success: true,
+    message: 'Single Article retrieved successfully!',
+    data: result,
+  })
+})
+
 const deleteArticle = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id
   const result = await ArticleService.deleteArticleToDB(id)
@@ -68,4 +101,6 @@ export const ArticleController = {
   createArticle,
   getAllArticle,
   deleteArticle,
+  getSingleArticle,
+  getAllArticleByCategory,
 }

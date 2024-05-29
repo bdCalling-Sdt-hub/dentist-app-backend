@@ -6,10 +6,12 @@ import ApiError from '../../../errors/ApiError'
 import { emailHelper } from '../../../helpers/emailHelper'
 import { jwtHelper } from '../../../helpers/jwtHelper'
 import { emailTemplate } from '../../../shared/emailTemplate'
-import { IChangePassword } from '../../../types/authTypes'
+import { IChangePassword, IResetPassword } from '../../../types/authTypes'
+import cryptoHexToken from '../../../util/cryptoHexToken'
 import generateOTP from '../../../util/generateOTP'
+import { ResetToken } from '../resetToken/resetToken.model'
 import { IForgetPassword, IUser, IVerifyOtp } from '../user/user.interface'
-import { User } from '../user/user.model'
+import { User } from './../user/user.model'
 
 const loginUserFromDB = async (payload: Partial<IUser>) => {
   const { email, pin, password } = payload
@@ -67,42 +69,130 @@ const forgetPasswordToDB = async (payload: IForgetPassword) => {
 
 const verifyOtpToDB = async (payload: IVerifyOtp) => {
   const { email, otp } = payload
+
   //user
-  const isExistUser = await User.isUserExistByEmail(email)
+  const isExistUser = await User.findOne({ email }).select('+authentication')
   if (!isExistUser) {
     throw new ApiError(StatusCodes.OK, "User doesn't exist!")
   }
+
   //otp
   if (!otp) {
-    throw new ApiError(StatusCodes.OK, 'Please give the otp')
+    throw new ApiError(
+      StatusCodes.OK,
+      'Please give the otp, check your email we send a code',
+    )
   }
+  if (otp !== isExistUser?.authentication?.oneTimeCode) {
+    throw new ApiError(StatusCodes.OK, 'You provide wrong api')
+  }
+
+  const date = new Date()
+  if (date > isExistUser?.authentication?.expiresAt) {
+    throw new ApiError(
+      StatusCodes.OK,
+      'Otp already expired, Please click resend',
+    )
+  }
+  const authentication = {
+    isResetPassword: true,
+    oneTimeCode: null,
+    expiresAt: null,
+  }
+  const updateUser = await User.findOneAndUpdate(
+    { _id: isExistUser._id },
+    {
+      $set: { authentication },
+    },
+  )
+
+  //create token;
+  const createToken = cryptoHexToken()
+
+  await ResetToken.create({
+    user: updateUser?._id,
+    token: createToken,
+    expiresAt: new Date(Date.now() + 5 * 60000),
+  })
+
+  return createToken
 }
 
+const resetPasswordToDB = async (token: string, payload: IResetPassword) => {
+  const { newPassword, confirmPassword } = payload
+  const isTokenExist = await ResetToken.isTokenExist(token)
+  if (!isTokenExist) {
+    throw new ApiError(StatusCodes.BAD_REQUEST, 'You are not authorized!')
+  }
+
+  const isValid = await ResetToken.isTokenExpire(token)
+  if (!isValid) {
+    throw new ApiError(
+      StatusCodes.BAD_REQUEST,
+      'Token expired, Please click again to the forget password',
+    )
+  }
+  //password check
+  if (newPassword !== confirmPassword) {
+    throw new ApiError(
+      StatusCodes.BAD_REQUEST,
+      "Password and confirm password doesn't exist",
+    )
+  }
+
+  //hash password
+  const hashPassword = await bcrypt.hash(
+    newPassword,
+    Number(config.bcrypt_salt_rounds),
+  )
+
+  const updateData = {
+    password: hashPassword,
+  }
+
+  await User.findOneAndUpdate({ _id: isTokenExist.user }, updateData, {
+    new: true,
+  })
+}
+
+//user change password
 const changePasswordToDB = async (
   user: JwtPayload,
   payload: IChangePassword,
 ) => {
   const { newPassword, currentPassword, confirmPassword } = payload
-  const isUserExist = await User.isUserExistById(user.id)
+  const isUserExist = await User.findById(user.id).select('+password')
   if (!isUserExist) {
     throw new ApiError(StatusCodes.BAD_REQUEST, "User doesn't exist")
   }
 
   //password check
   const isMatchPassword = await User.isMatchPassword(
-    newPassword,
     currentPassword,
+    isUserExist.password,
   )
-  if (currentPassword && !isMatchPassword) {
-    if (!isUserExist) {
-      throw new ApiError(StatusCodes.BAD_REQUEST, 'Password is incorrect!')
-    }
+  if (isUserExist.password && !isMatchPassword) {
+    throw new ApiError(StatusCodes.BAD_REQUEST, 'Password is incorrect!')
+  }
+
+  if (newPassword === currentPassword) {
+    throw new ApiError(
+      StatusCodes.BAD_REQUEST,
+      'Please give different password some current password',
+    )
+  }
+
+  if (newPassword !== confirmPassword) {
+    throw new ApiError(
+      StatusCodes.BAD_REQUEST,
+      "Password and confirm password doesn't match",
+    )
   }
 
   //hash password
-  const hashPassword = bcrypt.hash(
+  const hashPassword = await bcrypt.hash(
     newPassword,
-    config.bcrypt_salt_rounds as string,
+    Number(config.bcrypt_salt_rounds),
   )
 
   const updateData = {
@@ -116,4 +206,5 @@ export const AuthService = {
   changePasswordToDB,
   forgetPasswordToDB,
   verifyOtpToDB,
+  resetPasswordToDB,
 }

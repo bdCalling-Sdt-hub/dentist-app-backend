@@ -12,7 +12,7 @@ export type IUser = {
   status?: 'active' | 'delete'
   authentication?: {
     isResetPassword: boolean
-    oneTimeCode: number
+    oneTimeCode: string
     expiresAt: Date
   }
 }

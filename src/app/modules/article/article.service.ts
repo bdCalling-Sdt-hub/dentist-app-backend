@@ -64,6 +64,73 @@ const getAllArticleFromDB = async (
   }
 }
 
+const getAllArticleByCategoryFromDB = async (
+  category: string,
+  paginationOptions: IPaginationOptions,
+  filterOptions: IArticleFilterOptions,
+): Promise<IGenericResponse<IArticle[]>> => {
+  if (!category) {
+    throw new ApiError(
+      StatusCodes.BAD_REQUEST,
+      'Please give article category name',
+    )
+  }
+  const { page, limit, skip, sortBy, sortOrder } =
+    paginationHelper.calculatePagination(paginationOptions)
+  const { search } = filterOptions
+  let andConditions = []
+
+  //find match article
+  andConditions.push({ articleCategory: category })
+
+  //search
+  if (search) {
+    andConditions.push({
+      $or: ['articleName'].map(filed => ({
+        [filed]: {
+          $regex: search,
+          $options: 'i',
+        },
+      })),
+    })
+  }
+
+  const sortConditions: { [key: string]: SortOrder } = {}
+  if (sortBy && sortOrder) {
+    sortConditions[sortBy] = sortOrder
+  }
+
+  const whereConditions =
+    andConditions.length > 0 ? { $and: andConditions } : {}
+
+  const result = await Article.find(whereConditions)
+    .sort(sortConditions)
+    .skip(skip)
+    .limit(limit)
+
+  const total = await Article.countDocuments(whereConditions)
+  const totalPage = Math.ceil(total / limit)
+
+  return {
+    meta: {
+      page,
+      limit,
+      totalPage,
+      total,
+    },
+    data: result,
+  }
+}
+
+const getSingleArticleFromDB = async (id: string): Promise<IArticle | null> => {
+  const isExist = await Article.findById(id)
+  if (!isExist) {
+    throw new ApiError(StatusCodes.BAD_REQUEST, "Article doesn't exist!")
+  }
+  const result = await Article.findById(id)
+  return result
+}
+
 const deleteArticleToDB = async (id: string): Promise<IArticle | null> => {
   const isExist = await Article.findById(id)
   if (!isExist) {
@@ -83,4 +150,6 @@ export const ArticleService = {
   createArticleToDB,
   getAllArticleFromDB,
   deleteArticleToDB,
+  getSingleArticleFromDB,
+  getAllArticleByCategoryFromDB,
 }

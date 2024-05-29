@@ -4,6 +4,7 @@ import mongoose, { SortOrder, startSession } from 'mongoose'
 import { USER_TYPE } from '../../../enums/user'
 import ApiError from '../../../errors/ApiError'
 import { paginationHelper } from '../../../helpers/paginationHelper'
+import { selectedUserField } from '../../../shared/constant'
 import { IGenericResponse } from '../../../types/common'
 import { IPaginationOptions } from '../../../types/pagination'
 import { Admin } from '../admin/admin.model'
@@ -179,9 +180,11 @@ const deleteAdminFromDB = async (id: string): Promise<IUser | null> => {
 
 //profile
 const getProfileFromDB = async (payload: JwtPayload) => {
-  const result = await User.findOne({ _id: payload.id })
-    .populate(['patient', 'admin'])
-    .select('-password -pin')
+  const result = await User.findOne({ _id: payload.id }).populate([
+    { path: 'patient', select: selectedUserField },
+    { path: 'admin', select: selectedUserField },
+  ])
+
   return result
 }
 

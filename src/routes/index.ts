@@ -5,6 +5,7 @@ import { AuthRoutes } from '../app/modules/auth/auth.route'
 import { BannerRoutes } from '../app/modules/banner/banner.route'
 import { CategoryRoutes } from '../app/modules/category/category.route'
 import { ContactRoutes } from '../app/modules/contact/contact.route'
+import { FaqRoutes } from '../app/modules/faq/faq.route'
 import { OfferRoutes } from '../app/modules/offer/offer.route'
 import { PackageRoutes } from '../app/modules/package/package.route'
 import { RuleRoutes } from '../app/modules/rule/rule.route'
@@ -56,6 +57,10 @@ const appRouteList = [
   {
     path: '/smart-check',
     route: SmartCheckRoutes,
+  },
+  {
+    path: '/faq',
+    route: FaqRoutes,
   },
 ]
 

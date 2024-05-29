@@ -36,16 +36,21 @@ const userSchema = new Schema<IUser, UserModel>(
       default: 'active',
     },
     authentication: {
-      isResetPassword: {
-        type: Boolean,
-        default: false,
+      type: {
+        isResetPassword: {
+          type: Boolean,
+          default: false,
+        },
+        oneTimeCode: {
+          type: String,
+          default: null,
+        },
+        expiresAt: {
+          type: Date,
+          default: null,
+        },
       },
-      oneTimeCode: {
-        type: String,
-      },
-      expiresAt: {
-        type: Date,
-      },
+      select: 0,
     },
   },
   { timestamps: true },

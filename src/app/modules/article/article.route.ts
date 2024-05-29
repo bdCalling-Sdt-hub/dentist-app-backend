@@ -20,10 +20,20 @@ router.post(
 
 router
   .route('/:id')
+  .get(
+    auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN, USER_TYPE.PATIENT),
+    ArticleController.getSingleArticle,
+  )
   .delete(
     auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN),
     ArticleController.deleteArticle,
   )
+
+router.get(
+  '/category/:id',
+  auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN, USER_TYPE.PATIENT),
+  ArticleController.getAllArticleByCategory,
+)
 
 router.get(
   '/',

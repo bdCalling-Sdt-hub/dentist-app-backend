@@ -25,6 +25,13 @@ router.post(
 )
 
 router.post(
+  '/reset-password',
+  validateRequest(AuthValidation.createResetPasswordZodSchema),
+  AuthController.resetPassword,
+)
+
+//user change password
+router.post(
   '/change-password',
   auth(USER_TYPE.PATIENT, USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN),
   validateRequest(AuthValidation.createChangePasswordZodSchema),

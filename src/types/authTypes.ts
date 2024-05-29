@@ -3,3 +3,8 @@ export type IChangePassword = {
   newPassword: string
   confirmPassword: string
 }
+
+export type IResetPassword = {
+  newPassword: string
+  confirmPassword: string
+}
