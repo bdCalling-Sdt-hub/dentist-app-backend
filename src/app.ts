@@ -3,7 +3,12 @@ import express, { Application, Request, Response } from 'express'
 import { StatusCodes } from 'http-status-codes'
 import globalErrorHandler from './app/middlewares/globalErrorHandler'
 import router from './routes'
+import { Morgan } from './shared/morgan'
 const app: Application = express()
+
+//morgan
+app.use(Morgan.successHandler)
+app.use(Morgan.errorHandler)
 
 //parser
 app.use(cors())

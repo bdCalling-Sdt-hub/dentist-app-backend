@@ -17,6 +17,11 @@ const getOfferFromDB = async (): Promise<IOffer[]> => {
   return result
 }
 
+const getSingleOfferFromDB = async (id: string): Promise<IOffer | null> => {
+  const result = await Offer.findById(id)
+  return result
+}
+
 const updateOfferToDB = async (
   id: string,
   payload: IOffer,
@@ -54,4 +59,5 @@ export const OfferService = {
   getOfferFromDB,
   updateOfferToDB,
   deleteOfferToDB,
+  getSingleOfferFromDB,
 }

@@ -1,5 +1,0 @@
-Wed May 29 2024 11:30:12 [DENTIST] error: Invalid salt. Salt must be in the form of: $Vers$log2(NumRounds)$saltvalue
-Wed May 29 2024 11:31:2 [DENTIST] error: Invalid salt. Salt must be in the form of: $Vers$log2(NumRounds)$saltvalue
-Wed May 29 2024 11:34:24 [DENTIST] error: Invalid salt. Salt must be in the form of: $Vers$log2(NumRounds)$saltvalue
-Wed May 29 2024 11:36:40 [DENTIST] error: Invalid salt. Salt must be in the form of: $Vers$log2(NumRounds)$saltvalue
-Wed May 29 2024 11:38:8 [DENTIST] error: Invalid salt. Salt must be in the form of: $Vers$log2(NumRounds)$saltvalue

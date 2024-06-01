@@ -1,0 +1,2 @@
+Sat Jun 01 2024 16:32:58 [DENTIST] error: 192.168.10.7 - GET /api/v1/images/dentist-banner-1716273306695.png 404 - 2.076 ms
+Sat Jun 01 2024 16:33:3 [DENTIST] error: 192.168.10.7 - GET /api/v1/images/dentist-banner-1716273306695.png 404 - 0.930 ms

@@ -20,6 +20,10 @@ router.post(
 
 router
   .route('/:id')
+  .get(
+    auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN, USER_TYPE.PATIENT),
+    OfferController.getSingleOffer,
+  )
   .patch(
     auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN),
     fileHandler(),

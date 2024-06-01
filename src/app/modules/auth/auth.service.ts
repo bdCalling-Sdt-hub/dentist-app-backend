@@ -51,13 +51,6 @@ const forgetPasswordToDB = async (payload: IForgetPassword) => {
   //otp generate
   const otp = generateOTP()
 
-  //save to db
-  const authentication = {
-    oneTimeCode: otp,
-    expiresAt: new Date(Date.now() + 3 * 60000),
-  }
-  await User.findOneAndUpdate({ email: email }, { $set: { authentication } })
-
   //send email
   const data = {
     email,
@@ -65,6 +58,13 @@ const forgetPasswordToDB = async (payload: IForgetPassword) => {
   }
   const mailData = emailTemplate.forgetPassword(data)
   emailHelper.sendMail(mailData)
+
+  //save to db
+  const authentication = {
+    oneTimeCode: otp,
+    expiresAt: new Date(Date.now() + 3 * 60000),
+  }
+  await User.findOneAndUpdate({ email: email }, { $set: { authentication } })
 }
 
 const verifyOtpToDB = async (payload: IVerifyOtp) => {

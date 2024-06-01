@@ -34,6 +34,18 @@ const getAllOffer = catchAsync(async (req: Request, res: Response) => {
   })
 })
 
+const getSingleOffer = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id
+  const result = await OfferService.getSingleOfferFromDB(id)
+
+  sendResponse(res, {
+    success: true,
+    statusCode: StatusCodes.OK,
+    message: 'Offer retrieved successfully',
+    data: result,
+  })
+})
+
 const updateOffer = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id
   let offerImage
@@ -71,4 +83,5 @@ export const OfferController = {
   getAllOffer,
   updateOffer,
   deleteOffer,
+  getSingleOffer,
 }
