@@ -54,6 +54,8 @@ const fileHandler = () => {
     },
     fileFilter: fileFilter,
   }).fields([
+    { name: 'image', maxCount: 1 },
+    { name: 'profile', maxCount: 1 },
     { name: 'bannerImage', maxCount: 1 },
     { name: 'offerImage', maxCount: 1 },
     { name: 'articleCategoryImage', maxCount: 1 },

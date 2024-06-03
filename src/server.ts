@@ -1,7 +1,9 @@
 import colors from 'colors'
 import mongoose from 'mongoose'
+import { Server } from 'socket.io'
 import app from './app'
 import config from './config'
+import { socketHelper } from './helpers/socketHelper'
 import { errorLogger, logger } from './shared/logger'
 
 //uncaught exception
@@ -25,6 +27,18 @@ async function main() {
         colors.yellow(`🚀 Application Running on port:${config.port}`),
       )
     })
+
+    //socket
+    const io = new Server(server, {
+      pingTimeout: 60000,
+      cors: {
+        origin: '*',
+      },
+    })
+    socketHelper.socket(io)
+
+    //@ts-ignore
+    global.io = io
   } catch (error) {
     errorLogger.error(error)
   }

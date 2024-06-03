@@ -1,0 +1,158 @@
+Mon Jun 03 2024 15:1:10 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Mon Jun 03 2024 15:1:10 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Mon Jun 03 2024 15:4:2 [DENTIST] info: 192.168.10.16 - POST /api/v1/message/send-message 200 - 301.352 ms
+Mon Jun 03 2024 15:4:31 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Mon Jun 03 2024 15:4:31 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Mon Jun 03 2024 15:4:40 [DENTIST] info: 192.168.10.16 - POST /api/v1/message/send-message 200 - 275.073 ms
+Mon Jun 03 2024 15:6:58 [DENTIST] info: 192.168.10.7 - PATCH /api/v1/patient/profile-update 200 - 918.346 ms
+Mon Jun 03 2024 15:7:49 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 940.002 ms
+Mon Jun 03 2024 15:7:49 [DENTIST] info: 103.43.151.212 - GET /api/v1/banner 200 - 344.161 ms
+Mon Jun 03 2024 15:7:50 [DENTIST] info: 103.43.151.212 - GET /api/v1/offer 200 - 411.986 ms
+Mon Jun 03 2024 15:7:50 [DENTIST] info: 103.43.151.212 - GET /api/v1/smart-check 200 - 405.114 ms
+Mon Jun 03 2024 15:7:51 [DENTIST] info: 103.43.151.212 - GET /api/v1/faq 200 - 420.825 ms
+Mon Jun 03 2024 15:7:51 [DENTIST] info: 103.43.151.212 - GET /api/v1/article-category 200 - 328.361 ms
+Mon Jun 03 2024 15:7:52 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-two-1716273376207.png 200 - 3.353 ms
+Mon Jun 03 2024 15:7:52 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-two-1716273354351.png 200 - 3.134 ms
+Mon Jun 03 2024 15:7:52 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-1716273306695.png 200 - 2.188 ms
+Mon Jun 03 2024 15:7:58 [DENTIST] info: 103.43.151.212 - GET /api/v1/package 200 - 498.481 ms
+Mon Jun 03 2024 15:7:59 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 947.303 ms
+Mon Jun 03 2024 15:8:12 [DENTIST] info: 192.168.10.63 - POST /api/v1/auth/login 200 - 734.934 ms
+Mon Jun 03 2024 15:8:29 [DENTIST] info: 192.168.10.63 - POST /api/v1/message/send-message 200 - 346.135 ms
+Mon Jun 03 2024 15:9:0 [DENTIST] info: 192.168.10.63 - POST /api/v1/message/send-message 200 - 318.224 ms
+Mon Jun 03 2024 15:9:14 [DENTIST] info: 103.43.151.212 - GET /images/bruce-mars-8yg31xn4dsw-unsplash-1717405617856.jpg 200 - 1.047 ms
+Mon Jun 03 2024 15:9:19 [DENTIST] info: 192.168.10.16 - POST /api/v1/message/send-message 200 - 265.932 ms
+Mon Jun 03 2024 15:12:20 [DENTIST] info: 103.43.151.212 - GET /api/v1/article/category/Patient%20Care 200 - 520.231 ms
+Mon Jun 03 2024 15:12:20 [DENTIST] info: 103.43.151.212 - GET /images/checkup-1716871933264.png 200 - 11.513 ms
+Mon Jun 03 2024 15:12:21 [DENTIST] info: 103.43.151.212 - GET /api/v1/article/665562fd5cddb6417bf8c69d 200 - 537.287 ms
+Mon Jun 03 2024 15:12:21 [DENTIST] info: 103.43.151.212 - GET /images/slider-three-1716871933265.png 200 - 12.170 ms
+Mon Jun 03 2024 15:12:24 [DENTIST] info: 103.43.151.212 - GET /api/v1/article/665562fd5cddb6417bf8c69d 200 - 515.613 ms
+Mon Jun 03 2024 15:12:24 [DENTIST] info: 103.43.151.212 - GET /images/slider-two-1716871933266.png 200 - 1.709 ms
+Mon Jun 03 2024 15:12:24 [DENTIST] info: 103.43.151.212 - GET /images/slider-one-1716871933266.png 200 - 12.667 ms
+Mon Jun 03 2024 15:12:28 [DENTIST] info: 192.168.10.16 - POST /api/v1/chat 200 - 260.795 ms
+Mon Jun 03 2024 15:12:34 [DENTIST] info: 192.168.10.16 - POST /api/v1/chat 200 - 261.072 ms
+Mon Jun 03 2024 15:12:35 [DENTIST] info: 192.168.10.16 - POST /api/v1/chat 200 - 258.831 ms
+Mon Jun 03 2024 15:12:36 [DENTIST] info: 192.168.10.16 - POST /api/v1/chat 200 - 259.915 ms
+Mon Jun 03 2024 15:12:37 [DENTIST] info: 192.168.10.16 - POST /api/v1/chat 200 - 257.827 ms
+Mon Jun 03 2024 15:12:38 [DENTIST] info: 192.168.10.16 - POST /api/v1/chat 200 - 257.833 ms
+Mon Jun 03 2024 15:12:40 [DENTIST] info: 192.168.10.16 - POST /api/v1/chat 200 - 260.216 ms
+Mon Jun 03 2024 15:12:42 [DENTIST] info: 103.43.151.212 - GET /api/v1/article/category/Skin%20Condition 200 - 524.526 ms
+Mon Jun 03 2024 15:12:42 [DENTIST] info: 103.43.151.212 - GET /images/smile-design-1716872053384.png 200 - 3.276 ms
+Mon Jun 03 2024 15:12:45 [DENTIST] info: 192.168.10.16 - POST /api/v1/chat 200 - 264.613 ms
+Mon Jun 03 2024 15:12:46 [DENTIST] info: 192.168.10.16 - POST /api/v1/chat 200 - 256.784 ms
+Mon Jun 03 2024 15:12:47 [DENTIST] info: 192.168.10.16 - POST /api/v1/chat 200 - 258.384 ms
+Mon Jun 03 2024 15:12:48 [DENTIST] info: 192.168.10.16 - POST /api/v1/chat 200 - 257.895 ms
+Mon Jun 03 2024 15:12:49 [DENTIST] info: 192.168.10.16 - POST /api/v1/chat 200 - 258.056 ms
+Mon Jun 03 2024 15:12:50 [DENTIST] info: 192.168.10.16 - POST /api/v1/chat 200 - 257.661 ms
+Mon Jun 03 2024 15:15:10 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 522.701 ms
+Mon Jun 03 2024 15:15:11 [DENTIST] info: 103.43.151.212 - GET /api/v1/banner 200 - 261.903 ms
+Mon Jun 03 2024 15:15:11 [DENTIST] info: 103.43.151.212 - GET /api/v1/offer 200 - 261.521 ms
+Mon Jun 03 2024 15:15:11 [DENTIST] info: 103.43.151.212 - GET /api/v1/smart-check 200 - 260.727 ms
+Mon Jun 03 2024 15:15:12 [DENTIST] info: 103.43.151.212 - GET /api/v1/faq 200 - 257.867 ms
+Mon Jun 03 2024 15:15:12 [DENTIST] info: 103.43.151.212 - GET /api/v1/article-category 200 - 259.767 ms
+Mon Jun 03 2024 15:15:12 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-two-1716273354351.png 200 - 5.523 ms
+Mon Jun 03 2024 15:15:12 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-two-1716273376207.png 200 - 5.388 ms
+Mon Jun 03 2024 15:15:12 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-1716273306695.png 200 - 5.270 ms
+Mon Jun 03 2024 15:16:34 [DENTIST] info: 103.43.151.212 - GET /api/v1/article/category/Patient%20Care 200 - 516.490 ms
+Mon Jun 03 2024 15:16:34 [DENTIST] info: 103.43.151.212 - GET /images/checkup-1716871933264.png 200 - 0.926 ms
+Mon Jun 03 2024 15:16:35 [DENTIST] info: 103.43.151.212 - GET /api/v1/article/665562fd5cddb6417bf8c69d 200 - 522.665 ms
+Mon Jun 03 2024 15:16:36 [DENTIST] info: 103.43.151.212 - GET /images/slider-three-1716871933265.png 200 - 2.314 ms
+Mon Jun 03 2024 15:16:37 [DENTIST] info: 103.43.151.212 - GET /images/slider-two-1716871933266.png 200 - 1.992 ms
+Mon Jun 03 2024 15:17:32 [DENTIST] info: 103.43.151.212 - GET /api/v1/package 200 - 261.728 ms
+Mon Jun 03 2024 15:17:32 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 516.292 ms
+Mon Jun 03 2024 15:18:35 [DENTIST] info: 192.168.10.16 - GET /api/v1/contact 200 - 263.611 ms
+Mon Jun 03 2024 15:20:46 [DENTIST] info: 192.168.10.63 - POST /api/v1/message/send-message 200 - 296.900 ms
+Mon Jun 03 2024 15:20:50 [DENTIST] info: 192.168.10.16 - POST /api/v1/message/send-message 200 - 260.902 ms
+Mon Jun 03 2024 15:20:54 [DENTIST] info: 192.168.10.16 - POST /api/v1/message/send-message 200 - 264.967 ms
+Mon Jun 03 2024 15:23:33 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 519.182 ms
+Mon Jun 03 2024 15:23:33 [DENTIST] info: 103.43.151.212 - GET /api/v1/banner 200 - 259.527 ms
+Mon Jun 03 2024 15:23:34 [DENTIST] info: 103.43.151.212 - GET /api/v1/offer 200 - 257.513 ms
+Mon Jun 03 2024 15:23:34 [DENTIST] info: 103.43.151.212 - GET /api/v1/smart-check 200 - 258.842 ms
+Mon Jun 03 2024 15:23:34 [DENTIST] info: 103.43.151.212 - GET /api/v1/faq 200 - 263.726 ms
+Mon Jun 03 2024 15:23:34 [DENTIST] info: 103.43.151.212 - GET /api/v1/article-category 200 - 257.017 ms
+Mon Jun 03 2024 15:23:35 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-1716273306695.png 200 - 3.250 ms
+Mon Jun 03 2024 15:23:35 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-two-1716273354351.png 200 - 3.026 ms
+Mon Jun 03 2024 15:23:35 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-two-1716273376207.png 200 - 4.528 ms
+Mon Jun 03 2024 15:23:46 [DENTIST] info: 103.43.151.212 - GET /api/v1/package 200 - 261.166 ms
+Mon Jun 03 2024 15:23:46 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 516.908 ms
+Mon Jun 03 2024 15:25:56 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 521.250 ms
+Mon Jun 03 2024 15:25:57 [DENTIST] info: 103.43.151.212 - GET /api/v1/banner 200 - 260.091 ms
+Mon Jun 03 2024 15:25:57 [DENTIST] info: 103.43.151.212 - GET /api/v1/offer 200 - 260.526 ms
+Mon Jun 03 2024 15:25:57 [DENTIST] info: 103.43.151.212 - GET /api/v1/smart-check 200 - 257.742 ms
+Mon Jun 03 2024 15:25:58 [DENTIST] info: 103.43.151.212 - GET /api/v1/faq 200 - 258.605 ms
+Mon Jun 03 2024 15:25:58 [DENTIST] info: 103.43.151.212 - GET /api/v1/article-category 200 - 260.367 ms
+Mon Jun 03 2024 15:25:58 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-1716273306695.png 200 - 2.208 ms
+Mon Jun 03 2024 15:25:58 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-two-1716273354351.png 200 - 2.667 ms
+Mon Jun 03 2024 15:25:58 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-two-1716273376207.png 200 - 2.795 ms
+Mon Jun 03 2024 15:26:6 [DENTIST] info: 103.43.151.212 - GET /api/v1/package 200 - 261.846 ms
+Mon Jun 03 2024 15:26:6 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 513.753 ms
+Mon Jun 03 2024 15:26:20 [DENTIST] info: 103.43.151.212 - PATCH /api/v1/patient/profile-update 200 - 844.720 ms
+Mon Jun 03 2024 15:26:20 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 516.813 ms
+Mon Jun 03 2024 15:26:20 [DENTIST] info: 103.43.151.212 - GET /images/scaled_1000000854-1717406779206.jpg 200 - 1.784 ms
+Mon Jun 03 2024 15:26:55 [DENTIST] info: 103.43.151.212 - PATCH /api/v1/patient/profile-update 200 - 818.137 ms
+Mon Jun 03 2024 15:26:56 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 515.022 ms
+Mon Jun 03 2024 15:26:56 [DENTIST] info: 103.43.151.212 - GET /images/scaled_1000000913-1717406814962.jpg 200 - 1.405 ms
+Mon Jun 03 2024 15:27:43 [DENTIST] info: 103.43.151.212 - PATCH /api/v1/patient/profile-update 200 - 817.426 ms
+Mon Jun 03 2024 15:27:44 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 516.465 ms
+Mon Jun 03 2024 15:27:44 [DENTIST] info: 103.43.151.212 - GET /images/scaled_1000000630-1717406862932.jpg 200 - 1.878 ms
+Mon Jun 03 2024 15:30:8 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 519.350 ms
+Mon Jun 03 2024 15:30:8 [DENTIST] info: 103.43.151.212 - GET /api/v1/banner 200 - 256.686 ms
+Mon Jun 03 2024 15:30:8 [DENTIST] info: 103.43.151.212 - GET /api/v1/offer 200 - 258.459 ms
+Mon Jun 03 2024 15:30:9 [DENTIST] info: 103.43.151.212 - GET /api/v1/smart-check 200 - 256.893 ms
+Mon Jun 03 2024 15:30:9 [DENTIST] info: 103.43.151.212 - GET /api/v1/faq 200 - 255.714 ms
+Mon Jun 03 2024 15:30:9 [DENTIST] info: 103.43.151.212 - GET /api/v1/article-category 200 - 258.329 ms
+Mon Jun 03 2024 15:30:10 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-two-1716273376207.png 200 - 1.000 ms
+Mon Jun 03 2024 15:30:10 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-two-1716273354351.png 200 - 1.386 ms
+Mon Jun 03 2024 15:30:10 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-1716273306695.png 200 - 0.366 ms
+Mon Jun 03 2024 15:34:27 [DENTIST] info: 103.43.151.212 - GET /api/v1/package 200 - 257.765 ms
+Mon Jun 03 2024 15:34:28 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 515.114 ms
+Mon Jun 03 2024 15:35:4 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 658.515 ms
+Mon Jun 03 2024 15:35:5 [DENTIST] info: 103.43.151.212 - GET /api/v1/banner 200 - 346.784 ms
+Mon Jun 03 2024 15:35:5 [DENTIST] info: 103.43.151.212 - GET /api/v1/offer 200 - 350.812 ms
+Mon Jun 03 2024 15:35:6 [DENTIST] info: 103.43.151.212 - GET /api/v1/smart-check 200 - 329.778 ms
+Mon Jun 03 2024 15:35:6 [DENTIST] info: 103.43.151.212 - GET /api/v1/faq 200 - 331.823 ms
+Mon Jun 03 2024 15:35:6 [DENTIST] info: 103.43.151.212 - GET /api/v1/article-category 200 - 275.145 ms
+Mon Jun 03 2024 15:35:7 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-1716273306695.png 200 - 0.770 ms
+Mon Jun 03 2024 15:35:7 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-two-1716273354351.png 200 - 1.105 ms
+Mon Jun 03 2024 15:35:7 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-two-1716273376207.png 200 - 1.371 ms
+Mon Jun 03 2024 15:35:8 [DENTIST] info: 103.43.151.212 - GET /api/v1/package 200 - 328.900 ms
+Mon Jun 03 2024 15:35:9 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 849.251 ms
+Mon Jun 03 2024 15:35:24 [DENTIST] info: 103.43.151.212 - PATCH /api/v1/patient/profile-update 200 - 1776.902 ms
+Mon Jun 03 2024 15:35:25 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 586.060 ms
+Mon Jun 03 2024 15:35:25 [DENTIST] info: 103.43.151.212 - GET /images/scaled_1000000906-1717407322599.jpg 200 - 0.595 ms
+Mon Jun 03 2024 15:42:37 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 522.417 ms
+Mon Jun 03 2024 15:42:38 [DENTIST] info: 103.43.151.212 - GET /api/v1/banner 200 - 255.625 ms
+Mon Jun 03 2024 15:42:38 [DENTIST] info: 103.43.151.212 - GET /api/v1/offer 200 - 257.177 ms
+Mon Jun 03 2024 15:42:38 [DENTIST] info: 103.43.151.212 - GET /api/v1/smart-check 200 - 256.646 ms
+Mon Jun 03 2024 15:42:39 [DENTIST] info: 103.43.151.212 - GET /api/v1/faq 200 - 255.080 ms
+Mon Jun 03 2024 15:42:39 [DENTIST] info: 103.43.151.212 - GET /api/v1/article-category 200 - 258.332 ms
+Mon Jun 03 2024 15:42:39 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-two-1716273354351.png 200 - 0.857 ms
+Mon Jun 03 2024 15:42:39 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-1716273306695.png 200 - 1.924 ms
+Mon Jun 03 2024 15:42:39 [DENTIST] info: 103.43.151.212 - GET /images/dentist-banner-two-1716273376207.png 200 - 1.866 ms
+Mon Jun 03 2024 15:42:56 [DENTIST] info: 103.43.151.212 - GET /api/v1/package 200 - 255.851 ms
+Mon Jun 03 2024 15:42:56 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 508.774 ms
+Mon Jun 03 2024 15:43:4 [DENTIST] info: 103.43.151.212 - PATCH /api/v1/patient/profile-update 200 - 816.974 ms
+Mon Jun 03 2024 15:43:5 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 514.499 ms
+Mon Jun 03 2024 15:43:5 [DENTIST] info: 103.43.151.212 - GET /images/scaled_1000000901-1717407783821.jpg 200 - 1.629 ms
+Mon Jun 03 2024 15:43:16 [DENTIST] info: 103.43.151.212 - PATCH /api/v1/patient/profile-update 200 - 776.975 ms
+Mon Jun 03 2024 15:43:17 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 508.030 ms
+Mon Jun 03 2024 15:43:17 [DENTIST] info: 103.43.151.212 - GET /images/scaled_1000000901-1717407795689.jpg 200 - 0.526 ms
+Mon Jun 03 2024 15:44:5 [DENTIST] info: 103.43.151.212 - PATCH /api/v1/patient/profile-update 200 - 791.891 ms
+Mon Jun 03 2024 15:44:6 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 512.432 ms
+Mon Jun 03 2024 15:44:6 [DENTIST] info: 103.43.151.212 - GET /images/scaled_1000000901-1717407844992.jpg 200 - 1.189 ms
+Mon Jun 03 2024 15:44:23 [DENTIST] info: 103.43.151.212 - PATCH /api/v1/patient/profile-update 200 - 786.934 ms
+Mon Jun 03 2024 15:44:24 [DENTIST] info: 103.43.151.212 - GET /api/v1/user/profile 200 - 514.158 ms
+Mon Jun 03 2024 15:44:24 [DENTIST] info: 103.43.151.212 - GET /images/scaled_1000000901-1717407862768.jpg 200 - 1.589 ms
+Mon Jun 03 2024 15:46:51 [DENTIST] info: 192.168.10.7 - GET /api/v1/article/665563755cddb6417bf8c6a1 200 - 792.037 ms
+Mon Jun 03 2024 15:47:50 [DENTIST] info: 192.168.10.7 - GET /api/v1/contact 200 - 257.214 ms
+Mon Jun 03 2024 15:52:11 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Mon Jun 03 2024 15:52:11 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Mon Jun 03 2024 15:55:25 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Mon Jun 03 2024 15:55:25 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Mon Jun 03 2024 15:57:39 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Mon Jun 03 2024 15:57:39 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Mon Jun 03 2024 15:58:8 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Mon Jun 03 2024 15:58:8 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Mon Jun 03 2024 15:59:0 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Mon Jun 03 2024 15:59:0 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Mon Jun 03 2024 15:59:53 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Mon Jun 03 2024 15:59:53 [DENTIST] info: [33m🚀 Application Running on port:5001[39m

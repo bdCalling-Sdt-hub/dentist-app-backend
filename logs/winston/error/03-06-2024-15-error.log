@@ -1,0 +1,5 @@
+Mon Jun 03 2024 15:20:3 [DENTIST] error: 103.43.151.212 - POST /api/v1/patient/profile-update 404 - 0.563 ms
+Mon Jun 03 2024 15:23:56 [DENTIST] error: 103.43.151.212 - POST /api/v1/patient/profile-update 404 - 0.425 ms
+Mon Jun 03 2024 15:46:13 [DENTIST] error: 192.168.10.7 - GET /api/v1/article/665563755cddb6417bf8c6a1 401 - 6.094 ms
+Mon Jun 03 2024 15:46:25 [DENTIST] error: 192.168.10.7 - GET /api/v1/article/665563755cddb6417bf8c6a1 401 - 2.484 ms
+Mon Jun 03 2024 15:46:26 [DENTIST] error: 192.168.10.7 - GET /api/v1/article/665563755cddb6417bf8c6a1 401 - 15.094 ms
