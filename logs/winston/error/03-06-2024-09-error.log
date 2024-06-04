@@ -1,4 +1,0 @@
-Mon Jun 03 2024 9:54:0 [DENTIST] error: 192.168.10.16 - GET /api/v1/user/profile 401 - 2.195 ms
-Mon Jun 03 2024 9:54:15 [DENTIST] error: 192.168.10.16 - GET /api/v1/user/profile 500 - 1.329 ms
-Mon Jun 03 2024 9:57:42 [DENTIST] error: 192.168.10.7 - GET /api/v1/rule/terms-and-conditions 401 - 8.911 ms
-Mon Jun 03 2024 9:58:26 [DENTIST] error: 192.168.10.7 - POST /api/v1/auth/login 400 - 473.688 ms

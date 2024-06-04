@@ -75,3 +75,8 @@ Mon Jun 03 2024 16:13:9 [DENTIST] info: 192.168.10.63 - POST /api/v1/message/sen
 Mon Jun 03 2024 16:13:25 [DENTIST] info: 192.168.10.16 - POST /api/v1/message/send-message 200 - 264.274 ms
 Mon Jun 03 2024 16:14:22 [DENTIST] info: [32m♻️  Database connected successfully[39m
 Mon Jun 03 2024 16:14:22 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Mon Jun 03 2024 16:15:0 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Mon Jun 03 2024 16:15:0 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Mon Jun 03 2024 16:15:11 [DENTIST] info: 192.168.10.63 - POST /api/v1/message/send-message 200 - 285.238 ms
+Mon Jun 03 2024 16:15:31 [DENTIST] info: 192.168.10.16 - POST /api/v1/message/send-message 200 - 269.371 ms
+Mon Jun 03 2024 16:16:5 [DENTIST] info: 192.168.10.63 - POST /api/v1/message/send-message 200 - 274.875 ms

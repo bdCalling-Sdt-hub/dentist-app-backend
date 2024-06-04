@@ -1,5 +1,0 @@
-Mon Jun 03 2024 11:5:10 [DENTIST] error: 192.168.10.16 - PATCH /api/v1/patient/profile-update 400 - 2006.802 ms
-Mon Jun 03 2024 11:7:35 [DENTIST] error: 192.168.10.7 - PATCH /api/v1/patient/profile-update 400 - 517.984 ms
-Mon Jun 03 2024 11:56:14 [DENTIST] error: 103.43.151.212 - POST /api/v1/patient/profile-update 404 - 9.676 ms
-Mon Jun 03 2024 11:56:20 [DENTIST] error: 103.43.151.212 - POST /api/v1/patient/profile-update 404 - 0.674 ms
-Mon Jun 03 2024 11:56:30 [DENTIST] error: 103.43.151.212 - POST /api/v1/patient/profile-update 404 - 0.662 ms
