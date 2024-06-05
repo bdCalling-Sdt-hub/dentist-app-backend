@@ -1,5 +1,0 @@
-Mon Jun 03 2024 16:5:19 [DENTIST] error: 192.168.10.16 - POST /api/v1/message/send-message 400 - 18.793 ms
-Mon Jun 03 2024 16:8:34 [DENTIST] error: 192.168.10.7 - GET /api/v1/chat/patient-chat-list 401 - 8.957 ms
-Mon Jun 03 2024 16:8:42 [DENTIST] error: 192.168.10.7 - GET /api/v1/chat/patient-chat-list 403 - 8.761 ms
-Mon Jun 03 2024 16:8:51 [DENTIST] error: 192.168.10.7 - GET /api/v1/chat/patient-chat-list 403 - 10.229 ms
-Mon Jun 03 2024 16:8:59 [DENTIST] error: 192.168.10.7 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 401 - 6.206 ms
