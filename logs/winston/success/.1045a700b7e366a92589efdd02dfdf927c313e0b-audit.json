@@ -6,24 +6,24 @@
     "auditLog": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\success\\.1045a700b7e366a92589efdd02dfdf927c313e0b-audit.json",
     "files": [
         {
-            "date": 1717474847523,
-            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\success\\04-06-2024-10-success.log",
-            "hash": "7babfde14038bae3f2e52d17129c002705da11089b326abd06c337f14bc7f820"
+            "date": 1717665791416,
+            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\success\\06-06-2024-15-success.log",
+            "hash": "1d196856dc82068cdb097fd23afc8f2e54b35f23b49bf9acbdd1fdc1838f7a20"
         },
         {
-            "date": 1717478314260,
-            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\success\\04-06-2024-11-success.log",
-            "hash": "bce5c696bb660e9fad8c0b5dde020d91c7e4fea58a01c2f9a9920bfec98cc4c5"
+            "date": 1717668581672,
+            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\success\\06-06-2024-16-success.log",
+            "hash": "a05e8edebab4bf86d555638bde1e97635aba384f1ce711a46b1bc6e502dbec4d"
         },
         {
-            "date": 1717480819104,
-            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\success\\04-06-2024-12-success.log",
-            "hash": "9b50f806b92e92bc6b25e2974a887a05bdb3acf91a0ea77a8d9cc46667db0e35"
+            "date": 1717671822717,
+            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\success\\06-06-2024-17-success.log",
+            "hash": "5b9c3f3c6327363188d2c80fe9ae19d6767ead31ee2facafa6fac196207b5438"
         },
         {
-            "date": 1717558696624,
-            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\success\\05-06-2024-09-success.log",
-            "hash": "e4162fd31ff3b4cedfd88e6521d893f19aeedbe283395fa80b913624f5e7c150"
+            "date": 1717675439295,
+            "name": "D:\\Fahim\\bdCalling\\Backend\\dentist-app-backend\\logs\\winston\\success\\06-06-2024-18-success.log",
+            "hash": "7b4bd200e9ac067149a9ca75115863241baf92961bbba0b4c457e5f6010c77fa"
         }
     ],
     "hashType": "sha256"

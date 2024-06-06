@@ -3,7 +3,7 @@ import { z } from 'zod'
 const createLoginZodSchema = z.object({
   body: z.object({
     email: z.string({ required_error: 'Email is required' }),
-    pin: z.string({ required_error: 'Pin is required' }),
+    pin: z.string().optional(),
     password: z.string({ required_error: 'Password is required' }),
   }),
 })

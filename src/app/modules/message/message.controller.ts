@@ -21,7 +21,12 @@ const sendMessage = catchAsync(async (req: Request, res: Response) => {
     messageData.messageType = fileType(req.files.image[0].mimetype)
   }
 
-  if (data.text && req.files) {
+  if (
+    data.text !== '' &&
+    req.files &&
+    'image' in req.files &&
+    req.files.image[0]
+  ) {
     messageData.messageType = 'both'
   }
 

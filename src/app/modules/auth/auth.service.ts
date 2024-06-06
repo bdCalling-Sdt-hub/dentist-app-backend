@@ -2,6 +2,7 @@ import bcrypt from 'bcrypt'
 import { StatusCodes } from 'http-status-codes'
 import { JwtPayload, Secret } from 'jsonwebtoken'
 import config from '../../../config'
+import { USER_TYPE } from '../../../enums/user'
 import ApiError from '../../../errors/ApiError'
 import { emailHelper } from '../../../helpers/emailHelper'
 import { jwtHelper } from '../../../helpers/jwtHelper'
@@ -15,7 +16,6 @@ import { User } from './../user/user.model'
 
 const loginUserFromDB = async (payload: Partial<IUser>) => {
   const { email, pin, password } = payload
-
   const isUserExist = await User.findOne({ email }).select('+password +pin')
   if (!isUserExist) {
     throw new ApiError(StatusCodes.BAD_REQUEST, "User doesn't exist!")
@@ -26,9 +26,11 @@ const loginUserFromDB = async (payload: Partial<IUser>) => {
     throw new ApiError(StatusCodes.BAD_REQUEST, 'Password is incorrect!')
   }
 
-  const isMatchPin = await bcrypt.compare(pin!, isUserExist.pin!)
-  if (!isMatchPin) {
-    throw new ApiError(StatusCodes.BAD_REQUEST, 'Pin is incorrect!')
+  if (pin && isUserExist.role === USER_TYPE.PATIENT) {
+    const isMatchPin = await bcrypt.compare(pin!, isUserExist.pin!)
+    if (!isMatchPin) {
+      throw new ApiError(StatusCodes.BAD_REQUEST, 'Pin is incorrect!')
+    }
   }
 
   //jwt sign
