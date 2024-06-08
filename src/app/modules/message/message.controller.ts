@@ -1,6 +1,8 @@
 import { Request, Response } from 'express'
 import { StatusCodes } from 'http-status-codes'
 import catchAsync from '../../../shared/catchAsync'
+import { paginationFields } from '../../../shared/constant'
+import pick from '../../../shared/pick'
 import sendResponse from '../../../shared/sendResponse'
 import { fileType } from '../../../util/fileType'
 import { MessageService } from './message.service'
@@ -40,13 +42,18 @@ const sendMessage = catchAsync(async (req: Request, res: Response) => {
 })
 
 const getMessages = catchAsync(async (req: Request, res: Response) => {
+  const paginationOptions = pick(req.query, paginationFields)
   const chatId = req.params.chatId
-  const result = await MessageService.getMessagesFromDB(chatId)
+  const result = await MessageService.getMessagesFromDB(
+    chatId,
+    paginationOptions,
+  )
   sendResponse(res, {
     success: true,
     statusCode: StatusCodes.OK,
     message: 'Message retrieved successfully',
-    data: result,
+    pagination: result.meta,
+    data: result.data,
   })
 })
 
