@@ -3,12 +3,15 @@ import { JwtPayload } from 'jsonwebtoken'
 import mongoose, { SortOrder, startSession } from 'mongoose'
 import { USER_TYPE } from '../../../enums/user'
 import ApiError from '../../../errors/ApiError'
+import { emailHelper } from '../../../helpers/emailHelper'
 import { paginationHelper } from '../../../helpers/paginationHelper'
 import { selectedUserField } from '../../../shared/constant'
+import { emailTemplate } from '../../../shared/emailTemplate'
 import { IGenericResponse } from '../../../types/common'
+import { ICreatePatientTemplate } from '../../../types/emailTypes'
 import { IPaginationOptions } from '../../../types/pagination'
 import { Admin } from '../admin/admin.model'
-import { IPatient } from '../patient/patient.interface'
+import { IPatient, IPatientFilterOptions } from '../patient/patient.interface'
 import { Patient } from '../patient/patient.model'
 import { IUser } from './user.interface'
 import { User } from './user.model'
@@ -53,22 +56,60 @@ const createPatientToDB = async (payload: IUserPayload) => {
   return newUserData
 }
 
+//send email to patient
+const sendEmailFromDB = async (payload: ICreatePatientTemplate) => {
+  const emailData = emailTemplate.createPatient(payload)
+  emailHelper.sendMail(emailData)
+}
+
 const getAllPatientFromDB = async (
   paginationOptions: IPaginationOptions,
+  filterOptions: IPatientFilterOptions,
 ): Promise<IGenericResponse<IUser[]>> => {
   const { skip, page, limit, sortBy, sortOrder } =
     paginationHelper.calculatePagination(paginationOptions)
+  const { search, category } = filterOptions
+
+  const andConditions = []
+  if (search) {
+    const patineIds = await Patient.find({
+      $or: [
+        { name: { $regex: search, $options: 'i' } },
+        { contactNo: { $regex: search, $options: 'i' } },
+        { gender: { $regex: search, $options: 'i' } },
+        { plan: { $regex: search, $options: 'i' } },
+      ],
+    }).distinct('_id')
+
+    andConditions.push({
+      $or: [
+        { patient: { $in: patineIds } },
+        { email: { $regex: search, $options: 'i' } },
+      ],
+    })
+  }
+  andConditions.push({ role: USER_TYPE.PATIENT })
+
+  if (category) {
+    const categoryIds = await Patient.find({ category: category }).distinct(
+      '_id',
+    )
+    andConditions.push({ $and: [{ patient: { $in: categoryIds } }] })
+  }
 
   const sortCondition: { [key: string]: SortOrder } = {}
   if (sortBy && sortOrder) {
     sortCondition[sortBy] = sortOrder
   }
-  const result = await User.find({ role: USER_TYPE.PATIENT })
+  const whereConditions =
+    andConditions.length > 0 ? { $and: andConditions } : {}
+  const result = await User.find(whereConditions)
     .sort(sortCondition)
+    .populate('patient')
     .skip(skip)
     .limit(limit)
 
-  const total = await User.countDocuments({ role: USER_TYPE.PATIENT })
+  const total = await User.countDocuments(whereConditions)
   const totalPage = Math.ceil(total / limit)
   return {
     meta: {
@@ -194,4 +235,5 @@ export const UserService = {
   getAllAdminFromDB,
   getAllPatientFromDB,
   deleteAdminFromDB,
+  sendEmailFromDB,
 }

@@ -1,0 +1,132 @@
+Wed Jun 12 2024 17:3:24 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 17:3:24 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 17:6:48 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 17:6:48 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 17:6:53 [DENTIST] info: 192.168.10.16 - GET /api/v1/user/patient?category=gum 200 - 1044.252 ms
+Wed Jun 12 2024 17:7:16 [DENTIST] info: 192.168.10.16 - GET /api/v1/user/patient?search=fahim&category=gum 200 - 1290.452 ms
+Wed Jun 12 2024 17:16:0 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/category 204 - 0.346 ms
+Wed Jun 12 2024 17:16:0 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1 204 - 0.079 ms
+Wed Jun 12 2024 17:16:0 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.042 ms
+Wed Jun 12 2024 17:16:1 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 503.998 ms
+Wed Jun 12 2024 17:16:1 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 513.713 ms
+Wed Jun 12 2024 17:16:1 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1 304 - 731.538 ms
+Wed Jun 12 2024 17:16:1 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.823 ms
+Wed Jun 12 2024 17:16:1 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 499.890 ms
+Wed Jun 12 2024 17:16:1 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 513.226 ms
+Wed Jun 12 2024 17:16:2 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1 304 - 731.467 ms
+Wed Jun 12 2024 17:17:49 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 17:17:49 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 17:21:29 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/category 204 - 0.751 ms
+Wed Jun 12 2024 17:21:29 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 522.832 ms
+Wed Jun 12 2024 17:21:30 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 512.112 ms
+Wed Jun 12 2024 17:21:51 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/category 204 - 0.089 ms
+Wed Jun 12 2024 17:21:51 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 513.518 ms
+Wed Jun 12 2024 17:21:55 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 511.277 ms
+Wed Jun 12 2024 17:23:20 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 17:23:20 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 17:24:26 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/category 204 - 0.604 ms
+Wed Jun 12 2024 17:24:26 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/category 204 - 0.149 ms
+Wed Jun 12 2024 17:24:26 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 525.630 ms
+Wed Jun 12 2024 17:24:27 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 517.216 ms
+Wed Jun 12 2024 17:24:28 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1 204 - 0.060 ms
+Wed Jun 12 2024 17:24:28 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1 204 - 0.052 ms
+Wed Jun 12 2024 17:24:28 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 1.662 ms
+Wed Jun 12 2024 17:24:28 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 519.306 ms
+Wed Jun 12 2024 17:24:29 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1 304 - 756.558 ms
+Wed Jun 12 2024 17:24:29 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 516.564 ms
+Wed Jun 12 2024 17:24:29 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1 304 - 752.083 ms
+Wed Jun 12 2024 17:24:29 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 515.642 ms
+Wed Jun 12 2024 17:24:30 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 515.396 ms
+Wed Jun 12 2024 17:25:25 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 17:25:25 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 17:26:13 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1&category=Toothache 204 - 0.592 ms
+Wed Jun 12 2024 17:26:15 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1&category=Toothache 200 - 1057.466 ms
+Wed Jun 12 2024 17:26:17 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1&category=Cold 204 - 0.099 ms
+Wed Jun 12 2024 17:26:18 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1&category=Cold 200 - 1043.677 ms
+Wed Jun 12 2024 17:28:7 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 17:28:7 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 17:28:24 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/category 204 - 0.712 ms
+Wed Jun 12 2024 17:28:24 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/category 204 - 0.150 ms
+Wed Jun 12 2024 17:28:24 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1 204 - 0.096 ms
+Wed Jun 12 2024 17:28:24 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.076 ms
+Wed Jun 12 2024 17:28:24 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1 204 - 0.052 ms
+Wed Jun 12 2024 17:28:24 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.079 ms
+Wed Jun 12 2024 17:28:24 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 518.371 ms
+Wed Jun 12 2024 17:28:24 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 546.376 ms
+Wed Jun 12 2024 17:28:25 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1 304 - 793.945 ms
+Wed Jun 12 2024 17:28:25 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.813 ms
+Wed Jun 12 2024 17:28:25 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 507.203 ms
+Wed Jun 12 2024 17:28:25 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 533.906 ms
+Wed Jun 12 2024 17:28:25 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1 304 - 785.146 ms
+Wed Jun 12 2024 17:28:25 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 534.571 ms
+Wed Jun 12 2024 17:28:26 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 534.258 ms
+Wed Jun 12 2024 17:28:30 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1&search=F 204 - 0.084 ms
+Wed Jun 12 2024 17:28:30 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1&search=Fa 204 - 0.067 ms
+Wed Jun 12 2024 17:28:30 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1&search=Fah 204 - 0.065 ms
+Wed Jun 12 2024 17:28:31 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1&search=F 200 - 1068.567 ms
+Wed Jun 12 2024 17:28:31 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1&search=Fahi 204 - 0.078 ms
+Wed Jun 12 2024 17:28:31 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1&search=Fahim 204 - 0.078 ms
+Wed Jun 12 2024 17:28:31 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1&search=Fa 200 - 1041.131 ms
+Wed Jun 12 2024 17:28:31 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1&search=Fah 200 - 1011.606 ms
+Wed Jun 12 2024 17:28:32 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1&search=Fahi 200 - 1064.286 ms
+Wed Jun 12 2024 17:28:32 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1&search=Fahim 200 - 1083.222 ms
+Wed Jun 12 2024 17:28:33 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1 204 - 0.058 ms
+Wed Jun 12 2024 17:28:34 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1 304 - 807.902 ms
+Wed Jun 12 2024 17:28:45 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/category 204 - 0.059 ms
+Wed Jun 12 2024 17:28:45 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/category 204 - 0.057 ms
+Wed Jun 12 2024 17:28:45 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 537.015 ms
+Wed Jun 12 2024 17:28:46 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 536.788 ms
+Wed Jun 12 2024 17:28:46 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1 204 - 0.075 ms
+Wed Jun 12 2024 17:28:46 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1 204 - 0.064 ms
+Wed Jun 12 2024 17:28:47 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 537.502 ms
+Wed Jun 12 2024 17:28:47 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1 304 - 802.403 ms
+Wed Jun 12 2024 17:28:47 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 536.779 ms
+Wed Jun 12 2024 17:28:48 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1 304 - 802.185 ms
+Wed Jun 12 2024 17:28:48 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 537.416 ms
+Wed Jun 12 2024 17:28:49 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 541.614 ms
+Wed Jun 12 2024 17:29:22 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/category 204 - 0.066 ms
+Wed Jun 12 2024 17:29:22 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/category 204 - 0.044 ms
+Wed Jun 12 2024 17:29:22 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1 204 - 0.044 ms
+Wed Jun 12 2024 17:29:22 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.047 ms
+Wed Jun 12 2024 17:29:22 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 537.764 ms
+Wed Jun 12 2024 17:29:22 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 506.854 ms
+Wed Jun 12 2024 17:29:23 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1 304 - 802.343 ms
+Wed Jun 12 2024 17:29:23 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.409 ms
+Wed Jun 12 2024 17:29:23 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 536.348 ms
+Wed Jun 12 2024 17:29:23 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 506.195 ms
+Wed Jun 12 2024 17:29:24 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1 304 - 801.138 ms
+Wed Jun 12 2024 17:29:24 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 536.293 ms
+Wed Jun 12 2024 17:29:24 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 537.116 ms
+Wed Jun 12 2024 17:43:18 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 17:43:18 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 17:43:50 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 17:43:50 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 17:44:16 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 17:44:16 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 17:44:26 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 17:44:26 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 17:45:33 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 17:45:33 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 17:47:35 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 17:47:35 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 17:47:45 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 17:47:45 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 17:47:51 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 17:47:51 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 17:49:37 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/category 204 - 0.923 ms
+Wed Jun 12 2024 17:49:37 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.184 ms
+Wed Jun 12 2024 17:49:37 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/category 204 - 0.083 ms
+Wed Jun 12 2024 17:49:37 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient?page=1 204 - 0.056 ms
+Wed Jun 12 2024 17:49:37 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 505.540 ms
+Wed Jun 12 2024 17:49:37 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 528.832 ms
+Wed Jun 12 2024 17:49:37 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1 304 - 761.888 ms
+Wed Jun 12 2024 17:49:37 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.989 ms
+Wed Jun 12 2024 17:49:38 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 495.020 ms
+Wed Jun 12 2024 17:49:38 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 521.707 ms
+Wed Jun 12 2024 17:49:38 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient?page=1 304 - 756.250 ms
+Wed Jun 12 2024 17:49:38 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 519.977 ms
+Wed Jun 12 2024 17:49:39 [DENTIST] info: 192.168.10.102 - GET /api/v1/category 304 - 520.095 ms
+Wed Jun 12 2024 17:50:2 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 17:50:2 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 17:51:53 [DENTIST] info: 192.168.10.16 - POST /api/v1/user/send-mail 200 - 28.762 ms
+Wed Jun 12 2024 17:52:26 [DENTIST] info: MAIL SEND SUCCESSFULLY

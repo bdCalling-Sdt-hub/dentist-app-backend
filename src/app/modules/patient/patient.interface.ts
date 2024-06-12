@@ -12,3 +12,8 @@ export type IPatient = {
 }
 
 export type PatientModel = {} & Model<IPatient>
+
+export type IPatientFilterOptions = {
+  search?: string
+  category?: string
+}

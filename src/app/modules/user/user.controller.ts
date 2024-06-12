@@ -19,9 +19,25 @@ const createPatient = catchAsync(async (req: Request, res: Response) => {
   })
 })
 
+const sendEmail = catchAsync(async (req: Request, res: Response) => {
+  const { ...sendData } = req.body
+  const result = await UserService.sendEmailFromDB(sendData)
+
+  sendResponse(res, {
+    statusCode: StatusCodes.OK,
+    success: true,
+    message: 'Email send successfully',
+    data: result,
+  })
+})
+
 const getAllPatient = catchAsync(async (req: Request, res: Response) => {
   const paginationOptions = pick(req.query, paginationFields)
-  const result = await UserService.getAllPatientFromDB(paginationOptions)
+  const filterOptions = pick(req.query, ['search', 'category'])
+  const result = await UserService.getAllPatientFromDB(
+    paginationOptions,
+    filterOptions,
+  )
 
   sendResponse(res, {
     statusCode: StatusCodes.OK,
@@ -90,4 +106,5 @@ export const UserController = {
   getProfile,
   getAllPatient,
   deleteAdmin,
+  sendEmail,
 }

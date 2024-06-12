@@ -8,3 +8,9 @@ export type IForgetPasswordTemplate = {
   email: string
   otp: string
 }
+
+export type ICreatePatientTemplate = {
+  name: string
+  email: string
+  password: string
+}

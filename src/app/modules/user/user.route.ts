@@ -14,6 +14,13 @@ router.post(
   UserController.createPatient,
 )
 
+router.post(
+  '/send-mail',
+  auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN),
+  validateRequest(UserValidation.sendEmail),
+  UserController.sendEmail,
+)
+
 router.get(
   '/patient',
   auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN),
