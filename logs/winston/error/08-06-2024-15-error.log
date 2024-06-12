@@ -1,4 +1,0 @@
-Sat Jun 08 2024 15:26:40 [DENTIST] error: 192.168.10.7 - POST /api/v1/auth/login 400 - 466.469 ms
-Sat Jun 08 2024 15:26:46 [DENTIST] error: 192.168.10.7 - POST /api/v1/auth/login 400 - 462.741 ms
-Sat Jun 08 2024 15:27:41 [DENTIST] error: 192.168.10.7 - POST /api/v1/message/send-message 400 - 11.992 ms
-Sat Jun 08 2024 15:29:12 [DENTIST] error: 192.168.10.7 - POST /api/v1/auth/login 400 - 455.169 ms

@@ -17,9 +17,15 @@ const createCategory = catchAsync(async (req: Request, res: Response) => {
     data: result,
   })
 })
+
 const getCategories = catchAsync(async (req: Request, res: Response) => {
   const paginationOptions = pick(req.query, paginationFields)
-  const result = await CategoryService.getCategoriesFromDB(paginationOptions)
+  const filterOptions = pick(req.query, ['search'])
+
+  const result = await CategoryService.getCategoriesFromDB(
+    paginationOptions,
+    filterOptions,
+  )
 
   sendResponse(res, {
     success: true,
@@ -29,6 +35,7 @@ const getCategories = catchAsync(async (req: Request, res: Response) => {
     data: result.data,
   })
 })
+
 const updateCategory = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id
   const { ...updateCategoryData } = req.body

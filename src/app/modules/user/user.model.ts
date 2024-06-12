@@ -82,7 +82,7 @@ userSchema.pre('save', async function (next) {
     Number(config.bcrypt_salt_rounds),
   )
   //pin hash
-  user.pin = await bcrypt.hash(user.pin!, Number(config.bcrypt_salt_rounds))
+  //user.pin = await bcrypt.hash(user.pin!, Number(config.bcrypt_salt_rounds))
 
   next()
 })

@@ -11,6 +11,14 @@ const createPackageZodSchema = z.object({
   }),
 })
 
+const updatePackageZodSchema = z.object({
+  body: z.object({
+    packageName: z.string().optional(),
+    packageDetails: z.array(z.string()).optional(),
+  }),
+})
+
 export const PackageValidation = {
   createPackageZodSchema,
+  updatePackageZodSchema,
 }

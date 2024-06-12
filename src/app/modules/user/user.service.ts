@@ -83,11 +83,10 @@ const getAllPatientFromDB = async (
 
 //admin management
 const createAdminToDB = async (payload: IUserPayload) => {
-  const { email, password, pin, ...adminData } = payload
-  const user: IUser = {
+  const { email, password, ...adminData } = payload
+  const user: Partial<IUser> = {
     email,
     password,
-    pin,
     role: 'admin',
   }
 

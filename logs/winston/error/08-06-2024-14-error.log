@@ -1,4 +1,0 @@
-Sat Jun 08 2024 14:20:32 [DENTIST] error: 103.43.151.212 - GET /api/v1/message/chatId/null 500 - 4.610 ms
-Sat Jun 08 2024 14:23:41 [DENTIST] error: 103.43.151.212 - GET /api/v1/message/chatId/null 500 - 5.744 ms
-Sat Jun 08 2024 14:27:36 [DENTIST] error: 103.43.151.212 - GET /api/v1/message/chatId/null 500 - 9.882 ms
-Sat Jun 08 2024 14:28:42 [DENTIST] error: 103.43.151.212 - GET /api/v1/message/chatId/null 500 - 5.060 ms

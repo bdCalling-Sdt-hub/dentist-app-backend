@@ -14,7 +14,7 @@ const createPatientZodSchema = z.object({
     category: z.string({ required_error: 'Category is required' }),
     email: z.string({ required_error: 'Email is required' }),
     password: z.string({ required_error: 'Password is required' }),
-    pin: z.string({ required_error: 'Pin is required' }),
+    pin: z.string().optional(),
     profile: z.string().optional(),
     status: z.enum(['active', 'delete']).optional(),
   }),

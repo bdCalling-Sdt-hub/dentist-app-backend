@@ -1,0 +1,58 @@
+Wed Jun 12 2024 11:10:26 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:10:26 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:10:47 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:10:47 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:10:54 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:10:54 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:11:36 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:11:36 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:11:42 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:11:42 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:12:24 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:12:24 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:12:31 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:12:31 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:12:41 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:12:41 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:13:1 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:13:1 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:13:48 [DENTIST] info: 192.168.10.16 - POST /api/v1/auth/login 200 - 500.601 ms
+Wed Jun 12 2024 11:14:17 [DENTIST] info: 192.168.10.16 - GET /api/v1/user/profile 200 - 525.374 ms
+Wed Jun 12 2024 11:14:57 [DENTIST] info: 192.168.10.16 - GET /api/v1/package 200 - 262.513 ms
+Wed Jun 12 2024 11:16:10 [DENTIST] info: 192.168.10.16 - PATCH /api/v1/package 200 - 299.389 ms
+Wed Jun 12 2024 11:16:14 [DENTIST] info: 192.168.10.16 - GET /api/v1/package 200 - 259.392 ms
+Wed Jun 12 2024 11:16:17 [DENTIST] info: 192.168.10.16 - GET /api/v1/package 200 - 257.896 ms
+Wed Jun 12 2024 11:16:19 [DENTIST] info: 192.168.10.16 - GET /api/v1/package 200 - 258.147 ms
+Wed Jun 12 2024 11:16:20 [DENTIST] info: 192.168.10.16 - GET /api/v1/package 200 - 258.318 ms
+Wed Jun 12 2024 11:16:25 [DENTIST] info: 192.168.10.16 - GET /api/v1/package 200 - 258.084 ms
+Wed Jun 12 2024 11:16:26 [DENTIST] info: 192.168.10.16 - GET /api/v1/package 200 - 257.999 ms
+Wed Jun 12 2024 11:16:27 [DENTIST] info: 192.168.10.16 - GET /api/v1/package 200 - 258.672 ms
+Wed Jun 12 2024 11:16:28 [DENTIST] info: 192.168.10.16 - GET /api/v1/package 200 - 258.023 ms
+Wed Jun 12 2024 11:16:29 [DENTIST] info: 192.168.10.16 - GET /api/v1/package 200 - 258.913 ms
+Wed Jun 12 2024 11:18:41 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:18:41 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:30:30 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:30:30 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:30:58 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:30:58 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:31:12 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:31:12 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:41:23 [DENTIST] info: 192.168.10.16 - PATCH /api/v1/package/664890b7d089c52d262e81c2 200 - 336.718 ms
+Wed Jun 12 2024 11:41:27 [DENTIST] info: 192.168.10.16 - GET /api/v1/package 200 - 301.183 ms
+Wed Jun 12 2024 11:42:5 [DENTIST] info: 192.168.10.16 - PATCH /api/v1/package/664890b7d089c52d262e81c2 200 - 264.165 ms
+Wed Jun 12 2024 11:42:11 [DENTIST] info: 192.168.10.16 - GET /api/v1/package 200 - 259.914 ms
+Wed Jun 12 2024 11:46:46 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:46:46 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:47:29 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:47:29 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:48:48 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:48:48 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:50:1 [DENTIST] info: 192.168.10.16 - GET /api/v1/category 200 - 535.069 ms
+Wed Jun 12 2024 11:50:37 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:50:37 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:50:50 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Wed Jun 12 2024 11:50:50 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Wed Jun 12 2024 11:50:59 [DENTIST] info: 192.168.10.16 - GET /api/v1/category 200 - 535.310 ms
+Wed Jun 12 2024 11:51:1 [DENTIST] info: 192.168.10.16 - GET /api/v1/category 200 - 527.085 ms
+Wed Jun 12 2024 11:51:20 [DENTIST] info: 192.168.10.16 - GET /api/v1/category?search=Gum 200 - 526.589 ms
+Wed Jun 12 2024 11:52:6 [DENTIST] info: 192.168.10.16 - GET /api/v1/category?search=gum 200 - 526.537 ms

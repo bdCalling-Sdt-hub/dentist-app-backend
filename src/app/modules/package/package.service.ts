@@ -16,7 +16,18 @@ const getPackageFromDB = async (): Promise<IPackage | null> => {
   return result
 }
 
+const updatePackageToDB = async (
+  id: string,
+  payload: Partial<IPackage>,
+): Promise<IPackage | null> => {
+  const result = await Package.findOneAndUpdate({ _id: id }, payload, {
+    new: true,
+  })
+  return result
+}
+
 export const PackageService = {
   createPackageToDB,
   getPackageFromDB,
+  updatePackageToDB,
 }

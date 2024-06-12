@@ -9,7 +9,7 @@ export type IUser = {
   pin?: string
   patient?: Types.ObjectId | IPatient
   admin?: Types.ObjectId | IAdmin
-  status?: 'active' | 'delete'
+  status: 'active' | 'delete'
   authentication?: {
     isResetPassword: boolean
     oneTimeCode: string

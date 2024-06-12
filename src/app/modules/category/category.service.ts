@@ -4,7 +4,7 @@ import ApiError from '../../../errors/ApiError'
 import { paginationHelper } from '../../../helpers/paginationHelper'
 import { IGenericResponse } from '../../../types/common'
 import { IPaginationOptions } from '../../../types/pagination'
-import { ICategory } from './category.interface'
+import { CategoryFilterOption, ICategory } from './category.interface'
 import { Category } from './category.model'
 
 const createCategoryToDB = async (payload: ICategory) => {
@@ -18,21 +18,28 @@ const createCategoryToDB = async (payload: ICategory) => {
 
 const getCategoriesFromDB = async (
   paginationOptions: IPaginationOptions,
+  filterOptions: CategoryFilterOption,
 ): Promise<IGenericResponse<ICategory[]>> => {
   const { page, limit, skip, sortBy, sortOrder } =
     paginationHelper.calculatePagination(paginationOptions)
+  const { search } = filterOptions
+
+  let filter = {}
+  if (search) {
+    filter = { categoryName: { $regex: search, $options: 'i' } }
+  }
 
   const sortCondition: { [key: string]: SortOrder } = {}
   if (sortBy && sortOrder) {
     sortCondition[sortBy] = sortOrder
   }
 
-  const result = await Category.find()
+  const result = await Category.find(filter)
     .sort(sortCondition)
     .skip(skip)
     .limit(limit)
 
-  const total = await Category.countDocuments()
+  const total = await Category.countDocuments(filter)
   const totalPage = Math.ceil(total / limit)
   return {
     meta: {

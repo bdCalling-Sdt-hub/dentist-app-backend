@@ -27,7 +27,21 @@ const getPackage = catchAsync(async (req: Request, res: Response) => {
   })
 })
 
+const updatePackage = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id
+  const { ...packageData } = req.body
+  const result = await PackageService.updatePackageToDB(id, packageData)
+
+  sendResponse(res, {
+    statusCode: StatusCodes.OK,
+    success: true,
+    message: 'Package updated successfully',
+    data: result,
+  })
+})
+
 export const PackageController = {
   createPackage,
   getPackage,
+  updatePackage,
 }

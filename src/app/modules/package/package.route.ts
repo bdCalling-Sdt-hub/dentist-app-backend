@@ -6,6 +6,13 @@ import { PackageController } from './package.controller'
 import { PackageValidation } from './package.validation'
 const router = express.Router()
 
+router.patch(
+  '/:id',
+  auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN),
+  validateRequest(PackageValidation.updatePackageZodSchema),
+  PackageController.updatePackage,
+)
+
 router
   .route('/')
   .post(
@@ -13,6 +20,7 @@ router
     validateRequest(PackageValidation.createPackageZodSchema),
     PackageController.createPackage,
   )
+
   .get(
     auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN, USER_TYPE.PATIENT),
     PackageController.getPackage,

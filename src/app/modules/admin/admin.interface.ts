@@ -6,7 +6,6 @@ export type IAdmin = {
   age: number
   dateOfBirth: string
   gender: 'male' | 'female' | ''
-  plan: string
   profile: string
 }
 

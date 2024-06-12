@@ -1,4 +1,5 @@
 import express from 'express'
+import { AdminRoutes } from '../app/modules/admin/admin.route'
 import { ArticleRoutes } from '../app/modules/article/article.route'
 import { ArticleCategoryRoutes } from '../app/modules/articleCategory/articleCategory.route'
 import { AuthRoutes } from '../app/modules/auth/auth.route'
@@ -64,6 +65,10 @@ const appRouteList = [
   {
     path: '/faq',
     route: FaqRoutes,
+  },
+  {
+    path: '/admin',
+    route: AdminRoutes,
   },
   {
     path: '/patient',

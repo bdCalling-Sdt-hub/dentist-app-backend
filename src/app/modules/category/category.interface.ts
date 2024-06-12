@@ -5,3 +5,7 @@ export type ICategory = {
 }
 
 export type CategoryModel = Model<ICategory, Record<string, unknown>>
+
+export type CategoryFilterOption = {
+  search?: string
+}
