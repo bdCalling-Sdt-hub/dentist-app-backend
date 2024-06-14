@@ -73,6 +73,15 @@ userSchema.statics.isMatchPassword = async (
   return await bcrypt.compare(password, hashPassword)
 }
 
+//delete user
+userSchema.statics.deleteUser = async id => {
+  return await User.findOneAndUpdate(
+    { _id: id },
+    { status: 'delete' },
+    { new: true },
+  )
+}
+
 // password hash
 userSchema.pre('save', async function (next) {
   const user = this

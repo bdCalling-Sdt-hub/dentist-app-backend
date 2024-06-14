@@ -1,4 +1,3 @@
-import { SortOrder } from 'mongoose'
 import { paginationHelper } from '../../../helpers/paginationHelper'
 import { IPaginationOptions } from '../../../types/pagination'
 import { Message } from './message.model'
@@ -23,15 +22,12 @@ const getMessagesFromDB = async (
   const { skip, page, limit, sortBy, sortOrder } =
     paginationHelper.calculatePagination(paginationOptions)
 
-  const sortCondition: { [key: string]: SortOrder } = {}
-  if (sortBy && sortOrder) {
-    sortCondition[sortBy] = sortOrder
-  }
+  // const sortCondition: { [key: string]: SortOrder } = {}
+  // if (sortBy && sortOrder) {
+  //   sortCondition[sortBy] = sortOrder
+  // }
 
-  const result = await Message.find({ chatId })
-    .sort(sortCondition)
-    .skip(skip)
-    .limit(limit)
+  const result = await Message.find({ chatId }).skip(skip).limit(limit)
   const total = await Message.countDocuments({ chatId })
   const totalPage = Math.ceil(total / limit)
 

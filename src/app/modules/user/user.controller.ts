@@ -99,6 +99,30 @@ const getProfile = catchAsync(async (req: Request, res: Response) => {
   })
 })
 
+//user analysis
+const userAnalysis = catchAsync(async (req: Request, res: Response) => {
+  const result = await UserService.userAnalysisFromDB()
+
+  sendResponse(res, {
+    statusCode: StatusCodes.OK,
+    success: true,
+    message: 'User analysis retrieved successfully',
+    data: result,
+  })
+})
+
+//delete user
+const deleteUser = catchAsync(async (req: Request, res: Response) => {
+  const id = req.params.id
+  await UserService.deleteUserToDB(id)
+
+  sendResponse(res, {
+    statusCode: StatusCodes.OK,
+    success: true,
+    message: 'Patient deleted successfully',
+  })
+})
+
 export const UserController = {
   createPatient,
   createAdmin,
@@ -107,4 +131,6 @@ export const UserController = {
   getAllPatient,
   deleteAdmin,
   sendEmail,
+  deleteUser,
+  userAnalysis,
 }

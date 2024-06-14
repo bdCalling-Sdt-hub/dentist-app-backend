@@ -228,6 +228,82 @@ const getProfileFromDB = async (payload: JwtPayload) => {
   return result
 }
 
+//Analysis
+const userAnalysisFromDB = async () => {
+  const aggregate = await User.aggregate([
+    {
+      $match: { role: 'patient' },
+    },
+    {
+      $group: { _id: null, totalPatient: { $sum: 1 } },
+    },
+  ])
+  const totalPatient = aggregate[0].totalPatient
+
+  //monthly register user
+  const currentYear = new Date().getFullYear()
+  const months = [
+    { name: 'Jan', user: 0 },
+    { name: 'Feb', user: 0 },
+    { name: 'Mar', user: 0 },
+    { name: 'Apr', user: 0 },
+    { name: 'May', user: 0 },
+    { name: 'Jun', user: 0 },
+    { name: 'Jul', user: 0 },
+    { name: 'Aug', user: 0 },
+    { name: 'Sep', user: 0 },
+    { name: 'Oct', user: 0 },
+    { name: 'Nov', user: 0 },
+    { name: 'Dec', user: 0 },
+  ]
+
+  const totalRegisterUsers = await User.aggregate([
+    { $match: { role: 'patient' } },
+    {
+      $project: {
+        year: { $year: '$createdAt' },
+        month: { $month: '$createdAt' },
+      },
+    },
+    { $match: { year: currentYear } },
+    {
+      $group: {
+        _id: { year: '$year', month: '$month' },
+        totalUser: { $sum: 1 },
+      },
+    },
+  ])
+
+  let totalPatientThisYear = 0
+  totalRegisterUsers.forEach(u => {
+    const monthIndex = u._id.month - 1
+    months[monthIndex].user = u.totalUser
+    totalPatientThisYear += u.totalUser
+  })
+
+  //calculate the percentage
+  const percentage = Math.round((totalPatientThisYear / totalPatient) * 100)
+
+  return {
+    usersOverview: {
+      totalPatient,
+      percentage,
+    },
+    yearlyUserOverview: months,
+  }
+}
+
+//delete user
+const deleteUserToDB = async (id: string) => {
+  const isExistUser = await User.findOne({ _id: id })
+  if (!isExistUser) {
+    throw new ApiError(StatusCodes.BAD_REQUEST, "User doesn't exist!")
+  }
+
+  //delete user
+  await User.deleteUser(isExistUser._id.toString())
+}
+
 export const UserService = {
   createPatientToDB,
   getProfileFromDB,
@@ -236,4 +312,6 @@ export const UserService = {
   getAllPatientFromDB,
   deleteAdminFromDB,
   sendEmailFromDB,
+  deleteUserToDB,
+  userAnalysisFromDB,
 }

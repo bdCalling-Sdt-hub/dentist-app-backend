@@ -50,4 +50,18 @@ router.get(
   UserController.getProfile,
 )
 
+//analytic
+router.get(
+  '/analysis',
+  auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN, USER_TYPE.PATIENT),
+  UserController.userAnalysis,
+)
+
+//delete user
+router.patch(
+  '/delete/:id',
+  auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN),
+  UserController.deleteUser,
+)
+
 export const UserRoutes = router

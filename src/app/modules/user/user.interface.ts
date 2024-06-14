@@ -21,6 +21,7 @@ export type UserModel = {
   isUserExistById(id: string): any
   isUserExistByEmail(email: string): any
   isMatchPassword(password: string, hashPassword: string): Promise<boolean>
+  deleteUser(id: string): any
 } & Model<IUser>
 
 export type IForgetPassword = {

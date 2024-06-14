@@ -1,0 +1,340 @@
+Fri Jun 14 2024 15:0:2 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.203 ms
+Fri Jun 14 2024 15:0:36 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.173 ms
+Fri Jun 14 2024 15:1:31 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/chat/patient-chat-list 204 - 0.095 ms
+Fri Jun 14 2024 15:1:31 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.084 ms
+Fri Jun 14 2024 15:1:31 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/chat/patient-chat-list 204 - 0.063 ms
+Fri Jun 14 2024 15:1:31 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.032 ms
+Fri Jun 14 2024 15:1:31 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.236 ms
+Fri Jun 14 2024 15:1:31 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 749.063 ms
+Fri Jun 14 2024 15:1:32 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 745.508 ms
+Fri Jun 14 2024 15:1:34 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.161 ms
+Fri Jun 14 2024 15:1:35 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 496.784 ms
+Fri Jun 14 2024 15:1:35 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_205893a1-6ca2-4721-9049-7d388fe94aeb-60574-000000adc2094434-1717933331776.jpg 304 - 1.089 ms
+Fri Jun 14 2024 15:1:35 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000902-1717929479706.jpg 304 - 1.133 ms
+Fri Jun 14 2024 15:1:35 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000927-1717929568798.jpg 304 - 0.754 ms
+Fri Jun 14 2024 15:1:48 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.157 ms
+Fri Jun 14 2024 15:1:48 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 585.993 ms
+Fri Jun 14 2024 15:2:11 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/chat/patient-chat-list 204 - 0.152 ms
+Fri Jun 14 2024 15:2:11 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.140 ms
+Fri Jun 14 2024 15:2:11 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.036 ms
+Fri Jun 14 2024 15:2:12 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 528.976 ms
+Fri Jun 14 2024 15:2:12 [DENTIST] info: 192.168.10.102 - GET //images/1707057522255-1718257374820.jpg 304 - 0.687 ms
+Fri Jun 14 2024 15:2:12 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 742.039 ms
+Fri Jun 14 2024 15:2:12 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.460 ms
+Fri Jun 14 2024 15:2:13 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 492.407 ms
+Fri Jun 14 2024 15:2:13 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 739.319 ms
+Fri Jun 14 2024 15:2:15 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.205 ms
+Fri Jun 14 2024 15:2:15 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 497.019 ms
+Fri Jun 14 2024 15:2:15 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_205893a1-6ca2-4721-9049-7d388fe94aeb-60574-000000adc2094434-1717933331776.jpg 304 - 0.862 ms
+Fri Jun 14 2024 15:2:15 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000927-1717929568798.jpg 304 - 1.129 ms
+Fri Jun 14 2024 15:2:15 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000902-1717929479706.jpg 304 - 0.245 ms
+Fri Jun 14 2024 15:2:29 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/send-message 204 - 0.292 ms
+Fri Jun 14 2024 15:2:59 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/chat/patient-chat-list 204 - 0.147 ms
+Fri Jun 14 2024 15:2:59 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.100 ms
+Fri Jun 14 2024 15:2:59 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.036 ms
+Fri Jun 14 2024 15:3:0 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 493.206 ms
+Fri Jun 14 2024 15:3:0 [DENTIST] info: 192.168.10.102 - GET //images/1707057522255-1718257374820.jpg 304 - 0.476 ms
+Fri Jun 14 2024 15:3:0 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 737.476 ms
+Fri Jun 14 2024 15:3:0 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 1.368 ms
+Fri Jun 14 2024 15:3:0 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 493.440 ms
+Fri Jun 14 2024 15:3:1 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 740.835 ms
+Fri Jun 14 2024 15:3:2 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.168 ms
+Fri Jun 14 2024 15:3:2 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 494.559 ms
+Fri Jun 14 2024 15:3:2 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_205893a1-6ca2-4721-9049-7d388fe94aeb-60574-000000adc2094434-1717933331776.jpg 304 - 1.575 ms
+Fri Jun 14 2024 15:3:2 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000927-1717929568798.jpg 304 - 1.500 ms
+Fri Jun 14 2024 15:3:2 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000902-1717929479706.jpg 304 - 1.310 ms
+Fri Jun 14 2024 15:3:8 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/send-message 204 - 0.200 ms
+Fri Jun 14 2024 15:11:15 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:11:15 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:11:36 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:11:36 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:16:1 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:16:1 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:18:9 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:18:9 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:19:26 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:19:26 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:20:15 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:20:15 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:20:30 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:20:30 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:21:47 [DENTIST] info: 192.168.10.16 - GET /api/v1/user/analysis 200 - 259.195 ms
+Fri Jun 14 2024 15:22:9 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:22:9 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:22:12 [DENTIST] info: 192.168.10.16 - GET /api/v1/user/analysis 200 - 1935.746 ms
+Fri Jun 14 2024 15:24:31 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:24:31 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:24:52 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:24:52 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:24:54 [DENTIST] info: 192.168.10.16 - GET /api/v1/user/analysis 200 - 1789.241 ms
+Fri Jun 14 2024 15:32:29 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:32:29 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:32:32 [DENTIST] info: 192.168.10.16 - GET /api/v1/user/analysis 200 - 1651.914 ms
+Fri Jun 14 2024 15:34:41 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/send-message 204 - 0.409 ms
+Fri Jun 14 2024 15:37:21 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/auth/login 204 - 0.153 ms
+Fri Jun 14 2024 15:37:46 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/auth/login 204 - 0.217 ms
+Fri Jun 14 2024 15:37:52 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/auth/login 204 - 0.182 ms
+Fri Jun 14 2024 15:37:59 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/auth/login 204 - 0.300 ms
+Fri Jun 14 2024 15:38:9 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/auth/login 204 - 0.182 ms
+Fri Jun 14 2024 15:39:0 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/auth/login 204 - 0.212 ms
+Fri Jun 14 2024 15:39:1 [DENTIST] info: 192.168.10.102 - POST /api/v1/auth/login 200 - 465.402 ms
+Fri Jun 14 2024 15:39:2 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient? 204 - 0.165 ms
+Fri Jun 14 2024 15:39:2 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient? 204 - 0.103 ms
+Fri Jun 14 2024 15:39:2 [DENTIST] info: 192.168.10.102 - GET //images/1707057522255-1718257374820.jpg 304 - 1.242 ms
+Fri Jun 14 2024 15:39:2 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient? - - - ms
+Fri Jun 14 2024 15:39:3 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.136 ms
+Fri Jun 14 2024 15:39:3 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 503.794 ms
+Fri Jun 14 2024 15:39:3 [DENTIST] info: 192.168.10.102 - GET //images/1707057522255-1718257374820.jpg 200 - 1.876 ms
+Fri Jun 14 2024 15:39:4 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient? 200 - 757.646 ms
+Fri Jun 14 2024 15:39:4 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.578 ms
+Fri Jun 14 2024 15:39:4 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 504.745 ms
+Fri Jun 14 2024 15:39:4 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient? 304 - 756.144 ms
+Fri Jun 14 2024 15:39:8 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/chat/patient-chat-list 204 - 0.337 ms
+Fri Jun 14 2024 15:39:8 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.153 ms
+Fri Jun 14 2024 15:39:9 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 764.925 ms
+Fri Jun 14 2024 15:39:9 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.416 ms
+Fri Jun 14 2024 15:39:9 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 760.191 ms
+Fri Jun 14 2024 15:39:13 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.138 ms
+Fri Jun 14 2024 15:39:14 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 510.064 ms
+Fri Jun 14 2024 15:39:14 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000927-1717929568798.jpg 304 - 0.987 ms
+Fri Jun 14 2024 15:39:14 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_205893a1-6ca2-4721-9049-7d388fe94aeb-60574-000000adc2094434-1717933331776.jpg 304 - 1.397 ms
+Fri Jun 14 2024 15:39:14 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000902-1717929479706.jpg 304 - 1.696 ms
+Fri Jun 14 2024 15:39:17 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/send-message 204 - 0.617 ms
+Fri Jun 14 2024 15:39:53 [DENTIST] info: 192.168.10.102 - POST /api/v1/auth/login 200 - 466.993 ms
+Fri Jun 14 2024 15:39:58 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 200 - 510.758 ms
+Fri Jun 14 2024 15:40:22 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 200 - 509.996 ms
+Fri Jun 14 2024 15:40:27 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/send-message 204 - 0.204 ms
+Fri Jun 14 2024 15:40:43 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/chat/patient-chat-list 204 - 0.096 ms
+Fri Jun 14 2024 15:40:43 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.054 ms
+Fri Jun 14 2024 15:40:43 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.036 ms
+Fri Jun 14 2024 15:40:44 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 200 - 502.962 ms
+Fri Jun 14 2024 15:40:44 [DENTIST] info: 192.168.10.102 - GET //images/1707057522255-1718257374820.jpg 304 - 0.945 ms
+Fri Jun 14 2024 15:40:44 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 755.981 ms
+Fri Jun 14 2024 15:40:44 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.455 ms
+Fri Jun 14 2024 15:40:44 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 505.989 ms
+Fri Jun 14 2024 15:40:45 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 753.427 ms
+Fri Jun 14 2024 15:40:58 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/auth/login 204 - 0.042 ms
+Fri Jun 14 2024 15:40:58 [DENTIST] info: 192.168.10.102 - POST /api/v1/auth/login 200 - 461.042 ms
+Fri Jun 14 2024 15:41:0 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/patient? 204 - 0.163 ms
+Fri Jun 14 2024 15:41:0 [DENTIST] info: 192.168.10.102 - GET //images/1707057522255-1718257374820.jpg - - - ms
+Fri Jun 14 2024 15:41:0 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient? - - - ms
+Fri Jun 14 2024 15:41:1 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.059 ms
+Fri Jun 14 2024 15:41:2 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 503.537 ms
+Fri Jun 14 2024 15:41:2 [DENTIST] info: 192.168.10.102 - GET //images/1707057522255-1718257374820.jpg 200 - 0.799 ms
+Fri Jun 14 2024 15:41:2 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient? 200 - 762.020 ms
+Fri Jun 14 2024 15:41:2 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.686 ms
+Fri Jun 14 2024 15:41:2 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 503.767 ms
+Fri Jun 14 2024 15:41:3 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/patient? 304 - 760.676 ms
+Fri Jun 14 2024 15:41:5 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/chat/patient-chat-list 204 - 0.210 ms
+Fri Jun 14 2024 15:41:5 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.079 ms
+Fri Jun 14 2024 15:41:6 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 756.947 ms
+Fri Jun 14 2024 15:41:7 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 755.602 ms
+Fri Jun 14 2024 15:41:9 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.188 ms
+Fri Jun 14 2024 15:41:9 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 508.890 ms
+Fri Jun 14 2024 15:41:9 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000927-1717929568798.jpg 304 - 1.599 ms
+Fri Jun 14 2024 15:41:9 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_205893a1-6ca2-4721-9049-7d388fe94aeb-60574-000000adc2094434-1717933331776.jpg 304 - 2.244 ms
+Fri Jun 14 2024 15:41:9 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000902-1717929479706.jpg 304 - 0.639 ms
+Fri Jun 14 2024 15:41:16 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/send-message 204 - 0.112 ms
+Fri Jun 14 2024 15:41:16 [DENTIST] info: 192.168.10.102 - POST /api/v1/message/send-message 200 - 296.702 ms
+Fri Jun 14 2024 15:45:20 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.049 ms
+Fri Jun 14 2024 15:45:20 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile - - - ms
+Fri Jun 14 2024 15:45:22 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 200 - 511.769 ms
+Fri Jun 14 2024 15:45:23 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 504.983 ms
+Fri Jun 14 2024 15:45:27 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/chat/patient-chat-list 204 - 0.055 ms
+Fri Jun 14 2024 15:45:27 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.035 ms
+Fri Jun 14 2024 15:45:27 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.037 ms
+Fri Jun 14 2024 15:45:28 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 508.784 ms
+Fri Jun 14 2024 15:45:28 [DENTIST] info: 192.168.10.102 - GET //images/1707057522255-1718257374820.jpg 304 - 0.526 ms
+Fri Jun 14 2024 15:45:28 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 757.296 ms
+Fri Jun 14 2024 15:45:28 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.388 ms
+Fri Jun 14 2024 15:45:28 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 501.756 ms
+Fri Jun 14 2024 15:45:29 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 757.608 ms
+Fri Jun 14 2024 15:46:5 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:46:5 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:46:59 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.332 ms
+Fri Jun 14 2024 15:47:17 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:47:17 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:47:18 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.254 ms
+Fri Jun 14 2024 15:47:18 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.094 ms
+Fri Jun 14 2024 15:47:41 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:47:41 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:47:44 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.295 ms
+Fri Jun 14 2024 15:47:45 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 200 - 507.779 ms
+Fri Jun 14 2024 15:47:45 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000927-1717929568798.jpg 304 - 3.795 ms
+Fri Jun 14 2024 15:47:45 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_205893a1-6ca2-4721-9049-7d388fe94aeb-60574-000000adc2094434-1717933331776.jpg 304 - 2.572 ms
+Fri Jun 14 2024 15:47:45 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000902-1717929479706.jpg 304 - 2.229 ms
+Fri Jun 14 2024 15:47:52 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:47:52 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:47:58 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d60ef4874b6d5bad799c3 204 - 0.806 ms
+Fri Jun 14 2024 15:47:59 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d60ef4874b6d5bad799c3 304 - 529.018 ms
+Fri Jun 14 2024 15:48:0 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.135 ms
+Fri Jun 14 2024 15:48:1 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 521.045 ms
+Fri Jun 14 2024 15:48:7 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/chat/patient-chat-list 204 - 0.064 ms
+Fri Jun 14 2024 15:48:7 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.082 ms
+Fri Jun 14 2024 15:48:7 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.052 ms
+Fri Jun 14 2024 15:48:7 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 503.199 ms
+Fri Jun 14 2024 15:48:7 [DENTIST] info: 192.168.10.102 - GET //images/1707057522255-1718257374820.jpg 304 - 0.675 ms
+Fri Jun 14 2024 15:48:7 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 774.621 ms
+Fri Jun 14 2024 15:48:7 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.492 ms
+Fri Jun 14 2024 15:48:8 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 497.752 ms
+Fri Jun 14 2024 15:48:8 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 773.584 ms
+Fri Jun 14 2024 15:48:9 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.224 ms
+Fri Jun 14 2024 15:48:10 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 519.860 ms
+Fri Jun 14 2024 15:48:10 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_205893a1-6ca2-4721-9049-7d388fe94aeb-60574-000000adc2094434-1717933331776.jpg 304 - 1.779 ms
+Fri Jun 14 2024 15:48:10 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000927-1717929568798.jpg 304 - 1.733 ms
+Fri Jun 14 2024 15:48:10 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000902-1717929479706.jpg 304 - 2.440 ms
+Fri Jun 14 2024 15:48:18 [DENTIST] info: 192.168.10.16 - GET /api/v1/user/analysis 200 - 518.441 ms
+Fri Jun 14 2024 15:48:22 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/chat/patient-chat-list 204 - 0.258 ms
+Fri Jun 14 2024 15:48:22 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.246 ms
+Fri Jun 14 2024 15:48:22 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.066 ms
+Fri Jun 14 2024 15:48:23 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 499.139 ms
+Fri Jun 14 2024 15:48:23 [DENTIST] info: 192.168.10.102 - GET //images/1707057522255-1718257374820.jpg 304 - 0.378 ms
+Fri Jun 14 2024 15:48:23 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 778.871 ms
+Fri Jun 14 2024 15:48:23 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.415 ms
+Fri Jun 14 2024 15:48:23 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 497.699 ms
+Fri Jun 14 2024 15:48:24 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.069 ms
+Fri Jun 14 2024 15:48:24 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 1241.263 ms
+Fri Jun 14 2024 15:48:24 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 496.487 ms
+Fri Jun 14 2024 15:48:24 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_205893a1-6ca2-4721-9049-7d388fe94aeb-60574-000000adc2094434-1717933331776.jpg 304 - 1.615 ms
+Fri Jun 14 2024 15:48:24 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000927-1717929568798.jpg 304 - 1.399 ms
+Fri Jun 14 2024 15:48:24 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000902-1717929479706.jpg 304 - 1.588 ms
+Fri Jun 14 2024 15:48:28 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/send-message 204 - 0.219 ms
+Fri Jun 14 2024 15:48:28 [DENTIST] info: 192.168.10.102 - POST /api/v1/message/send-message 200 - 271.765 ms
+Fri Jun 14 2024 15:48:45 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/chat/patient-chat-list 204 - 0.287 ms
+Fri Jun 14 2024 15:48:45 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.149 ms
+Fri Jun 14 2024 15:48:45 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.055 ms
+Fri Jun 14 2024 15:48:46 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 510.169 ms
+Fri Jun 14 2024 15:48:46 [DENTIST] info: 192.168.10.102 - GET //images/1707057522255-1718257374820.jpg 304 - 0.403 ms
+Fri Jun 14 2024 15:48:46 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 743.436 ms
+Fri Jun 14 2024 15:48:46 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.334 ms
+Fri Jun 14 2024 15:48:46 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 510.939 ms
+Fri Jun 14 2024 15:48:47 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 741.755 ms
+Fri Jun 14 2024 15:48:47 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.243 ms
+Fri Jun 14 2024 15:48:48 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 200 - 495.247 ms
+Fri Jun 14 2024 15:48:48 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_205893a1-6ca2-4721-9049-7d388fe94aeb-60574-000000adc2094434-1717933331776.jpg 304 - 1.035 ms
+Fri Jun 14 2024 15:48:48 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000927-1717929568798.jpg 304 - 0.737 ms
+Fri Jun 14 2024 15:48:48 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000902-1717929479706.jpg 304 - 1.188 ms
+Fri Jun 14 2024 15:49:4 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/send-message 204 - 0.320 ms
+Fri Jun 14 2024 15:49:4 [DENTIST] info: 192.168.10.102 - POST /api/v1/message/send-message 200 - 257.265 ms
+Fri Jun 14 2024 15:49:7 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d60ef4874b6d5bad799c3 204 - 0.068 ms
+Fri Jun 14 2024 15:49:8 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d60ef4874b6d5bad799c3 304 - 490.507 ms
+Fri Jun 14 2024 15:49:8 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.164 ms
+Fri Jun 14 2024 15:49:9 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 200 - 499.117 ms
+Fri Jun 14 2024 15:49:12 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/chat/patient-chat-list 204 - 0.103 ms
+Fri Jun 14 2024 15:49:12 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.069 ms
+Fri Jun 14 2024 15:49:12 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.043 ms
+Fri Jun 14 2024 15:49:12 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 510.860 ms
+Fri Jun 14 2024 15:49:12 [DENTIST] info: 192.168.10.102 - GET //images/1707057522255-1718257374820.jpg 304 - 1.050 ms
+Fri Jun 14 2024 15:49:13 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 516.860 ms
+Fri Jun 14 2024 15:49:13 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 1221.606 ms
+Fri Jun 14 2024 15:49:13 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.407 ms
+Fri Jun 14 2024 15:49:14 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 746.481 ms
+Fri Jun 14 2024 15:49:16 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.212 ms
+Fri Jun 14 2024 15:49:17 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 498.628 ms
+Fri Jun 14 2024 15:49:17 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_205893a1-6ca2-4721-9049-7d388fe94aeb-60574-000000adc2094434-1717933331776.jpg 304 - 2.025 ms
+Fri Jun 14 2024 15:49:17 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000927-1717929568798.jpg 304 - 2.303 ms
+Fri Jun 14 2024 15:49:17 [DENTIST] info: 192.168.10.102 - GET /images/scaled_1000000902-1717929479706.jpg 304 - 2.724 ms
+Fri Jun 14 2024 15:49:24 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/send-message 204 - 0.137 ms
+Fri Jun 14 2024 15:49:24 [DENTIST] info: 192.168.10.102 - POST /api/v1/message/send-message 200 - 256.342 ms
+Fri Jun 14 2024 15:49:38 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.162 ms
+Fri Jun 14 2024 15:49:38 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 200 - 499.647 ms
+Fri Jun 14 2024 15:49:45 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/send-message 204 - 0.094 ms
+Fri Jun 14 2024 15:49:46 [DENTIST] info: 192.168.10.102 - POST /api/v1/message/send-message 200 - 252.748 ms
+Fri Jun 14 2024 15:49:46 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.165 ms
+Fri Jun 14 2024 15:49:46 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 200 - 496.721 ms
+Fri Jun 14 2024 15:49:51 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/send-message 204 - 0.144 ms
+Fri Jun 14 2024 15:49:51 [DENTIST] info: 192.168.10.102 - POST /api/v1/message/send-message 200 - 255.239 ms
+Fri Jun 14 2024 15:49:51 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.157 ms
+Fri Jun 14 2024 15:49:52 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 200 - 497.988 ms
+Fri Jun 14 2024 15:51:0 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 200 - 494.607 ms
+Fri Jun 14 2024 15:51:25 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:51:25 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:51:37 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 200 - 518.397 ms
+Fri Jun 14 2024 15:52:1 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:52:1 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:52:8 [DENTIST] info: 192.168.10.16 - GET /api/v1/user/analysis 200 - 516.823 ms
+Fri Jun 14 2024 15:52:25 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/chat/patient-chat-list 204 - 2.076 ms
+Fri Jun 14 2024 15:52:25 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.158 ms
+Fri Jun 14 2024 15:52:25 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.046 ms
+Fri Jun 14 2024 15:52:25 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 775.414 ms
+Fri Jun 14 2024 15:52:26 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 766.822 ms
+Fri Jun 14 2024 15:52:30 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.255 ms
+Fri Jun 14 2024 15:52:31 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 200 - 518.920 ms
+Fri Jun 14 2024 15:52:31 [DENTIST] info: 192.168.10.102 - GET / 200 - 1.284 ms
+Fri Jun 14 2024 15:52:31 [DENTIST] info: 192.168.10.102 - GET /images/worlds-smallest-dogs-1647336453-1717667131631.jpg 200 - 4.711 ms
+Fri Jun 14 2024 15:52:52 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:52:52 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:52:55 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.334 ms
+Fri Jun 14 2024 15:52:55 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 499.991 ms
+Fri Jun 14 2024 15:52:57 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 502.432 ms
+Fri Jun 14 2024 15:53:6 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/chat/patient-chat-list 204 - 0.118 ms
+Fri Jun 14 2024 15:53:6 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.055 ms
+Fri Jun 14 2024 15:53:6 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.065 ms
+Fri Jun 14 2024 15:53:7 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 508.739 ms
+Fri Jun 14 2024 15:53:7 [DENTIST] info: 192.168.10.102 - GET //images/1707057522255-1718257374820.jpg 304 - 0.743 ms
+Fri Jun 14 2024 15:53:7 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 766.361 ms
+Fri Jun 14 2024 15:53:7 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.323 ms
+Fri Jun 14 2024 15:53:7 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 505.827 ms
+Fri Jun 14 2024 15:53:8 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 766.510 ms
+Fri Jun 14 2024 15:53:8 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.239 ms
+Fri Jun 14 2024 15:53:9 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 498.296 ms
+Fri Jun 14 2024 15:53:9 [DENTIST] info: 192.168.10.102 - GET / 200 - 1.761 ms
+Fri Jun 14 2024 15:53:9 [DENTIST] info: 192.168.10.102 - GET /images/worlds-smallest-dogs-1647336453-1717667131631.jpg 304 - 0.821 ms
+Fri Jun 14 2024 15:53:34 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 200 - 492.954 ms
+Fri Jun 14 2024 15:54:6 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:54:6 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:54:9 [DENTIST] info: 192.168.10.16 - GET /api/v1/user/analysis 200 - 2454.738 ms
+Fri Jun 14 2024 15:54:14 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.711 ms
+Fri Jun 14 2024 15:54:15 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 498.250 ms
+Fri Jun 14 2024 15:54:29 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/send-message 204 - 0.407 ms
+Fri Jun 14 2024 15:54:29 [DENTIST] info: 192.168.10.102 - POST /api/v1/message/send-message 200 - 265.146 ms
+Fri Jun 14 2024 15:54:29 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.138 ms
+Fri Jun 14 2024 15:54:30 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 200 - 495.573 ms
+Fri Jun 14 2024 15:54:36 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d60ef4874b6d5bad799c3 204 - 0.171 ms
+Fri Jun 14 2024 15:54:36 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d60ef4874b6d5bad799c3 304 - 495.728 ms
+Fri Jun 14 2024 15:54:37 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.247 ms
+Fri Jun 14 2024 15:54:37 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 496.373 ms
+Fri Jun 14 2024 15:54:37 [DENTIST] info: 192.168.10.102 - GET / 200 - 1.061 ms
+Fri Jun 14 2024 15:55:8 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.123 ms
+Fri Jun 14 2024 15:55:8 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 506.804 ms
+Fri Jun 14 2024 15:55:12 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/send-message 204 - 0.262 ms
+Fri Jun 14 2024 15:55:12 [DENTIST] info: 192.168.10.102 - POST /api/v1/message/send-message 200 - 256.178 ms
+Fri Jun 14 2024 15:55:12 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 200 - 498.778 ms
+Fri Jun 14 2024 15:55:27 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.147 ms
+Fri Jun 14 2024 15:55:27 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 499.930 ms
+Fri Jun 14 2024 15:55:28 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 501.915 ms
+Fri Jun 14 2024 15:55:35 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/send-message 204 - 0.145 ms
+Fri Jun 14 2024 15:55:35 [DENTIST] info: 192.168.10.102 - POST /api/v1/message/send-message 200 - 254.659 ms
+Fri Jun 14 2024 15:55:35 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.599 ms
+Fri Jun 14 2024 15:55:35 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 200 - 497.503 ms
+Fri Jun 14 2024 15:55:36 [DENTIST] info: 192.168.10.102 - POST /api/v1/message/send-message 200 - 256.060 ms
+Fri Jun 14 2024 15:55:36 [DENTIST] info: 192.168.10.102 - POST /api/v1/message/send-message 200 - 264.478 ms
+Fri Jun 14 2024 15:55:36 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 200 - 505.398 ms
+Fri Jun 14 2024 15:55:37 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 498.633 ms
+Fri Jun 14 2024 15:55:41 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/chat/patient-chat-list 204 - 0.137 ms
+Fri Jun 14 2024 15:55:41 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/ 204 - 0.071 ms
+Fri Jun 14 2024 15:55:41 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/user/profile 204 - 0.151 ms
+Fri Jun 14 2024 15:55:41 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 519.641 ms
+Fri Jun 14 2024 15:55:41 [DENTIST] info: 192.168.10.102 - GET //images/1707057522255-1718257374820.jpg 304 - 0.724 ms
+Fri Jun 14 2024 15:55:41 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 740.783 ms
+Fri Jun 14 2024 15:55:41 [DENTIST] info: 192.168.10.102 - GET /images/image_picker_74049b75-b355-4790-a461-306ec10ec4ae-26493-0000004384b2404f-1717914313172.jpg 304 - 0.286 ms
+Fri Jun 14 2024 15:55:42 [DENTIST] info: 192.168.10.102 - GET /api/v1/user/profile 304 - 515.253 ms
+Fri Jun 14 2024 15:55:42 [DENTIST] info: 192.168.10.102 - GET /api/v1/chat/patient-chat-list 304 - 737.662 ms
+Fri Jun 14 2024 15:55:43 [DENTIST] info: 192.168.10.102 - OPTIONS /api/v1/message/chatId/665d5ebe75719b613f867830 204 - 0.076 ms
+Fri Jun 14 2024 15:55:43 [DENTIST] info: 192.168.10.102 - GET /api/v1/message/chatId/665d5ebe75719b613f867830 304 - 493.648 ms
+Fri Jun 14 2024 15:55:43 [DENTIST] info: 192.168.10.102 - GET / 200 - 0.418 ms
+Fri Jun 14 2024 15:55:43 [DENTIST] info: 192.168.10.102 - GET /images/worlds-smallest-dogs-1647336453-1717667131631.jpg 304 - 0.332 ms
+Fri Jun 14 2024 15:55:51 [DENTIST] info: 192.168.10.16 - GET /api/v1/user/analysis 200 - 494.454 ms
+Fri Jun 14 2024 15:56:24 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:56:24 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:56:28 [DENTIST] info: 192.168.10.16 - GET /api/v1/user/analysis 200 - 510.936 ms
+Fri Jun 14 2024 15:56:52 [DENTIST] info: 192.168.10.16 - GET /api/v1/user/analysis 200 - 512.980 ms
+Fri Jun 14 2024 15:57:9 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:57:9 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:57:12 [DENTIST] info: 192.168.10.16 - GET /api/v1/user/analysis 200 - 2149.466 ms
+Fri Jun 14 2024 15:57:45 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:57:45 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:57:47 [DENTIST] info: 192.168.10.16 - GET /api/v1/user/analysis 200 - 2172.604 ms
+Fri Jun 14 2024 15:58:29 [DENTIST] info: [32m♻️  Database connected successfully[39m
+Fri Jun 14 2024 15:58:29 [DENTIST] info: [33m🚀 Application Running on port:5001[39m
+Fri Jun 14 2024 15:58:31 [DENTIST] info: 192.168.10.16 - GET /api/v1/user/analysis 200 - 2405.579 ms

@@ -14,7 +14,10 @@ const createChatToDB = async (user: JwtPayload) => {
 }
 
 const patientChatListFromDB = async () => {
-  const chat = await Chat.find()
+  const chat = await Chat.find().populate({
+    path: 'participants',
+    populate: [{ path: 'patient' }],
+  })
   return chat
 }
 
