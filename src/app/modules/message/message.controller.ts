@@ -52,8 +52,8 @@ const getMessages = catchAsync(async (req: Request, res: Response) => {
     success: true,
     statusCode: StatusCodes.OK,
     message: 'Message retrieved successfully',
-    pagination: result.meta,
-    data: result.data,
+    // pagination: result.meta,
+    data: result,
   })
 })
 

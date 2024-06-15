@@ -27,19 +27,22 @@ const getMessagesFromDB = async (
   //   sortCondition[sortBy] = sortOrder
   // }
 
-  const result = await Message.find({ chatId }).skip(skip).limit(limit)
-  const total = await Message.countDocuments({ chatId })
-  const totalPage = Math.ceil(total / limit)
+  // const result = await Message.find({ chatId }).skip(skip).limit(limit)
+  // const total = await Message.countDocuments({ chatId })
+  // const totalPage = Math.ceil(total / limit)
 
-  return {
-    meta: {
-      page,
-      limit,
-      totalPage,
-      total,
-    },
-    data: result,
-  }
+  const result = await Message.find({ chatId })
+
+  // return {
+  //   meta: {
+  //     page,
+  //     limit,
+  //     totalPage,
+  //     total,
+  //   },
+  //   data: result,
+  // }
+  return result
 }
 
 export const MessageService = {
