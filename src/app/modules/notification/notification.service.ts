@@ -42,12 +42,8 @@ const getAllNotificationFromDB = async (
   };
 };
 
-const readNotificationsToDB = async (id: string) => {
-  const result = await Notification.findByIdAndUpdate(
-    id,
-    { $set: { read: true } },
-    { new: true },
-  );
+const readNotificationsToDB = async () => {
+  const result = await Notification.updateMany({ $set: { read: true } });
   return result;
 };
 

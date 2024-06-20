@@ -87,6 +87,7 @@ const getSingleArticle = catchAsync(async (req: Request, res: Response) => {
 
 const updateArticle = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id;
+  let imageToDelete = req.body.imageToDelete || [];
   let buttonImage;
   const articleSlider: string[] = [];
   if (req.files && 'buttonImage' in req.files && req.files.buttonImage[0]) {
@@ -102,6 +103,7 @@ const updateArticle = catchAsync(async (req: Request, res: Response) => {
   const payload = {
     buttonImage,
     articleSlider,
+    imageToDelete,
     ...req.body,
   };
 

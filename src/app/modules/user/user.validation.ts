@@ -1,5 +1,5 @@
-import { z } from 'zod'
-import { gender } from '../../../shared/constant'
+import { z } from 'zod';
+import { gender } from '../../../shared/constant';
 
 const createPatientZodSchema = z.object({
   body: z.object({
@@ -18,7 +18,7 @@ const createPatientZodSchema = z.object({
     profile: z.string().optional(),
     status: z.enum(['active', 'delete']).optional(),
   }),
-})
+});
 
 const createAdminZodSchema = z.object({
   body: z.object({
@@ -33,18 +33,19 @@ const createAdminZodSchema = z.object({
     profile: z.string().optional(),
     status: z.enum(['active', 'delete']).optional(),
   }),
-})
+});
 
 const sendEmail = z.object({
   body: z.object({
     name: z.string({ required_error: 'Name is required' }),
     email: z.string({ required_error: 'Email is required' }),
     password: z.string({ required_error: 'Password is required' }),
+    pin: z.string({ required_error: 'Pin is required' }),
   }),
-})
+});
 
 export const UserValidation = {
   createPatientZodSchema,
   createAdminZodSchema,
   sendEmail,
-}
+};

@@ -1,7 +1,7 @@
 import {
   ICreatePatientTemplate,
   IForgetPasswordTemplate,
-} from '../types/emailTypes'
+} from '../types/emailTypes';
 
 const forgetPassword = (values: IForgetPasswordTemplate) => {
   const data = {
@@ -20,9 +20,9 @@ const forgetPassword = (values: IForgetPasswordTemplate) => {
         </div>
     </div>
 </body>`,
-  }
-  return data
-}
+  };
+  return data;
+};
 
 const createPatient = (values: ICreatePatientTemplate) => {
   const data = {
@@ -35,8 +35,9 @@ const createPatient = (values: ICreatePatientTemplate) => {
             <h2 style="color: #12354E; font-size: 24px; margin-bottom: 20px;">Hey! ${values.name}, Your Toothlens Account Credentials</h2>
             <p style="color: #555; font-size: 16px; line-height: 1.5; margin-bottom: 20px;">Please find below the login credentials for the account:</p>
             <div style="background-color: #12354E; width: 80%; padding: 10px; text-align: center; border-radius: 8px; color: #fff; font-size: 18px; margin: 20px auto;">
-                <p>Email: ${values.email}</p>
-                <p>Password: ${values.password}</p>
+                <p style="color: #fff;">Email: ${values.email}</p>
+                <p style="color: #fff;">Password: ${values.password}</p>
+                <p style="color: #fff;">Pin: ${values.pin}</p>
             </div>
             <p style="color: #555; font-size: 16px; line-height: 1.5; margin-bottom: 20px;">Please ensure that these credentials are kept confidential and secure. Should you encounter any issues or require further assistance, do not hesitate to reach out.</p>
         </div>
@@ -45,11 +46,11 @@ const createPatient = (values: ICreatePatientTemplate) => {
         </div>
     </div>
 </body>`,
-  }
-  return data
-}
+  };
+  return data;
+};
 
 export const emailTemplate = {
   forgetPassword,
   createPatient,
-}
+};
