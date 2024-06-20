@@ -9,7 +9,7 @@ const notificationSchema = new Schema<INotification, NotificationModel>(
     },
     type: {
       type: String,
-      enum: ['offer', 'chat'],
+      enum: ['offer', 'chat', 'article'],
     },
     role: {
       type: String,
@@ -17,6 +17,10 @@ const notificationSchema = new Schema<INotification, NotificationModel>(
     },
     image: {
       type: String,
+    },
+    read: {
+      type: Boolean,
+      default: false,
     },
   },
   { timestamps: true },

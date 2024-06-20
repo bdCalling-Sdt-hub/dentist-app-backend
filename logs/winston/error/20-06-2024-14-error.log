@@ -1,0 +1,4 @@
+Thu Jun 20 2024 14:14:38 [DENTIST] error: 192.168.10.102 - GET /undefined 404 - 0.335 ms
+Thu Jun 20 2024 14:36:55 [DENTIST] error: 192.168.10.7 - POST /api/v1/offer/create-offer 401 - 10.297 ms
+Thu Jun 20 2024 14:46:35 [DENTIST] error: 192.168.10.16 - PATCH /api/v1/article/6673b67054be8ee3ed42085a 500 - 331.766 ms
+Thu Jun 20 2024 14:53:16 [DENTIST] error: 192.168.10.102 - GET /undefined 404 - 0.949 ms

@@ -24,13 +24,25 @@ router
     auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN, USER_TYPE.PATIENT),
     ArticleController.getSingleArticle,
   )
+  .patch(
+    auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN),
+    fileHandler(),
+    (req: Request, res: Response, next: NextFunction) => {
+      if (req.body.data) {
+        req.body = ArticleValidation.updateArticleZodSchema.parse(
+          JSON.parse(req.body.data),
+        )
+      }
+      return ArticleController.updateArticle(req, res, next)
+    },
+  )
   .delete(
     auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN),
     ArticleController.deleteArticle,
   )
 
 router.get(
-  '/category/:id',
+  '/category/:category_name',
   auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN, USER_TYPE.PATIENT),
   ArticleController.getAllArticleByCategory,
 )

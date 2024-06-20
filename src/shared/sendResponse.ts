@@ -10,6 +10,7 @@ type IData<T> = {
     totalPage: number
     total: number
   }
+  unreadNotifications?: number
   data?: T
 }
 
@@ -19,6 +20,7 @@ const sendResponse = <T>(res: Response, data: IData<T>) => {
     success: data.success,
     message: data.message,
     pagination: data.pagination,
+    unreadNotifications: data.unreadNotifications,
     data: data.data,
   }
 
