@@ -9,6 +9,7 @@ import { ChatRoutes } from '../app/modules/chat/chat.route'
 import { ContactRoutes } from '../app/modules/contact/contact.route'
 import { FaqRoutes } from '../app/modules/faq/faq.route'
 import { MessageRoutes } from '../app/modules/message/message.route'
+import { NotificationRoutes } from '../app/modules/notification/notification.route'
 import { OfferRoutes } from '../app/modules/offer/offer.route'
 import { PackageRoutes } from '../app/modules/package/package.route'
 import { PatientRoutes } from '../app/modules/patient/patient.route'
@@ -81,6 +82,10 @@ const appRouteList = [
   {
     path: '/message',
     route: MessageRoutes,
+  },
+  {
+    path: '/notifications',
+    route: NotificationRoutes,
   },
 ]
 

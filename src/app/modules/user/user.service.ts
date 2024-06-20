@@ -88,7 +88,7 @@ const getAllPatientFromDB = async (
       ],
     })
   }
-  andConditions.push({ role: USER_TYPE.PATIENT })
+  andConditions.push({ role: USER_TYPE.PATIENT, status: { $ne: 'delete' } })
 
   if (category) {
     const categoryIds = await Patient.find({ category: category }).distinct(
