@@ -1,5 +1,5 @@
-import { model, Schema } from 'mongoose'
-import { IMessage } from './message.interface'
+import { model, Schema } from 'mongoose';
+import { IMessage } from './message.interface';
 
 const messageSchema = new Schema<IMessage>(
   {
@@ -10,7 +10,7 @@ const messageSchema = new Schema<IMessage>(
     },
     sender: {
       type: String,
-      enum: ['patient', 'admin'],
+      enum: ['patient', 'support'],
       required: true,
     },
     image: {
@@ -27,6 +27,6 @@ const messageSchema = new Schema<IMessage>(
     },
   },
   { timestamps: true },
-)
+);
 
-export const Message = model<IMessage>('Message', messageSchema)
+export const Message = model<IMessage>('Message', messageSchema);

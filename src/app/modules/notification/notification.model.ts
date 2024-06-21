@@ -1,5 +1,5 @@
-import { model, Schema } from 'mongoose'
-import { INotification, NotificationModel } from './notification.interface'
+import { model, Schema } from 'mongoose';
+import { INotification, NotificationModel } from './notification.interface';
 
 const notificationSchema = new Schema<INotification, NotificationModel>(
   {
@@ -9,7 +9,7 @@ const notificationSchema = new Schema<INotification, NotificationModel>(
     },
     type: {
       type: String,
-      enum: ['offer', 'chat', 'article'],
+      enum: ['offer', 'chat', 'article', 'profile'],
     },
     role: {
       type: String,
@@ -24,9 +24,9 @@ const notificationSchema = new Schema<INotification, NotificationModel>(
     },
   },
   { timestamps: true },
-)
+);
 
 export const Notification = model<INotification, NotificationModel>(
   'Notification',
   notificationSchema,
-)
+);

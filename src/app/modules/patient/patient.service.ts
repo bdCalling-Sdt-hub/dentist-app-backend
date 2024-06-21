@@ -1,33 +1,34 @@
-import { StatusCodes } from 'http-status-codes'
-import { JwtPayload } from 'jsonwebtoken'
-import ApiError from '../../../errors/ApiError'
-import unlinkFile from '../../../util/unlinkFile'
-import { User } from '../user/user.model'
-import { IPatient } from './patient.interface'
-import { Patient } from './patient.model'
+import { StatusCodes } from 'http-status-codes';
+import { JwtPayload } from 'jsonwebtoken';
+import ApiError from '../../../errors/ApiError';
+import unlinkFile from '../../../util/unlinkFile';
+import { Notification } from '../notification/notification.model';
+import { User } from '../user/user.model';
+import { IPatient } from './patient.interface';
+import { Patient } from './patient.model';
 
 const patientUpdateToDB = async (
   user: JwtPayload,
   payload: Partial<IPatient>,
 ) => {
-  const isExistUser = await User.isUserExistById(user.id)
+  const isExistUser = await User.isUserExistById(user.id);
 
   //find patient
-  const isExistPatient = await Patient.findById(isExistUser.patient)
+  const isExistPatient = await Patient.findById(isExistUser.patient);
   if (!isExistPatient) {
-    throw new ApiError(StatusCodes.BAD_REQUEST, "Patient doesn't exist")
+    throw new ApiError(StatusCodes.BAD_REQUEST, "Patient doesn't exist");
   }
-  const { age, category, dateOfBirth, gender, plan } = payload
+  const { age, category, dateOfBirth, gender, plan } = payload;
   if (age || category || dateOfBirth || gender || plan) {
     throw new ApiError(
       StatusCodes.BAD_REQUEST,
-      'Changes to this field are not permitted.',
-    )
+      'Changes to age, category, date of birth, gender, or plan are not permitted.',
+    );
   }
 
   //unlink profile
   if (payload.profile) {
-    unlinkFile(isExistPatient?.profile)
+    unlinkFile(isExistPatient?.profile);
   }
 
   //update profile
@@ -35,7 +36,7 @@ const patientUpdateToDB = async (
     name: payload.name,
     contactNo: payload.contactNo,
     profile: payload.profile,
-  }
+  };
 
   let updateProfile = await Patient.findOneAndUpdate(
     {
@@ -43,11 +44,25 @@ const patientUpdateToDB = async (
     },
     updateData,
     { new: true },
-  )
+  );
 
-  return updateProfile
-}
+  //notification
+  //@ts-ignore
+  const socketIO = global.io;
+  const createNotification = await Notification.create({
+    message: `${payload.name ? payload.name : isExistPatient.name} has updated their profile.`,
+    image: `${payload.profile ? payload.profile : isExistPatient.profile}`,
+    type: 'profile',
+    role: 'admin',
+  });
+
+  if (socketIO) {
+    socketIO.emit('admin-notifications', createNotification);
+  }
+
+  return updateProfile;
+};
 
 export const PatientService = {
   patientUpdateToDB,
-}
+};
