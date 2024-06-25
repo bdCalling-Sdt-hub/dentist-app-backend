@@ -1,0 +1,20 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 1
+    },
+    "auditLog": "D:\\Fahim\\Bdcalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\.80f625f48182d9bffe26ebd9252586acf60115e2-audit.json",
+    "files": [
+        {
+            "date": 1719224614426,
+            "name": "D:\\Fahim\\Bdcalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\24-06-2024-16-error.log",
+            "hash": "cfa5172686e73ae5d06ff557c2a47d2547051d518b1d9af97f27813027dec090"
+        },
+        {
+            "date": 1719310090969,
+            "name": "D:\\Fahim\\Bdcalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\25-06-2024-16-error.log",
+            "hash": "bd544fdd6bedf33418b83cf0bab25bab9d7f6d81beb5ded1e1b59de6e46fe7c1"
+        }
+    ],
+    "hashType": "sha256"
+}

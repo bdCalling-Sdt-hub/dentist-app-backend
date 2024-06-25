@@ -1,5 +1,5 @@
-import { model, Schema } from 'mongoose'
-import { AdminModel, IAdmin } from './admin.interface'
+import { model, Schema } from 'mongoose';
+import { AdminModel, IAdmin } from './admin.interface';
 
 const adminSchema = new Schema<IAdmin, AdminModel>(
   {
@@ -26,11 +26,10 @@ const adminSchema = new Schema<IAdmin, AdminModel>(
     },
     profile: {
       type: String,
-      default:
-        'https://huggingface.co/datasets/huggingfacejs/tasks/resolve/main/image-classification/image-classification-input.jpeg',
+      default: 'https://i.postimg.cc/SsDP2qqv/profile.png',
     },
   },
   { timestamps: true },
-)
+);
 
-export const Admin = model<IAdmin, AdminModel>('Admin', adminSchema)
+export const Admin = model<IAdmin, AdminModel>('Admin', adminSchema);

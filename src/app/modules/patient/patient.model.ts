@@ -1,5 +1,5 @@
-import { model, Schema } from 'mongoose'
-import { IPatient, PatientModel } from './patient.interface'
+import { model, Schema } from 'mongoose';
+import { IPatient, PatientModel } from './patient.interface';
 
 const patientSchema = new Schema<IPatient, PatientModel>(
   {
@@ -35,11 +35,10 @@ const patientSchema = new Schema<IPatient, PatientModel>(
     },
     profile: {
       type: String,
-      default:
-        'https://huggingface.co/datasets/huggingfacejs/tasks/resolve/main/image-classification/image-classification-input.jpeg',
+      default: 'https://i.postimg.cc/SsDP2qqv/profile.png',
     },
   },
   { timestamps: true },
-)
+);
 
-export const Patient = model<IPatient, PatientModel>('Patient', patientSchema)
+export const Patient = model<IPatient, PatientModel>('Patient', patientSchema);
