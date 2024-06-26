@@ -1,4 +1,0 @@
-Mon Jun 24 2024 16:23:34 [DENTIST] error: 192.168.10.45 - GET /api/v1/user/profile 500 - 3.282 ms
-Mon Jun 24 2024 16:23:34 [DENTIST] error: 192.168.10.45 - GET /api/v1/user/profile 500 - 2.182 ms
-Mon Jun 24 2024 16:23:34 [DENTIST] error: 192.168.10.45 - GET /api/v1/user/profile 500 - 1.366 ms
-Mon Jun 24 2024 16:23:34 [DENTIST] error: 192.168.10.45 - GET /api/v1/user/profile 500 - 1.604 ms
