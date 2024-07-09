@@ -6,19 +6,9 @@
     "auditLog": "D:\\Fahim\\Bdcalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\.80f625f48182d9bffe26ebd9252586acf60115e2-audit.json",
     "files": [
         {
-            "date": 1719310090969,
-            "name": "D:\\Fahim\\Bdcalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\25-06-2024-16-error.log",
-            "hash": "bd544fdd6bedf33418b83cf0bab25bab9d7f6d81beb5ded1e1b59de6e46fe7c1"
-        },
-        {
-            "date": 1719313321281,
-            "name": "D:\\Fahim\\Bdcalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\25-06-2024-17-error.log",
-            "hash": "7a4bd2c7f24474c1250087da4dfb983bd300892f2ceb61fbe647b6d97a0a1465"
-        },
-        {
-            "date": 1719371217258,
-            "name": "D:\\Fahim\\Bdcalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\26-06-2024-09-error.log",
-            "hash": "8a0e539a2594a012d6450fc85a636bff26ca311b6214073ed2a795bf95612d7b"
+            "date": 1720495777085,
+            "name": "D:\\Fahim\\Bdcalling\\Backend\\dentist-app-backend\\logs\\winston\\error\\09-07-2024-09-error.log",
+            "hash": "5673a0de2d59b81c09880db7383257752836f3390f360528930ab2ee9eda671f"
         }
     ],
     "hashType": "sha256"
