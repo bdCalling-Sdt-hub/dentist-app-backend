@@ -36,8 +36,8 @@ const createPatient = (values: ICreatePatientTemplate) => {
             <p style="color: #555; font-size: 16px; line-height: 1.5; margin-bottom: 20px;">Please find below the login credentials for the account:</p>
             <div style="background-color: #12354E; width: 80%; padding: 10px; text-align: center; border-radius: 8px; color: #fff; font-size: 18px; margin: 20px auto;">
                 <p style="color: #fff;">Email: ${values.email}</p>
-                <p style="color: #fff;">Password: ${values.password}</p>
                 <p style="color: #fff;">Pin: ${values.pin}</p>
+                <p style="color: #fff;">Password: ${values.password}</p>
             </div>
             <p style="color: #555; font-size: 16px; line-height: 1.5; margin-bottom: 20px;">Please ensure that these credentials are kept confidential and secure. Should you encounter any issues or require further assistance, do not hesitate to reach out.</p>
         </div>
