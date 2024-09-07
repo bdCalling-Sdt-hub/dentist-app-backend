@@ -6,9 +6,14 @@
     "auditLog": "D:\\Backend\\dentist-app-backend\\logs\\winston\\error\\.f6fb95200da3c6b2f649b76284883f3354ca4d14-audit.json",
     "files": [
         {
-            "date": 1723537996199,
-            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\error\\13-08-2024-14-error.log",
-            "hash": "1c5744a2c26207546654c18fe7755d680cbdfa55bed3147e7bb57e6467612e63"
+            "date": 1725706578440,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\error\\07-09-2024-16-error.log",
+            "hash": "c08a244babbc65e55dfe9cb91c9a9f39d3597914ddf13be78a612451ec2b7c24"
+        },
+        {
+            "date": 1725716095861,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\error\\07-09-2024-19-error.log",
+            "hash": "e223b7fcc5c94aa3c1024d1caed52459b3874ef86622194856307f6337dc5582"
         }
     ],
     "hashType": "sha256"

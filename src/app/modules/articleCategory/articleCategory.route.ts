@@ -1,10 +1,10 @@
-import express, { NextFunction, Request, Response } from 'express'
-import { USER_TYPE } from '../../../enums/user'
-import auth from '../../middlewares/auth'
-import fileHandler from '../../middlewares/fileHandler'
-import { ArticleCategoryController } from './articleCategory.controller'
-import { ArticleCategoryValidation } from './articleCategory.validation'
-const router = express.Router()
+import express, { NextFunction, Request, Response } from 'express';
+import { USER_TYPE } from '../../../enums/user';
+import auth from '../../middlewares/auth';
+import fileHandler from '../../middlewares/fileHandler';
+import { ArticleCategoryController } from './articleCategory.controller';
+import { ArticleCategoryValidation } from './articleCategory.validation';
+const router = express.Router();
 
 router.post(
   '/create-article-category',
@@ -13,10 +13,10 @@ router.post(
   (req: Request, res: Response, next: NextFunction) => {
     req.body = ArticleCategoryValidation.createArticleCategoryZodSchema.parse(
       JSON.parse(req.body.data),
-    )
-    return ArticleCategoryController.createArticleCategory(req, res, next)
+    );
+    return ArticleCategoryController.createArticleCategory(req, res, next);
   },
-)
+);
 
 router
   .route('/:id')
@@ -28,16 +28,20 @@ router
         req.body =
           ArticleCategoryValidation.updateArticleCategoryZodSchema.parse(
             JSON.parse(req.body.data),
-          )
+          );
       }
-      return ArticleCategoryController.updateArticleCategory(req, res, next)
+      return ArticleCategoryController.updateArticleCategory(req, res, next);
     },
   )
+  .delete(
+    auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN),
+    ArticleCategoryController.deleteArticleCategory,
+  );
 
 router.get(
   '/',
   auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN, USER_TYPE.PATIENT),
   ArticleCategoryController.getAllArticleCategory,
-)
+);
 
-export const ArticleCategoryRoutes = router
+export const ArticleCategoryRoutes = router;
