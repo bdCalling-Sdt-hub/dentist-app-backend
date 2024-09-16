@@ -32,7 +32,7 @@ const createPatient = (values: ICreatePatientTemplate) => {
     <div style="width: 100%; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #fff; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
         <img src="https://i.postimg.cc/CxR60Th4/logo.png" alt="Logo" style="display: block; margin: 0 auto 20px;" />
         <div style="text-align: center;">
-            <h2 style="color: #12354E; font-size: 24px; margin-bottom: 20px;">Hey! ${values.name}, Your Toothlens Account Credentials</h2>
+            <h2 style="color: #12354E; font-size: 24px; margin-bottom: 20px;">Hey! ${values.name}, Your Smile Club Account Credentials</h2>
             <p style="color: #555; font-size: 16px; line-height: 1.5; margin-bottom: 20px;">Please find below the login credentials for the account:</p>
             <div style="background-color: #12354E; width: 80%; padding: 10px; text-align: center; border-radius: 8px; color: #fff; font-size: 18px; margin: 20px auto;">
                 <p style="color: #fff;">Email: ${values.email}</p>
@@ -40,9 +40,6 @@ const createPatient = (values: ICreatePatientTemplate) => {
                 <p style="color: #fff;">Password: ${values.password}</p>
             </div>
             <p style="color: #555; font-size: 16px; line-height: 1.5; margin-bottom: 20px;">Please ensure that these credentials are kept confidential and secure. Should you encounter any issues or require further assistance, do not hesitate to reach out.</p>
-        </div>
-        <div style="font-size: 14px; color: #999; text-align: center;">
-            <p>&copy; 2024 Dental Clinic. All rights reserved.</p>
         </div>
     </div>
 </body>`,
