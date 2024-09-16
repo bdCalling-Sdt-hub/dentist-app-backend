@@ -20,7 +20,7 @@ type IUserPayload = IUser & IPatient;
 //patient management
 const createPatientToDB = async (payload: IUserPayload) => {
   const { email, password, pin, ...patientData } = payload;
-  const user: IUser = {
+  const user: Partial<IUser> = {
     email,
     password,
     pin,
