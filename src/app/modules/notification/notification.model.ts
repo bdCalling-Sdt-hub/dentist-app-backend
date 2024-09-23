@@ -9,7 +9,7 @@ const notificationSchema = new Schema<INotification, NotificationModel>(
     },
     type: {
       type: String,
-      enum: ['offer', 'chat', 'article', 'profile'],
+      enum: ['offer', 'chat', 'article', 'profile', 'reset'],
     },
     role: {
       type: String,

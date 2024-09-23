@@ -19,11 +19,6 @@ const adminSchema = new Schema<IAdmin, AdminModel>(
       type: String,
       default: '',
     },
-    gender: {
-      type: String,
-      enum: ['male', 'female', ''],
-      default: '',
-    },
     profile: {
       type: String,
       default: 'https://i.postimg.cc/SsDP2qqv/profile.png',

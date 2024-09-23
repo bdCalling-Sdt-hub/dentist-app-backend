@@ -10,6 +10,8 @@ const getAllNotificationFromDB = async (
   role: string,
   paginationOptions: IPaginationOptions,
 ) => {
+  const getRole = role === 'super_admin' ? 'admin' : role;
+
   const { skip, page, limit, sortBy, sortOrder } =
     paginationHelper.calculatePagination(paginationOptions);
 
@@ -17,17 +19,17 @@ const getAllNotificationFromDB = async (
   if (sortBy && sortOrder) {
     sortConditions[sortBy] = sortOrder;
   }
-  const result = await Notification.find({ role: { $eq: role } })
+  const result = await Notification.find({ role: { $eq: getRole } })
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);
 
-  const total = await Notification.countDocuments({ role: { $eq: role } });
+  const total = await Notification.countDocuments({ role: { $eq: getRole } });
   const totalPage = Math.ceil(total / limit);
 
   const unreadNotifications = await Notification.countDocuments({
     read: false,
-    role: { $eq: role },
+    role: { $eq: getRole },
   });
 
   return {

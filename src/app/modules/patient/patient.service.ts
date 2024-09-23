@@ -18,8 +18,8 @@ const patientUpdateToDB = async (
   if (!isExistPatient) {
     throw new ApiError(StatusCodes.BAD_REQUEST, "Patient doesn't exist");
   }
-  const { age, category, dateOfBirth, gender, plan } = payload;
-  if (age || category || dateOfBirth || gender || plan) {
+  const { age, category, dateOfBirth, plan } = payload;
+  if (age || category || dateOfBirth || plan) {
     throw new ApiError(
       StatusCodes.BAD_REQUEST,
       'Changes to age, category, date of birth, gender, or plan are not permitted.',

@@ -47,7 +47,6 @@ const createPatientToDB = async (payload: IUserPayload) => {
     await session.commitTransaction();
     await session.endSession();
   } catch (error: any) {
-    console.log(error);
     await session.abortTransaction();
     await session.endSession();
     throw new ApiError(StatusCodes.BAD_REQUEST, error?.message);

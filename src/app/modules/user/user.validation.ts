@@ -7,9 +7,6 @@ const createPatientZodSchema = z.object({
     contactNo: z.string({ required_error: 'Contact Number is required' }),
     age: z.number({ required_error: 'Age is required' }),
     dateOfBirth: z.string({ required_error: 'Date of Birth is required' }),
-    gender: z.enum([...gender] as [string, ...string[]], {
-      required_error: 'Gender is required',
-    }),
     plan: z.string({ required_error: 'Plan is required' }),
     category: z.string({ required_error: 'Category is required' }),
     email: z.string({ required_error: 'Email is required' }),

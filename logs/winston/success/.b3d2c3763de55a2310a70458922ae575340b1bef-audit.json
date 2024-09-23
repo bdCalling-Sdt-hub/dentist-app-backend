@@ -6,14 +6,19 @@
     "auditLog": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\.b3d2c3763de55a2310a70458922ae575340b1bef-audit.json",
     "files": [
         {
-            "date": 1725706578437,
-            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\07-09-2024-16-success.log",
-            "hash": "adbb121a7d91e9b4cdf5756a0b109566ca8877cfa2c78328dac1ca6304f167a8"
+            "date": 1726997106436,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\22-09-2024-15-success.log",
+            "hash": "37b241468c569c352db2cdf2a3ed8bfdbe0f41b34a182614de683cba53cad76a"
         },
         {
-            "date": 1725716095859,
-            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\07-09-2024-19-success.log",
-            "hash": "7f528d672486696a5e093c7f0a9de154ae43bd43fd6f650cf2b62414825b9f19"
+            "date": 1727004690670,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\22-09-2024-17-success.log",
+            "hash": "1a5019c3b9da651e46daeb95c241a6c0fc50d90e361ff0ec898c826b1f932089"
+        },
+        {
+            "date": 1727007895330,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\22-09-2024-18-success.log",
+            "hash": "943f70c87ab6bd9d2f8120a0a6cad0d332329774379c4d0af693947108a4e78e"
         }
     ],
     "hashType": "sha256"

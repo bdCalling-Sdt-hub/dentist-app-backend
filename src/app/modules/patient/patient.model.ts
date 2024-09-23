@@ -7,7 +7,10 @@ const patientSchema = new Schema<IPatient, PatientModel>(
       type: String,
       required: true,
     },
-
+    surname: {
+      type: String,
+      required: true,
+    },
     contactNo: {
       type: String,
       required: true,
@@ -18,11 +21,6 @@ const patientSchema = new Schema<IPatient, PatientModel>(
     },
     dateOfBirth: {
       type: String,
-      required: true,
-    },
-    gender: {
-      type: String,
-      enum: ['male', 'female'],
       required: true,
     },
     plan: {

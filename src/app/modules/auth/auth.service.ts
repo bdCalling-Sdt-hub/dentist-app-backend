@@ -4,12 +4,10 @@ import { JwtPayload, Secret } from 'jsonwebtoken';
 import config from '../../../config';
 import { USER_TYPE } from '../../../enums/user';
 import ApiError from '../../../errors/ApiError';
-import { emailHelper } from '../../../helpers/emailHelper';
 import { jwtHelper } from '../../../helpers/jwtHelper';
-import { emailTemplate } from '../../../shared/emailTemplate';
-import { IChangePassword, IResetPassword } from '../../../types/authTypes';
+import { IChangePassword } from '../../../types/authTypes';
 import cryptoHexToken from '../../../util/cryptoHexToken';
-import generateOTP from '../../../util/generateOTP';
+import { Notification } from '../notification/notification.model';
 import { ResetToken } from '../resetToken/resetToken.model';
 import { IForgetPassword, IUser, IVerifyOtp } from '../user/user.interface';
 import { User } from './../user/user.model';
@@ -56,24 +54,45 @@ const forgetPasswordToDB = async (payload: IForgetPassword) => {
     throw new ApiError(StatusCodes.OK, "User doesn't exist!");
   }
 
-  //otp generate
-  const otp = generateOTP();
+  //notification
+  //@ts-ignore
+  const socketIO = global.io;
+  const createNotification = await Notification.create({
+    message: `<span style="color:#04aa6d;font-weight:bold">${email}</span> request to reset his password`,
+    type: 'reset',
+    role: 'admin',
+  });
 
-  //send email
-  const data = {
-    email,
-    otp: otp.toString(),
-  };
-  const mailData = emailTemplate.forgetPassword(data);
-  emailHelper.sendMail(mailData);
-
-  //save to db
-  const authentication = {
-    oneTimeCode: otp,
-    expiresAt: new Date(Date.now() + 3 * 60000),
-  };
-  await User.findOneAndUpdate({ email: email }, { $set: { authentication } });
+  if (socketIO) {
+    socketIO.emit('admin-notifications', createNotification);
+  }
 };
+
+// const forgetPasswordToDB = async (payload: IForgetPassword) => {
+//   const { email } = payload;
+//   const isExistUser = await User.isUserExistByEmail(email);
+//   if (!isExistUser) {
+//     throw new ApiError(StatusCodes.OK, "User doesn't exist!");
+//   }
+
+//   //otp generate
+//   const otp = generateOTP();
+
+//   //send email
+//   const data = {
+//     email,
+//     otp: otp.toString(),
+//   };
+//   const mailData = emailTemplate.forgetPassword(data);
+//   emailHelper.sendMail(mailData);
+
+//   //save to db
+//   const authentication = {
+//     oneTimeCode: otp,
+//     expiresAt: new Date(Date.now() + 3 * 60000),
+//   };
+//   await User.findOneAndUpdate({ email: email }, { $set: { authentication } });
+// };
 
 const verifyOtpToDB = async (payload: IVerifyOtp) => {
   const { email, otp } = payload;
@@ -126,39 +145,35 @@ const verifyOtpToDB = async (payload: IVerifyOtp) => {
   return createToken;
 };
 
-const resetPasswordToDB = async (token: string, payload: IResetPassword) => {
-  const { newPassword, confirmPassword } = payload;
-  const isTokenExist = await ResetToken.isTokenExist(token);
-  if (!isTokenExist) {
-    throw new ApiError(StatusCodes.BAD_REQUEST, 'You are not authorized!');
+const resetPasswordToDB = async (payload: any) => {
+  const { email, password, pin } = payload;
+  const isUserExist = await User.findOne({ email });
+  if (!isUserExist) {
+    throw new ApiError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
   }
 
-  const isValid = await ResetToken.isTokenExpire(token);
-  if (!isValid) {
-    throw new ApiError(
-      StatusCodes.BAD_REQUEST,
-      'Token expired, Please click again to the forget password',
-    );
-  }
+  // console.log(isUserExist);
+
   //password check
-  if (newPassword !== confirmPassword) {
-    throw new ApiError(
-      StatusCodes.BAD_REQUEST,
-      "Password and confirm password doesn't exist",
-    );
-  }
+  // if (newPassword !== confirmPassword) {
+  //   throw new ApiError(
+  //     StatusCodes.BAD_REQUEST,
+  //     "Password and confirm password doesn't exist",
+  //   );
+  // }
 
   //hash password
   const hashPassword = await bcrypt.hash(
-    newPassword,
+    password,
     Number(config.bcrypt_salt_rounds),
   );
 
   const updateData = {
     password: hashPassword,
+    pin: pin,
   };
 
-  await User.findOneAndUpdate({ _id: isTokenExist.user }, updateData, {
+  await User.findOneAndUpdate({ email }, updateData, {
     new: true,
   });
 };

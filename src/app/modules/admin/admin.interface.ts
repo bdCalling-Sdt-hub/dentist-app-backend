@@ -1,12 +1,11 @@
-import { Model } from 'mongoose'
+import { Model } from 'mongoose';
 
 export type IAdmin = {
-  name: string
-  contactNo: string
-  age: number
-  dateOfBirth: string
-  gender: 'male' | 'female' | ''
-  profile: string
-}
+  name: string;
+  contactNo: string;
+  age: number;
+  dateOfBirth: string;
+  profile: string;
+};
 
-export type AdminModel = {} & Model<IAdmin>
+export type AdminModel = {} & Model<IAdmin>;
