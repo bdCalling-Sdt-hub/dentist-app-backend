@@ -13,11 +13,13 @@ import { IForgetPassword, IUser, IVerifyOtp } from '../user/user.interface';
 import { User } from './../user/user.model';
 
 const loginUserFromDB = async (payload: Partial<IUser>) => {
-  const { email, pin, password } = payload;
+  const { email, pin, password, deviceToken } = payload;
   const isUserExist = await User.findOne({ email }).select('+password +pin');
   if (!isUserExist) {
     throw new ApiError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
   }
+
+  console.log('new', deviceToken);
 
   if (isUserExist.status === 'delete') {
     throw new ApiError(
@@ -36,6 +38,15 @@ const loginUserFromDB = async (payload: Partial<IUser>) => {
       throw new ApiError(StatusCodes.BAD_REQUEST, 'Pin is incorrect!');
     }
   }
+
+  //save device token
+  const update = await User.findOneAndUpdate(
+    { _id: isUserExist._id },
+    { $set: { deviceToken: deviceToken } },
+    { new: true },
+  );
+
+  console.log('updateDb', update);
 
   //jwt sign
   const createToken = jwtHelper.createToken(

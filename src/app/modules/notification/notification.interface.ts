@@ -6,6 +6,7 @@ export type INotification = {
   role: 'patient' | 'admin';
   image?: string;
   read: boolean;
+  token?: string;
 };
 
 export type NotificationModel = Model<INotification, Record<string, unknown>>;
