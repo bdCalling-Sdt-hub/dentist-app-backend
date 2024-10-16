@@ -5,6 +5,7 @@ export type INotification = {
   type: 'offer' | 'chat' | 'article' | 'profile' | 'reset';
   role: 'patient' | 'admin';
   image?: string;
+  chatId?: string;
   read: boolean;
   token?: string;
 };

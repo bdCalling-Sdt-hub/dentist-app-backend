@@ -25,6 +25,9 @@ const notificationSchema = new Schema<INotification, NotificationModel>(
     token: {
       type: String,
     },
+    chatId: {
+      type: String,
+    },
   },
   { timestamps: true },
 );

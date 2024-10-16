@@ -2,6 +2,7 @@ import { firebaseHelper } from '../../../helpers/firebaseHelper';
 import { paginationHelper } from '../../../helpers/paginationHelper';
 import { IPaginationOptions } from '../../../types/pagination';
 import { Chat } from '../chat/chat.model';
+import { Notification } from '../notification/notification.model';
 import { User } from '../user/user.model';
 import { Message } from './message.model';
 
@@ -30,6 +31,22 @@ const sendMessageToDB = async (payload: any) => {
   const socketIo = global.io;
   if (socketIo) {
     socketIo.emit(`message::${payload.chatId}`, result);
+  }
+
+  //notification
+  if (payload.sender !== 'support') {
+    //@ts-ignore
+    const socketIO = global.io;
+    const createNotification = await Notification.create({
+      message: `Someone send you message, ${payload.text}`,
+      type: 'chat',
+      role: 'admin',
+      chatId: payload.chatId,
+    });
+
+    if (socketIO) {
+      socketIO.emit('admin-notifications', createNotification);
+    }
   }
 
   return result;
