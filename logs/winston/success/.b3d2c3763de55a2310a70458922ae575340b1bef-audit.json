@@ -9,6 +9,21 @@
             "date": 1729070203020,
             "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\16-10-2024-15-success.log",
             "hash": "2eb7b9b75127079378720e311855742153f41a84cf92551016ecbb7a9e94ad83"
+        },
+        {
+            "date": 1729136850060,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\17-10-2024-09-success.log",
+            "hash": "4551229bc91f6355d3f0d1d487f75a6b8648adf212fd57e66de8430cba0f4740"
+        },
+        {
+            "date": 1729145343170,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\17-10-2024-12-success.log",
+            "hash": "e3251aabc5d3fd939bb0c4bc4e4b1c440f314f222c790f4db04428817b7af907"
+        },
+        {
+            "date": 1729148423822,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\17-10-2024-13-success.log",
+            "hash": "73d780cddfc0856c6e26c540922c0cda9e4b26aa0659e0b61f79326b1867527f"
         }
     ],
     "hashType": "sha256"

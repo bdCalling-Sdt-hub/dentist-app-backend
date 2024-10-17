@@ -38,7 +38,7 @@ const patientChatListFromDB = async (paginationOptions: IPaginationOptions) => {
     sortConditions[sortBy] = sortOrder;
   }
   const chat = await Chat.find()
-    .sort(sortConditions)
+    .sort({ lastMessageTime: 'desc' })
     .populate({
       path: 'participants',
       populate: [{ path: 'patient' }],

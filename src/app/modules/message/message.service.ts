@@ -1,3 +1,5 @@
+import { StatusCodes } from 'http-status-codes';
+import ApiError from '../../../errors/ApiError';
 import { firebaseHelper } from '../../../helpers/firebaseHelper';
 import { paginationHelper } from '../../../helpers/paginationHelper';
 import { IPaginationOptions } from '../../../types/pagination';
@@ -8,8 +10,21 @@ import { Message } from './message.model';
 
 const sendMessageToDB = async (payload: any) => {
   const result = await Message.create(payload);
+  if (!result) {
+    throw new ApiError(StatusCodes.BAD_REQUEST, 'Failed to send message');
+  }
   const chatId = await Chat.findById(result.toObject().chatId);
   const user = await User.findById(chatId?.participants);
+
+  //update message time
+  const updateChatList = await Chat.findByIdAndUpdate(
+    payload.chatId,
+    {
+      lastMessage: payload.text,
+      lastMessageTime: result.createdAt as any,
+    },
+    { new: true },
+  );
 
   //push notifications
   if (payload.sender !== 'patient') {
@@ -31,6 +46,7 @@ const sendMessageToDB = async (payload: any) => {
   const socketIo = global.io;
   if (socketIo) {
     socketIo.emit(`message::${payload.chatId}`, result);
+    socketIo.emit('chat-list-update', updateChatList);
   }
 
   //notification

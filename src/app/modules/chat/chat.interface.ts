@@ -1,5 +1,7 @@
-import { Types } from 'mongoose'
+import { Types } from 'mongoose';
 
 export type IChat = {
-  participants: Types.ObjectId
-}
+  participants: Types.ObjectId;
+  lastMessage: string;
+  lastMessageTime: Date;
+};
