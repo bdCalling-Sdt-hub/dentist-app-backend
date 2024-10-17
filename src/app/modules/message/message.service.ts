@@ -21,7 +21,8 @@ const sendMessageToDB = async (payload: any) => {
     payload.chatId,
     {
       lastMessage: payload.text,
-      lastMessageTime: result.createdAt as any,
+      //@ts-ignore
+      lastMessageTime: result.createdAt,
     },
     { new: true },
   );
