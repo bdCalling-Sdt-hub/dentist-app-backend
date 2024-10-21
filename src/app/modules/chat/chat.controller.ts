@@ -18,6 +18,18 @@ const createChat = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const readLastMessage = catchAsync(async (req: Request, res: Response) => {
+  const chatId = req.params.chatId;
+  const result = await ChatService.readLastMessageToDB(chatId);
+
+  sendResponse(res, {
+    success: true,
+    statusCode: StatusCodes.OK,
+    message: 'Last message successfully',
+    data: result,
+  });
+});
+
 const patientChatList = catchAsync(async (req: Request, res: Response) => {
   const paginationOptions = pick(req.query, paginationFields);
   const result = await ChatService.patientChatListFromDB(paginationOptions);
@@ -33,4 +45,5 @@ const patientChatList = catchAsync(async (req: Request, res: Response) => {
 export const ChatController = {
   createChat,
   patientChatList,
+  readLastMessage,
 };

@@ -30,6 +30,17 @@ const createChatToDB = async (user: JwtPayload) => {
   return result;
 };
 
+const readLastMessageToDB = async (chatId: string) => {
+  const result = await Chat.findByIdAndUpdate(
+    chatId,
+    {
+      'lastMessage.status': false,
+    },
+    { new: true },
+  );
+  return result;
+};
+
 const patientChatListFromDB = async (paginationOptions: IPaginationOptions) => {
   const { sortBy, sortOrder } =
     paginationHelper.calculatePagination(paginationOptions);
@@ -43,10 +54,17 @@ const patientChatListFromDB = async (paginationOptions: IPaginationOptions) => {
       path: 'participants',
       populate: [{ path: 'patient' }],
     });
-  return chat;
+  const unReadMessage = await Chat.countDocuments({
+    'lastMessage.status': { $eq: true },
+  });
+
+  console.log(unReadMessage);
+
+  return { chatList: chat, unReadMessage };
 };
 
 export const ChatService = {
   createChatToDB,
   patientChatListFromDB,
+  readLastMessageToDB,
 };

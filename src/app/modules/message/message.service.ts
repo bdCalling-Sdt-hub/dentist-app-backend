@@ -20,7 +20,10 @@ const sendMessageToDB = async (payload: any) => {
   const updateChatList = await Chat.findByIdAndUpdate(
     payload.chatId,
     {
-      lastMessage: payload.text,
+      lastMessage: {
+        message: payload.text,
+        status: payload.sender !== 'patient' ? false : true,
+      },
       //@ts-ignore
       lastMessageTime: result.createdAt,
     },

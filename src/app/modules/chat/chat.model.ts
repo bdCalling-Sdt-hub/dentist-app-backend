@@ -1,15 +1,20 @@
 import { model, Schema } from 'mongoose';
-import { IChat } from './chat.interface';
+import { ChatModel, IChat } from './chat.interface';
 
-const chatSchema = new Schema<IChat>(
+const chatSchema = new Schema<IChat, ChatModel>(
   {
     participants: {
       type: Schema.Types.ObjectId,
       ref: 'User',
     },
     lastMessage: {
-      type: String,
-      default: 'You have a new message',
+      message: {
+        type: String,
+        default: 'You have a new message',
+      },
+      status: {
+        type: Boolean,
+      },
     },
     lastMessageTime: {
       type: Date,
@@ -19,4 +24,4 @@ const chatSchema = new Schema<IChat>(
   { timestamps: true },
 );
 
-export const Chat = model<IChat>('Chat', chatSchema);
+export const Chat = model<IChat, ChatModel>('Chat', chatSchema);
