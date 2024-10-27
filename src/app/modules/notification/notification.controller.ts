@@ -36,9 +36,8 @@ const readNotifications = catchAsync(async (req: Request, res: Response) => {
 });
 
 const deleteNotification = catchAsync(async (req: Request, res: Response) => {
-  const user = req.user;
   const id = req.params.id;
-  const result = await NotificationService.deleteNotificationToDB(id, user);
+  const result = await NotificationService.deleteNotificationToDB(id);
 
   sendResponse(res, {
     statusCode: StatusCodes.OK,

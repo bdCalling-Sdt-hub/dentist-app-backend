@@ -1,5 +1,4 @@
 import { StatusCodes } from 'http-status-codes';
-import { JwtPayload } from 'jsonwebtoken';
 import { SortOrder } from 'mongoose';
 import ApiError from '../../../errors/ApiError';
 import { paginationHelper } from '../../../helpers/paginationHelper';
@@ -49,9 +48,9 @@ const readNotificationsToDB = async () => {
   return result;
 };
 
-const deleteNotificationToDB = async (id: string, user: JwtPayload) => {
+const deleteNotificationToDB = async (id: string) => {
   const isExistNotification = await Notification.findById(id);
-  if (isExistNotification?.role !== user.role) {
+  if (!isExistNotification) {
     throw new ApiError(
       StatusCodes.BAD_REQUEST,
       'You do not have permission to delete this notification.',
