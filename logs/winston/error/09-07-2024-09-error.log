@@ -1,5 +1,0 @@
-Tue Jul 09 2024 9:29:53 [DENTIST] error: 192.168.10.16 - GET /favicon.ico 404 - 2.034 ms
-Tue Jul 09 2024 9:34:42 [DENTIST] error: 192.168.10.102 - POST /api/v1/auth/login 400 - 276.384 ms
-Tue Jul 09 2024 9:34:51 [DENTIST] error: 192.168.10.102 - POST /api/v1/auth/login 400 - 458.153 ms
-Tue Jul 09 2024 9:34:57 [DENTIST] error: 192.168.10.102 - POST /api/v1/auth/login 400 - 463.555 ms
-Tue Jul 09 2024 9:35:4 [DENTIST] error: 192.168.10.102 - POST /api/v1/auth/login 400 - 457.084 ms

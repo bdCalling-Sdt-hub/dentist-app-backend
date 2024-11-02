@@ -42,7 +42,7 @@ const loginUserFromDB = async (payload: Partial<IUser>) => {
   //save device token
   const update = await User.findOneAndUpdate(
     { _id: isUserExist._id },
-    { $set: { deviceToken: deviceToken } },
+    { deviceToken: deviceToken },
     { new: true },
   );
 
