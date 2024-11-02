@@ -15,6 +15,8 @@ const createOfferToDB = async (payload: IOffer) => {
 
   const users = await User.find({ deviceToken: { $ne: null } });
 
+  console.log('tokens', users);
+
   //notification create
   //@ts-ignore
   const socketIo = global.io;
