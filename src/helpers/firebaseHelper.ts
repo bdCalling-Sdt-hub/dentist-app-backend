@@ -6,6 +6,8 @@ import { logger } from '../shared/logger';
 const serviceAccountKey: admin.ServiceAccount =
   serviceAccount as admin.ServiceAccount;
 
+console.log(serviceAccountKey);
+
 // Initialize Firebase SDK
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccountKey),

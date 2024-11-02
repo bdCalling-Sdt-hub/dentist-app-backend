@@ -9,6 +9,11 @@
             "date": 1730528050407,
             "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\02-11-2024-12-success.log",
             "hash": "60701c061e91f7ad8337d725c08747f2ceb8f6add7917082f298a59e9f16a762"
+        },
+        {
+            "date": 1730538645500,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\02-11-2024-15-success.log",
+            "hash": "454bef48b97496bb7f6df5b66dcc0f191e429479778fcad7daf17f6a4863ebd4"
         }
     ],
     "hashType": "sha256"
