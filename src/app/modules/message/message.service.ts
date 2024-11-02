@@ -30,6 +30,8 @@ const sendMessageToDB = async (payload: any) => {
     { new: true },
   );
 
+  console.log(user);
+
   //push notifications
   if (payload.sender !== 'patient') {
     if (user?.deviceToken) {
@@ -55,8 +57,6 @@ const sendMessageToDB = async (payload: any) => {
 
   //notification
   if (payload.sender !== 'support') {
-    //@ts-ignore
-    const socketIO = global.io;
     const createNotification = await Notification.create({
       message: `Someone send you message, ${payload.text}`,
       type: 'chat',
@@ -64,8 +64,8 @@ const sendMessageToDB = async (payload: any) => {
       chatId: payload.chatId,
     });
 
-    if (socketIO) {
-      socketIO.emit('admin-notifications', createNotification);
+    if (socketIo) {
+      socketIo.emit('admin-notifications', createNotification);
     }
   }
 
