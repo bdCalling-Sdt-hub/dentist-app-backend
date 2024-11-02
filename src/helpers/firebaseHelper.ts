@@ -6,8 +6,6 @@ import { logger } from '../shared/logger';
 const serviceAccountKey: admin.ServiceAccount =
   serviceAccount as admin.ServiceAccount;
 
-console.log(serviceAccountKey);
-
 // Initialize Firebase SDK
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccountKey),
@@ -17,6 +15,7 @@ admin.initializeApp({
 const sendPushNotifications = async (
   values: admin.messaging.MulticastMessage,
 ) => {
+  console.log(values);
   const res = await admin.messaging().sendEachForMulticast(values);
   logger.info('Notifications sent successfully', res);
 };
