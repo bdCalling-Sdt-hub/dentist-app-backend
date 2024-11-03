@@ -6,14 +6,39 @@
     "auditLog": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\.b3d2c3763de55a2310a70458922ae575340b1bef-audit.json",
     "files": [
         {
-            "date": 1730528050407,
-            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\02-11-2024-12-success.log",
-            "hash": "60701c061e91f7ad8337d725c08747f2ceb8f6add7917082f298a59e9f16a762"
-        },
-        {
             "date": 1730538645500,
             "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\02-11-2024-15-success.log",
             "hash": "454bef48b97496bb7f6df5b66dcc0f191e429479778fcad7daf17f6a4863ebd4"
+        },
+        {
+            "date": 1730543605333,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\02-11-2024-16-success.log",
+            "hash": "f1845db2fc63ef710c24402c09eb8c6184180b608d055f393adfea41b70727ed"
+        },
+        {
+            "date": 1730610573884,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\03-11-2024-11-success.log",
+            "hash": "6a444096b06c810a7071a979726565fc0f3d1caafa1e9d87330de31b2312633a"
+        },
+        {
+            "date": 1730615526297,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\03-11-2024-12-success.log",
+            "hash": "d4773ee5821d5e197fa6a06d38b7f1ed03ab906dd341e0f7936c693826fe4dd8"
+        },
+        {
+            "date": 1730617980765,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\03-11-2024-13-success.log",
+            "hash": "f095800abc743218ec97c322948ea87ed074f7414f875939bbb37a2a717acb6e"
+        },
+        {
+            "date": 1730623874183,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\03-11-2024-14-success.log",
+            "hash": "22ccbb37a3c22fe6c2b3ac1caaa3c5ee16bdc173493507c74984ae41dff11a5b"
+        },
+        {
+            "date": 1730624767311,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\success\\03-11-2024-15-success.log",
+            "hash": "672f05718843a6282debe868d74a73e3cf3ac19bd5aa4295ef8601c6e2ae4d5f"
         }
     ],
     "hashType": "sha256"

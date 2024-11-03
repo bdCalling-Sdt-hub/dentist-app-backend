@@ -5,6 +5,6 @@ node_modules
 
 /dist
 
-dentist-push-notification.json
+firebase-admin-secret.json
 
 /uploads

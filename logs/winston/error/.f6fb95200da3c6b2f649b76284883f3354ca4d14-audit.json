@@ -6,14 +6,39 @@
     "auditLog": "D:\\Backend\\dentist-app-backend\\logs\\winston\\error\\.f6fb95200da3c6b2f649b76284883f3354ca4d14-audit.json",
     "files": [
         {
-            "date": 1730528050410,
-            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\error\\02-11-2024-12-error.log",
-            "hash": "defc135103851505c9da8f04f92b025f4355da0d247fc850952835bda7ae921a"
-        },
-        {
             "date": 1730538645502,
             "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\error\\02-11-2024-15-error.log",
             "hash": "ea1afa1ed86a66791da350d24c756f4c87c5f55863d5534a1becd2f56ccc9d75"
+        },
+        {
+            "date": 1730543605335,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\error\\02-11-2024-16-error.log",
+            "hash": "4a4f7988c896474d10bdea92e99e5e6eac50253335cc429c9af3d25102353dd2"
+        },
+        {
+            "date": 1730610573886,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\error\\03-11-2024-11-error.log",
+            "hash": "f05476d47284b91b03d9c22728267cc6b566fde0074b4978edf7079bd985b314"
+        },
+        {
+            "date": 1730615526299,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\error\\03-11-2024-12-error.log",
+            "hash": "540c278f746e4e0e3bd05f1f25c0ce194c499f4e912fcc1940154def8e0bb011"
+        },
+        {
+            "date": 1730618020326,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\error\\03-11-2024-13-error.log",
+            "hash": "b403ab06b7929451c84d7f3aaf497a159209d75252fd9ed20653fcea52a76bfc"
+        },
+        {
+            "date": 1730624122720,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\error\\03-11-2024-14-error.log",
+            "hash": "b4ab6fb414c14eb142b9ffcfea2c68b7e4db74176ed13f4a8ef54c3b842ddca1"
+        },
+        {
+            "date": 1730624767314,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\error\\03-11-2024-15-error.log",
+            "hash": "dd1319340d3d085481a85cef9e073f6363f75462a1f80d2e6f8ae87e8ed914a5"
         }
     ],
     "hashType": "sha256"

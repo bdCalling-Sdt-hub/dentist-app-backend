@@ -30,8 +30,6 @@ const sendMessageToDB = async (payload: any) => {
     { new: true },
   );
 
-  console.log(user);
-
   //push notifications
   if (payload.sender !== 'patient') {
     if (user?.deviceToken) {

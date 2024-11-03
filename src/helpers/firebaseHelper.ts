@@ -1,5 +1,5 @@
 import admin from 'firebase-admin';
-import serviceAccount from '../../dentist-push-notification.json';
+import serviceAccount from '../../firebase-admin-secret.json';
 import { logger } from '../shared/logger';
 
 // Cast serviceAccount to ServiceAccount type
@@ -15,7 +15,6 @@ admin.initializeApp({
 const sendPushNotifications = async (
   values: admin.messaging.MulticastMessage,
 ) => {
-  console.log(values);
   const res = await admin.messaging().sendEachForMulticast(values);
   logger.info('Notifications sent successfully', res);
 };

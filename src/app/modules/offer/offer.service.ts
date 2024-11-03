@@ -12,10 +12,7 @@ const createOfferToDB = async (payload: IOffer) => {
   if (!createOffer) {
     throw new ApiError(StatusCodes.OK, 'Failed to create offer');
   }
-
   const users = await User.find({ deviceToken: { $ne: null } });
-
-  console.log('tokens', users);
 
   //notification create
   //@ts-ignore
