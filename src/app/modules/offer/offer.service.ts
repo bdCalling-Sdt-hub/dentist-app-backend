@@ -12,18 +12,29 @@ const createOfferToDB = async (payload: IOffer) => {
   if (!createOffer) {
     throw new ApiError(StatusCodes.OK, 'Failed to create offer');
   }
-  const users = await User.find({ deviceToken: { $ne: null } });
+  const users = await User.find({
+    deviceToken: { $ne: null },
+    status: 'active',
+  });
 
   //notification create
   //@ts-ignore
   const socketIo = global.io;
-  const createNotification = await Notification.create({
-    message: 'A new offer has been created for you.',
-    role: 'patient',
-    type: 'offer',
-    image: payload.offerImage,
-  });
+  if (socketIo) {
+    users.map(async user => {
+      const createNotification = await Notification.create({
+        message: 'A new offer has been created for you.',
+        role: 'patient',
+        user: user._id,
+        type: 'offer',
+        image: payload.offerImage,
+      });
 
+      socketIo.emit(`patient-notifications::${user._id}`, createNotification);
+    });
+  }
+
+  //firebase
   const message = {
     notification: {
       title: `${payload.offerTitle}`,
@@ -36,10 +47,6 @@ const createOfferToDB = async (payload: IOffer) => {
 
   //firebase
   firebaseHelper.sendPushNotifications(message);
-
-  if (socketIo) {
-    socketIo.emit('patient-notifications', createNotification);
-  }
 
   return createOffer;
 };

@@ -7,10 +7,10 @@ import sendResponse from '../../../shared/sendResponse';
 import { NotificationService } from './notification.service';
 
 const getAllNotification = catchAsync(async (req: Request, res: Response) => {
-  const role = req.user.role;
+  const user = req.user;
   const paginationOptions = pick(req.query, paginationFields);
   const result = await NotificationService.getAllNotificationFromDB(
-    role,
+    user,
     paginationOptions,
   );
 
@@ -36,8 +36,9 @@ const readNotifications = catchAsync(async (req: Request, res: Response) => {
 });
 
 const deleteNotification = catchAsync(async (req: Request, res: Response) => {
+  const user = req.user.id;
   const id = req.params.id;
-  const result = await NotificationService.deleteNotificationToDB(id);
+  const result = await NotificationService.deleteNotificationToDB(user, id);
 
   sendResponse(res, {
     statusCode: StatusCodes.OK,
@@ -47,8 +48,22 @@ const deleteNotification = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const allDeleteNotification = catchAsync(
+  async (req: Request, res: Response) => {
+    const user = req.user.id;
+    await NotificationService.allDeleteNotificationToDB(user);
+
+    sendResponse(res, {
+      statusCode: StatusCodes.OK,
+      success: true,
+      message: 'All Notification deleted successfully',
+    });
+  },
+);
+
 export const NotificationController = {
   getAllNotification,
   deleteNotification,
   readNotifications,
+  allDeleteNotification,
 };

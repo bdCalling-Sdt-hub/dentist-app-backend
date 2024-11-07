@@ -1,16 +1,16 @@
 import { StatusCodes } from 'http-status-codes';
+import { JwtPayload } from 'jsonwebtoken';
 import { SortOrder } from 'mongoose';
 import ApiError from '../../../errors/ApiError';
 import { paginationHelper } from '../../../helpers/paginationHelper';
 import { IPaginationOptions } from '../../../types/pagination';
+import { User } from '../user/user.model';
 import { Notification } from './notification.model';
 
 const getAllNotificationFromDB = async (
-  role: string,
+  user: JwtPayload,
   paginationOptions: IPaginationOptions,
 ) => {
-  const getRole = role === 'super_admin' ? 'admin' : role;
-
   const { skip, page, limit, sortBy, sortOrder } =
     paginationHelper.calculatePagination(paginationOptions);
 
@@ -18,17 +18,17 @@ const getAllNotificationFromDB = async (
   if (sortBy && sortOrder) {
     sortConditions[sortBy] = sortOrder;
   }
-  const result = await Notification.find({ role: { $eq: getRole } })
+  const result = await Notification.find({ user: user.id })
     .sort(sortConditions)
     .skip(skip)
     .limit(limit);
 
-  const total = await Notification.countDocuments({ role: { $eq: getRole } });
+  const total = await Notification.countDocuments({ user: user.id });
   const totalPage = Math.ceil(total / limit);
 
   const unreadNotifications = await Notification.countDocuments({
     read: false,
-    role: { $eq: getRole },
+    user: user.id,
   });
 
   return {
@@ -48,9 +48,9 @@ const readNotificationsToDB = async () => {
   return result;
 };
 
-const deleteNotificationToDB = async (id: string) => {
-  const isExistNotification = await Notification.findById(id);
-  if (!isExistNotification) {
+const deleteNotificationToDB = async (user: string, id: string) => {
+  const isExistUser = await User.findById(user);
+  if (!isExistUser) {
     throw new ApiError(
       StatusCodes.BAD_REQUEST,
       'You do not have permission to delete this notification.',
@@ -60,8 +60,13 @@ const deleteNotificationToDB = async (id: string) => {
   return result;
 };
 
+const allDeleteNotificationToDB = async (user: string) => {
+  await Notification.deleteMany({ user });
+};
+
 export const NotificationService = {
   getAllNotificationFromDB,
   deleteNotificationToDB,
   readNotificationsToDB,
+  allDeleteNotificationToDB,
 };

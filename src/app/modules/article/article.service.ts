@@ -6,27 +6,35 @@ import { IGenericResponse } from '../../../types/common';
 import { IPaginationOptions } from '../../../types/pagination';
 import unlinkFile from '../../../util/unlinkFile';
 import { Notification } from '../notification/notification.model';
+import { User } from '../user/user.model';
 import { IArticle, IArticleFilterOptions } from './article.interface';
 import { Article } from './article.model';
 
 const createArticleToDB = async (payload: IArticle): Promise<IArticle> => {
   const createArticle = await Article.create(payload);
-
   if (!createArticle) {
     throw new ApiError(StatusCodes.BAD_REQUEST, 'Failed to created article');
   }
 
+  const users = await User.find({
+    deviceToken: { $ne: null },
+    status: 'active',
+  });
+
   //notification create
   //@ts-ignore
   const socketIo = global.io;
-  const createNotification = await Notification.create({
-    message: 'A new post has been published.',
-    role: 'patient',
-    type: 'article',
-  });
-
   if (socketIo) {
-    socketIo.emit('patient-notifications', createNotification);
+    users.map(async user => {
+      const createNotification = await Notification.create({
+        message: 'A new post has been published.',
+        role: 'patient',
+        user: user._id,
+        type: 'article',
+      });
+
+      socketIo.emit(`patient-notifications::${user._id}`, createNotification);
+    });
   }
 
   return createArticle;

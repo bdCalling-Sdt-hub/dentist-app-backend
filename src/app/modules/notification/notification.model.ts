@@ -22,6 +22,7 @@ const notificationSchema = new Schema<INotification, NotificationModel>(
       type: Boolean,
       default: false,
     },
+    user: { type: Schema.Types.ObjectId, ref: 'User' },
     token: {
       type: String,
     },

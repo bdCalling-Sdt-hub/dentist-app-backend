@@ -10,7 +10,19 @@ router.patch(
   NotificationController.readNotifications,
 );
 
-router.route('/:id').delete(NotificationController.deleteNotification);
+router
+  .route('/all-delete')
+  .delete(
+    auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN, USER_TYPE.PATIENT),
+    NotificationController.allDeleteNotification,
+  );
+
+router
+  .route('/:id')
+  .delete(
+    auth(USER_TYPE.SUPER_ADMIN, USER_TYPE.ADMIN, USER_TYPE.PATIENT),
+    NotificationController.deleteNotification,
+  );
 
 router.get(
   '/',
