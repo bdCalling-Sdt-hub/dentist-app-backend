@@ -43,6 +43,43 @@ const getAllNotificationFromDB = async (
   };
 };
 
+const getAllAdminNotificationFromDB = async (
+  user: JwtPayload,
+  paginationOptions: IPaginationOptions,
+) => {
+  const getRole = user.role === 'super_admin' ? 'admin' : user.role;
+  const { skip, page, limit, sortBy, sortOrder } =
+    paginationHelper.calculatePagination(paginationOptions);
+
+  const sortConditions: { [key: string]: SortOrder } = {};
+  if (sortBy && sortOrder) {
+    sortConditions[sortBy] = sortOrder;
+  }
+  const result = await Notification.find({ role: getRole })
+    .sort(sortConditions)
+    .skip(skip)
+    .limit(limit);
+
+  const total = await Notification.countDocuments({ role: getRole });
+  const totalPage = Math.ceil(total / limit);
+
+  const unreadNotifications = await Notification.countDocuments({
+    read: false,
+    role: getRole,
+  });
+
+  return {
+    meta: {
+      limit,
+      page,
+      totalPage,
+      total,
+    },
+    unreadNotifications,
+    data: result,
+  };
+};
+
 const readNotificationsToDB = async () => {
   const result = await Notification.updateMany({ $set: { read: true } });
   return result;
@@ -69,4 +106,5 @@ export const NotificationService = {
   deleteNotificationToDB,
   readNotificationsToDB,
   allDeleteNotificationToDB,
+  getAllAdminNotificationFromDB,
 };

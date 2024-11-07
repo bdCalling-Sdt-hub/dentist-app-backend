@@ -17,6 +17,12 @@ router
     NotificationController.allDeleteNotification,
   );
 
+router.get(
+  '/admin-notifications',
+  auth(USER_TYPE.ADMIN, USER_TYPE.SUPER_ADMIN),
+  NotificationController.getAllAdminNotification,
+);
+
 router
   .route('/:id')
   .delete(

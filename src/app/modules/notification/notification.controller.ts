@@ -24,6 +24,26 @@ const getAllNotification = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const getAllAdminNotification = catchAsync(
+  async (req: Request, res: Response) => {
+    const user = req.user;
+    const paginationOptions = pick(req.query, paginationFields);
+    const result = await NotificationService.getAllAdminNotificationFromDB(
+      user,
+      paginationOptions,
+    );
+
+    sendResponse(res, {
+      statusCode: StatusCodes.OK,
+      success: true,
+      message: 'Notification retrieved successfully',
+      pagination: result.meta,
+      unreadNotifications: result.unreadNotifications,
+      data: result.data,
+    });
+  },
+);
+
 const readNotifications = catchAsync(async (req: Request, res: Response) => {
   const result = await NotificationService.readNotificationsToDB();
 
@@ -66,4 +86,5 @@ export const NotificationController = {
   deleteNotification,
   readNotifications,
   allDeleteNotification,
+  getAllAdminNotification,
 };

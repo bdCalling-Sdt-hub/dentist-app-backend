@@ -19,6 +19,11 @@
             "date": 1730981144339,
             "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\error\\07-11-2024-18-error.log",
             "hash": "62d193325fbc50f225af97fcb1d6b85223bf3b339f74475ba4340b1a84c6c523"
+        },
+        {
+            "date": 1730984430544,
+            "name": "D:\\Backend\\dentist-app-backend\\logs\\winston\\error\\07-11-2024-19-error.log",
+            "hash": "e80fbd7e8802f510a2febcae479a33a35b7141ac78ec6d8b04038d0ab6f43bfa"
         }
     ],
     "hashType": "sha256"
